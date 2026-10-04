@@ -20,10 +20,6 @@
 
     <style>
 
-        /* ==================================================
-           GENERAL
-        ================================================== */
-
         body {
             margin: 0;
 
@@ -62,14 +58,8 @@
             padding: 0 30px;
         }
 
-
-        /* ==================================================
-           HEADER
-        ================================================== */
-
         header {
             padding: 28px 0;
-
             border-bottom:
                 1px solid rgba(80, 70, 60, 0.12);
         }
@@ -119,7 +109,7 @@
         }
 
         .nav-links a {
-            color: #555;
+            color: #222;
             text-decoration: none;
 
             transition:
@@ -129,11 +119,6 @@
         .nav-links a:hover {
             color: #000;
         }
-
-
-        /* ==================================================
-           HERO
-        ================================================== */
 
         .hero {
             padding: 120px 0;
@@ -191,7 +176,7 @@
             font-size: 18px;
             font-weight: 400;
 
-            color: #555;
+            color: #222;
 
             line-height: 1.6;
         }
@@ -208,7 +193,7 @@
             font-size: 17px;
             font-weight: 400;
 
-            color: #5f5b56;
+            color: #222;
 
             line-height: 1.75;
 
@@ -230,9 +215,7 @@
 
         .links a {
             color: #222;
-
             text-decoration: none;
-
             border-bottom:
                 1px solid #222;
 
@@ -244,14 +227,8 @@
             opacity: 0.6;
         }
 
-
-        /* ==================================================
-           SECTIONS
-        ================================================== */
-
         section {
             padding: 70px 0;
-
             border-top:
                 1px solid rgba(80, 70, 60, 0.12);
         }
@@ -268,10 +245,8 @@
             font-weight: normal;
 
             text-transform: uppercase;
-
             letter-spacing: 2px;
-
-            color: #777;
+            color: #222;
         }
 
         .text {
@@ -286,15 +261,10 @@
             font-size: 16px;
             font-weight: 400;
 
-            color: #5f5b56;
+            color: #222;
 
             line-height: 1.75;
         }
-
-
-        /* ==================================================
-           CONTACT
-        ================================================== */
 
         #contact {
             text-align: center;
@@ -338,47 +308,25 @@
             display: block;
         }
 
-
-        /* ==================================================
-           LINKEDIN ICON
-        ================================================== */
-
         .linkedin-icon {
             width: 48px;
             height: 48px;
         }
-
-
-        /* ==================================================
-           EMAIL ICON
-        ================================================== */
 
         .email-icon {
             width: 50px;
             height: 50px;
         }
 
-
-        /* ==================================================
-           GITHUB ICON
-        ================================================== */
-
         .github-icon {
             width: 48px;
             height: 48px;
-
             fill: #181717;
         }
 
-
-        /* ==================================================
-           FOOTER
-        ================================================== */
-
         footer {
             padding: 50px 0;
-
-            color: #999;
+            color: #222;
 
             font-family:
                 "Inter",
@@ -387,14 +335,8 @@
                 sans-serif;
 
             font-size: 13px;
-
             text-align: center;
         }
-
-
-        /* ==================================================
-           MOBILE
-        ================================================== */
 
         @media (max-width: 650px) {
 
@@ -412,9 +354,7 @@
 
             .nav-links {
                 gap: 12px;
-
                 flex-wrap: wrap;
-
                 justify-content: flex-end;
             }
 
@@ -424,9 +364,7 @@
 
             .hero-content {
                 flex-direction: column;
-
                 text-align: center;
-
                 gap: 40px;
             }
 
@@ -472,86 +410,44 @@
 
 </head>
 
-
 <body>
 
-
-<!-- ==================================================
-     HEADER
-================================================== -->
-
 <header>
-
     <div class="container">
-
         <nav>
 
             <div class="name">
-
                 <a href="index.html">
                     Dalia Ahmed
                 </a>
-
             </div>
 
             <div class="nav-links">
 
-                <a href="#about">
-                    About
-                </a>
+                <a href="#about">About</a>
 
-                <a href="blog.html">
-                    Blog
-                </a>
+                <a href="blog.html">Blog</a>
 
-                <a href="#cv">
-                    CV
-                </a>
+                <a href="#cv">CV</a>
 
-                <a href="#contact">
-                    Contact
-                </a>
+                <a href="#contact">Contact</a>
 
             </div>
 
         </nav>
-
     </div>
-
 </header>
 
-
-<!-- ==================================================
-     MAIN
-================================================== -->
-
 <main>
-
-
-<!-- ==================================================
-     HERO
-================================================== -->
 
 <section class="hero">
 
     <div class="container hero-content">
 
-
-        <!-- ==========================
-             PHOTO
-        ========================== -->
-
         <div class="hero-photo">
-
             <img src="Dalia.png"
                  alt="Dalia Ahmed">
-
         </div>
-
-
-        <!-- ==========================
-             TEXT
-        ========================== -->
 
         <div class="hero-text">
 
@@ -595,18 +491,11 @@
 
 </section>
 
-
-<!-- ==================================================
-     ABOUT
-================================================== -->
-
 <section id="about">
 
     <div class="container">
 
-        <h2>
-            About
-        </h2>
+        <h2>About</h2>
 
         <div class="text">
 
@@ -635,18 +524,11 @@
 
 </section>
 
-
-<!-- ==================================================
-     CV
-================================================== -->
-
 <section id="cv">
 
     <div class="container">
 
-        <h2>
-            CV
-        </h2>
+        <h2>CV</h2>
 
         <div class="text">
 
@@ -665,26 +547,13 @@
 
 </section>
 
-
-<!-- ==================================================
-     CONTACT
-================================================== -->
-
 <section id="contact">
 
     <div class="container">
 
-        <h2>
-            Contact
-        </h2>
-
+        <h2>Contact</h2>
 
         <div class="contact-links">
-
-
-            <!-- ==========================
-                 LINKEDIN
-            ========================== -->
 
             <a href="https://www.linkedin.com/in/dalia-ahmed99/"
                target="_blank"
@@ -729,11 +598,6 @@
 
             </a>
 
-
-            <!-- ==========================
-                 EMAIL
-            ========================== -->
-
             <a href="mailto:dalia.ahmed1119@gmail.com"
                aria-label="Email"
                title="Email">
@@ -764,11 +628,6 @@
                 </svg>
 
             </a>
-
-
-            <!-- ==========================
-                 GITHUB
-            ========================== -->
 
             <a href="https://github.com/DaliaAhmd"
                target="_blank"
@@ -809,31 +668,21 @@
 
             </a>
 
-
         </div>
 
     </div>
 
 </section>
 
-
 </main>
-
-
-<!-- ==================================================
-     FOOTER
-================================================== -->
 
 <footer>
 
     <div class="container">
-
         © 2026 Dalia Ahmed
-
     </div>
 
 </footer>
-
 
 </body>
 
