@@ -14,7 +14,7 @@
 
         body {
             margin: 0;
-            background: white;
+            background:  #f8f6f1;
             color: #222;
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
@@ -127,7 +127,28 @@
             color: #999;
             font-size: 13px;
         }
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
 
+.hero-text {
+    flex: 1;
+}
+
+.hero-photo {
+    flex-shrink: 0;
+}
+
+.hero-photo img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
         @media (max-width: 650px) {
 
             .container {
@@ -151,7 +172,19 @@
             h1 {
                 font-size: 42px;
             }
+.hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+}
 
+.hero-photo img {
+    width: 190px;
+    height: 190px;
+}
+
+.links {
+    justify-content: center;
+}
         }
 
     </style>
@@ -195,43 +228,33 @@
 
 
 <section class="hero">
+  <div class="container hero-content">
 
-    <div class="container">
+    <div class="hero-text">
+      <h1>Hello, I'm Dalia.</h1>
 
-        <h1>Hello, I'm Dalia.</h1>
+      <div class="subtitle">
+        Research & Operations · AI Safety, Governance & Policy · Economics
+      </div>
 
-        <div class="subtitle">
+      <p class="intro">
+        I’m interested in how technological change affects people,
+        institutions, and economies — and in how research, policy,
+        and governance can help shape better outcomes.
+      </p>
 
-            Research & Operations · AI Safety, Governance & Policy · Economics
-
-        </div>
-
-        <p class="intro">
-
-            I’m interested in how technological change affects people,
-            institutions, and economies — and in how research, policy,
-            and governance can help shape better outcomes.
-
-        </p>
-
-        <div class="links">
-
-            <a href="https://github.com/DaliaAhmd" target="_blank">
-                GitHub
-            </a>
-
-            <a href="#">
-                LinkedIn
-            </a>
-
-            <a href="mailto:YOUR-EMAIL">
-                Email
-            </a>
-
-        </div>
-
+      <div class="links">
+        <a href="https://github.com/DaliaAhmd" target="_blank">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="mailto:YOUR-EMAIL">Email</a>
+      </div>
     </div>
 
+    <div class="hero-photo">
+      <img src="Dalia.png" alt="Dalia Ahmed">
+    </div>
+
+  </div>
 </section>
 
 
