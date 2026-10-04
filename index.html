@@ -23,16 +23,21 @@
 
             background:
                 radial-gradient(
-                    circle at 85% 15%,
-                    #f1edf5 0%,
+                    circle at 10% 15%,
+                    rgba(190, 160, 130, 0.18) 0,
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 90% 80%,
+                    rgba(170, 145, 120, 0.16) 0,
                     transparent 30%
                 ),
                 radial-gradient(
-                    circle at 10% 80%,
-                    #e2dce8 0%,
-                    transparent 35%
+                    circle at 75% 10%,
+                    rgba(255, 255, 255, 0.55) 0,
+                    transparent 22%
                 ),
-                #e8e4ec;
+                #e8dfd2;
 
             color: #222;
 
@@ -59,7 +64,7 @@
             padding: 28px 0;
 
             border-bottom:
-                1px solid rgba(80, 70, 90, 0.12);
+                1px solid rgba(80, 70, 60, 0.12);
         }
 
         nav {
@@ -101,12 +106,7 @@
         .hero-content {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 60px;
-        }
-
-        .hero-text {
-            flex: 1;
+            gap: 70px;
         }
 
         .hero-photo {
@@ -117,8 +117,12 @@
             width: 300px;
             height: 300px;
             object-fit: cover;
-            border-radius: 50%;
+            border-radius: 8px;
             display: block;
+        }
+
+        .hero-text {
+            flex: 1;
         }
 
         h1 {
@@ -171,7 +175,7 @@
             padding: 70px 0;
 
             border-top:
-                1px solid rgba(80, 70, 90, 0.12);
+                1px solid rgba(80, 70, 60, 0.12);
         }
 
         h2 {
@@ -250,13 +254,13 @@
 
 
         /* ==================================================
-           GMAIL ICON
+           EMAIL ICON
         ================================================== */
 
         .email-icon {
-    width: 50px;
-    height: 50px;
-}
+            width: 50px;
+            height: 50px;
+        }
 
 
         /* ==================================================
@@ -307,7 +311,7 @@
             }
 
             .hero-content {
-                flex-direction: column-reverse;
+                flex-direction: column;
                 text-align: center;
                 gap: 40px;
             }
@@ -339,10 +343,10 @@
                 height: 42px;
             }
 
-           .email-icon {
-    width: 44px;
-    height: 44px;
-}
+            .email-icon {
+                width: 44px;
+                height: 44px;
+            }
 
         }
 
@@ -411,6 +415,22 @@
     <div class="container hero-content">
 
 
+        <!-- ==========================
+             PHOTO
+        ========================== -->
+
+        <div class="hero-photo">
+
+            <img src="Dalia.png"
+                 alt="Dalia Ahmed">
+
+        </div>
+
+
+        <!-- ==========================
+             TEXT
+        ========================== -->
+
         <div class="hero-text">
 
             <h1>
@@ -446,14 +466,6 @@
                 </a>
 
             </div>
-
-        </div>
-
-
-        <div class="hero-photo">
-
-            <img src="Dalia.png"
-                 alt="Dalia Ahmed">
 
         </div>
 
@@ -563,8 +575,6 @@
                      xmlns="http://www.w3.org/2000/svg"
                      aria-hidden="true">
 
-                    <!-- LinkedIn blue square -->
-
                     <rect
                         x="2"
                         y="2"
@@ -573,17 +583,11 @@
                         rx="5"
                         fill="#0A66C2"/>
 
-
-                    <!-- White dot -->
-
                     <circle
                         cx="13"
                         cy="14"
                         r="3"
                         fill="#FFFFFF"/>
-
-
-                    <!-- White vertical line -->
 
                     <rect
                         x="10"
@@ -591,9 +595,6 @@
                         width="6"
                         height="17"
                         fill="#FFFFFF"/>
-
-
-                    <!-- White n -->
 
                     <path
                         d="M20 21h6v2.4c1.1-1.8 3-3 5.6-3
@@ -607,42 +608,42 @@
             </a>
 
 
-          <!-- ==========================
-     EMAIL
-========================== -->
+            <!-- ==========================
+                 EMAIL
+            ========================== -->
 
-<a href="mailto:dalia.ahmed1119@gmail.com"
-   aria-label="Email"
-   title="Email">
+            <a href="mailto:dalia.ahmed1119@gmail.com"
+               aria-label="Email"
+               title="Email">
 
-    <svg class="contact-icon email-icon"
-         viewBox="0 0 48 48"
-         xmlns="http://www.w3.org/2000/svg"
-         aria-hidden="true">
+                <svg class="contact-icon email-icon"
+                     viewBox="0 0 48 48"
+                     xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true">
 
-        <!-- Envelope -->
-        <rect
-    x="4"
-    y="8"
-    width="40"
-    height="32"
-    rx="4"
-    fill="#C44536"/>
+                    <rect
+                        x="4"
+                        y="8"
+                        width="40"
+                        height="32"
+                        rx="4"
+                        fill="#C44536"/>
 
-        <!-- White envelope opening -->
-        <path
-            d="M7 12
-               L24 26
-               L41 12
-               V17
-               L24 31
-               L7 17
-               Z"
-            fill="#FFFFFF"/>
+                    <path
+                        d="M7 12
+                           L24 26
+                           L41 12
+                           V17
+                           L24 31
+                           L7 17
+                           Z"
+                        fill="#FFFFFF"/>
 
-    </svg>
+                </svg>
 
-</a>
+            </a>
+
+
             <!-- ==========================
                  GITHUB
             ========================== -->
