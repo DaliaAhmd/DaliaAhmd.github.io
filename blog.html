@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Blog · Dalia Ahmed</title>
+
+    <link rel="icon" type="image/png" href="Dalia.png">
+
+    <style>
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(circle at 85% 15%, #f1edf5 0%, transparent 30%),
+                radial-gradient(circle at 10% 80%, #e2dce8 0%, transparent 35%),
+                #e8e4ec;
+            color: #222;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 0 30px;
+        }
+
+
+        /* ---------- Header ---------- */
+
+        header {
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(80, 70, 90, 0.12);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .name {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 14px;
+        }
+
+        .nav-links a {
+            color: #555;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: #000;
+        }
+
+
+        /* ---------- Blog Header ---------- */
+
+        .blog-header {
+            padding: 100px 0 60px;
+        }
+
+        .blog-header h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 56px;
+            margin: 0 0 15px;
+            letter-spacing: -2px;
+        }
+
+        .blog-intro {
+            max-width: 650px;
+            color: #666;
+            font-size: 18px;
+        }
+
+
+        /* ---------- Categories ---------- */
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 10px 0 55px;
+        }
+
+        .category {
+            border: 1px solid rgba(80, 70, 90, 0.18);
+            border-radius: 30px;
+            padding: 8px 17px;
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.22);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .category:hover,
+        .category.active {
+            background: #5f5668;
+            color: white;
+            border-color: #5f5668;
+        }
+
+
+        /* ---------- Blog Posts ---------- */
+
+        .post {
+            padding: 30px 0;
+            border-top: 1px solid rgba(80, 70, 90, 0.12);
+        }
+
+        .post:last-child {
+            border-bottom: 1px solid rgba(80, 70, 90, 0.12);
+        }
+
+        .post-category {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #81758e;
+            margin-bottom: 8px;
+        }
+
+        .post-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .post-title a {
+            color: #222;
+            text-decoration: none;
+        }
+
+        .post-title a:hover {
+            opacity: 0.65;
+        }
+
+        .post-meta {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .post-description {
+            max-width: 700px;
+            color: #666;
+        }
+
+
+        /* ---------- Footer ---------- */
+
+        footer {
+            padding: 70px 0;
+            color: #999;
+            font-size: 13px;
+        }
+
+
+        /* ---------- Mobile ---------- */
+
+        @media (max-width: 650px) {
+
+            .container {
+                padding: 0 20px;
+            }
+
+            nav {
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            .blog-header {
+                padding: 70px 0 40px;
+            }
+
+            .blog-header h1 {
+                font-size: 44px;
+            }
+
+            .blog-intro {
+                font-size: 17px;
+            }
+
+            .post-title {
+                font-size: 24px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ---------- Header ---------- -->
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <div class="name">
+                Dalia Ahmed
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html#about">About</a>
+
+                <a href="blog.html">Blog</a>
+
+                <a href="index.html#cv">CV</a>
+
+                <a href="index.html#contact">Contact</a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<!-- ---------- Blog ---------- -->
+
+<main>
+
+    <section class="blog-header">
+
+        <div class="container">
+
+            <h1>Blog</h1>
+
+            <p class="blog-intro">
+                Notes, essays, and research on AI safety, economics,
+                history, technology, and governance.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <div class="container">
+
+        <!-- Categories -->
+
+        <div class="categories">
+
+            <a class="category active"
+               onclick="filterPosts('all')">
+                All
+            </a>
+
+            <a class="category"
+               onclick="filterPosts('ai-safety')">
+                AI Safety
+            </a>
+
+            <a class="category"
+               onclick="filterPosts('economics')">
+                Economics
+            </a>
+
+            <a class="category"
+               onclick="filterPosts('history')">
+                History
+            </a>
+
+        </div>
+
+
+        <!-- Posts -->
+
+        <div id="posts">
+
+
+            <!-- AI Safety -->
+
+            <article class="post"
+                     data-category="ai-safety">
+
+                <div class="post-category">
+                    AI Safety
+                </div>
+
+                <div class="post-title">
+                    <a href="#">
+                        Coming soon
+                    </a>
+                </div>
+
+                <div class="post-meta">
+                    AI Safety · 2026
+                </div>
+
+                <div class="post-description">
+                    Essays and notes on AI safety, frontier AI,
+                    alignment, control, and the governance of
+                    increasingly capable AI systems.
+                </div>
+
+            </article>
+
+
+            <!-- Economics -->
+
+            <article class="post"
+                     data-category="economics">
+
+                <div class="post-category">
+                    Economics
+                </div>
+
+                <div class="post-title">
+                    <a href="#">
+                        Coming soon
+                    </a>
+                </div>
+
+                <div class="post-meta">
+                    Economics · 2026
+                </div>
+
+                <div class="post-description">
+                    Writing on economic systems, technological change,
+                    labor, financial institutions, and political economy.
+                </div>
+
+            </article>
+
+
+            <!-- History -->
+
+            <article class="post"
+                     data-category="history">
+
+                <div class="post-category">
+                    History
+                </div>
+
+                <div class="post-title">
+                    <a href="#">
+                        Coming soon
+                    </a>
+                </div>
+
+                <div class="post-meta">
+                    History · 2026
+                </div>
+
+                <div class="post-description">
+                    Historical notes and research on institutions,
+                    economic history, technology, and political change.
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- ---------- Footer ---------- -->
+
+<footer>
+
+    <div class="container">
+        © 2026 Dalia Ahmed
+    </div>
+
+</footer>
+
+
+<!-- ---------- Category Filter ---------- -->
+
+<script>
+
+    function filterPosts(category) {
+
+        const posts = document.querySelectorAll(".post");
+        const buttons = document.querySelectorAll(".category");
+
+        buttons.forEach(button => {
+            button.classList.remove("active");
+        });
+
+        event.target.classList.add("active");
+
+        posts.forEach(post => {
+
+            if (category === "all" ||
+                post.dataset.category === category) {
+
+                post.style.display = "block";
+
+            } else {
+
+                post.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
