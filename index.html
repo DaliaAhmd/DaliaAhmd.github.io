@@ -74,8 +74,27 @@
         }
 
         .name {
-            font-size: 18px;
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 22px;
             font-weight: bold;
+
+            letter-spacing: -0.3px;
+        }
+
+        .name a {
+            color: #222;
+            text-decoration: none;
+
+            transition:
+                opacity 0.2s ease;
+        }
+
+        .name a:hover {
+            opacity: 0.65;
         }
 
         .nav-links {
@@ -133,14 +152,17 @@
                 "Times New Roman",
                 serif;
 
-            font-size: 60px;
-            letter-spacing: -2px;
+            font-size: 48px;
+            font-weight: normal;
+
+            letter-spacing: -1.5px;
             line-height: 1.1;
         }
 
         .subtitle {
             margin-bottom: 25px;
-            font-size: 20px;
+
+            font-size: 19px;
             color: #555;
         }
 
@@ -159,7 +181,9 @@
             color: #222;
             text-decoration: none;
             border-bottom: 1px solid #222;
-            transition: opacity 0.2s ease;
+
+            transition:
+                opacity 0.2s ease;
         }
 
         .links a:hover {
@@ -187,6 +211,8 @@
                 serif;
 
             font-size: 16px;
+            font-weight: normal;
+
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #777;
@@ -280,6 +306,7 @@
 
         footer {
             padding: 50px 0;
+
             color: #999;
             font-size: 13px;
             text-align: center;
@@ -298,6 +325,10 @@
 
             nav {
                 align-items: flex-start;
+            }
+
+            .name {
+                font-size: 20px;
             }
 
             .nav-links {
@@ -322,7 +353,7 @@
             }
 
             h1 {
-                font-size: 44px;
+                font-size: 40px;
             }
 
             .subtitle {
@@ -369,7 +400,11 @@
         <nav>
 
             <div class="name">
-                Dalia Ahmed
+
+                <a href="index.html">
+                    Dalia Ahmed
+                </a>
+
             </div>
 
             <div class="nav-links">
@@ -434,7 +469,7 @@
         <div class="hero-text">
 
             <h1>
-                Hello, I'm Dalia.
+                Hi, I'm Dalia.
             </h1>
 
             <div class="subtitle">
