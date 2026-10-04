@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,9 +13,14 @@
 
     <style>
 
+        /* ---------- General ---------- */
+
         body {
             margin: 0;
-            background:  #f8f6f1;
+            background:
+                radial-gradient(circle at 85% 15%, #f1edf5 0%, transparent 30%),
+                radial-gradient(circle at 10% 80%, #e2dce8 0%, transparent 35%),
+                #e8e4ec;
             color: #222;
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
@@ -26,9 +32,12 @@
             padding: 0 30px;
         }
 
+
+        /* ---------- Header ---------- */
+
         header {
             padding: 28px 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid rgba(80, 70, 90, 0.12);
         }
 
         nav {
@@ -57,14 +66,42 @@
             color: #000;
         }
 
+
+        /* ---------- Hero ---------- */
+
         .hero {
             padding: 120px 0;
         }
 
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-photo {
+            flex-shrink: 0;
+        }
+
+        .hero-photo img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+        }
+
         h1 {
-            font-size: 56px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 60px;
             margin: 0 0 20px;
             letter-spacing: -2px;
+            line-height: 1.1;
         }
 
         .subtitle {
@@ -90,13 +127,21 @@
             border-bottom: 1px solid #222;
         }
 
+        .links a:hover {
+            opacity: 0.6;
+        }
+
+
+        /* ---------- Sections ---------- */
+
         section {
             padding: 70px 0;
-            border-top: 1px solid #eee;
+            border-top: 1px solid rgba(80, 70, 90, 0.12);
         }
 
         h2 {
-            font-size: 13px;
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 16px;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #777;
@@ -108,9 +153,12 @@
             color: #555;
         }
 
+
+        /* ---------- Writing ---------- */
+
         .writing {
             padding: 20px 0;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid rgba(80, 70, 90, 0.12);
         }
 
         .writing-title {
@@ -122,33 +170,18 @@
             font-size: 14px;
         }
 
+
+        /* ---------- Footer ---------- */
+
         footer {
             padding: 50px 0;
             color: #999;
             font-size: 13px;
         }
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-}
 
-.hero-text {
-    flex: 1;
-}
 
-.hero-photo {
-    flex-shrink: 0;
-}
+        /* ---------- Mobile ---------- */
 
-.hero-photo img {
-    width: 230px;
-    height: 230px;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-}
         @media (max-width: 650px) {
 
             .container {
@@ -169,22 +202,29 @@
                 padding: 80px 0;
             }
 
-            h1 {
-                font-size: 42px;
+            .hero-content {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 40px;
             }
-.hero-content {
-    flex-direction: column-reverse;
-    text-align: center;
-}
 
-.hero-photo img {
-    width: 190px;
-    height: 190px;
-}
+            .hero-photo img {
+                width: 220px;
+                height: 220px;
+            }
 
-.links {
-    justify-content: center;
-}
+            h1 {
+                font-size: 44px;
+            }
+
+            .subtitle {
+                font-size: 18px;
+            }
+
+            .links {
+                justify-content: center;
+            }
+
         }
 
     </style>
@@ -194,6 +234,8 @@
 
 <body>
 
+
+<!-- ---------- Header ---------- -->
 
 <header>
 
@@ -224,39 +266,66 @@
 </header>
 
 
+<!-- ---------- Main ---------- -->
+
 <main>
 
 
+<!-- ---------- Hero ---------- -->
+
 <section class="hero">
-  <div class="container hero-content">
 
-    <div class="hero-text">
-      <h1>Hello, I'm Dalia.</h1>
+    <div class="container hero-content">
 
-      <div class="subtitle">
-        Research & Operations · AI Safety, Governance & Policy · Economics
-      </div>
 
-      <p class="intro">
-        I’m interested in how technological change affects people,
-        institutions, and economies — and in how research, policy,
-        and governance can help shape better outcomes.
-      </p>
+        <div class="hero-text">
 
-      <div class="links">
-        <a href="https://github.com/DaliaAhmd" target="_blank">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="mailto:YOUR-EMAIL">Email</a>
-      </div>
+            <h1>Hello, I'm Dalia.</h1>
+
+            <div class="subtitle">
+                Research & Operations · AI Safety, Governance & Policy · Economics
+            </div>
+
+            <p class="intro">
+                I’m interested in how technological change affects people,
+                institutions, and economies — and in how research, policy,
+                and governance can help shape better outcomes.
+            </p>
+
+            <div class="links">
+
+                <a href="https://github.com/DaliaAhmd"
+                   target="_blank">
+                    GitHub
+                </a>
+
+                <a href="#">
+                    LinkedIn
+                </a>
+
+                <a href="mailto:YOUR-EMAIL">
+                    Email
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-photo">
+
+            <img src="Dalia.png"
+                 alt="Dalia Ahmed">
+
+        </div>
+
+
     </div>
 
-    <div class="hero-photo">
-      <img src="Dalia.png" alt="Dalia Ahmed">
-    </div>
-
-  </div>
 </section>
 
+
+<!-- ---------- About ---------- -->
 
 <section id="about">
 
@@ -292,6 +361,8 @@
 </section>
 
 
+<!-- ---------- Writing ---------- -->
+
 <section id="writing">
 
     <div class="container">
@@ -305,10 +376,8 @@
             </div>
 
             <div class="writing-description">
-
                 Essays and notes on economics, AI governance,
                 technology, and research.
-
             </div>
 
         </div>
@@ -317,6 +386,8 @@
 
 </section>
 
+
+<!-- ---------- CV ---------- -->
 
 <section id="cv">
 
@@ -341,6 +412,8 @@
 
 </section>
 
+
+<!-- ---------- Contact ---------- -->
 
 <section id="contact">
 
@@ -370,6 +443,8 @@
 </main>
 
 
+<!-- ---------- Footer ---------- -->
+
 <footer>
 
     <div class="container">
@@ -384,3 +459,4 @@
 </body>
 
 </html>
+```
