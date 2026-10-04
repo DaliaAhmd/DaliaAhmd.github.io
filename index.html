@@ -10,46 +10,72 @@
 
     <title>Dalia Ahmed</title>
 
+    <!-- Website icon -->
     <link rel="icon" type="image/png" href="Dalia.png">
 
     <style>
 
-        /* ---------- General ---------- */
+        /* ==================================================
+           GENERAL
+        ================================================== */
 
         body {
             margin: 0;
+
             background:
-                radial-gradient(circle at 85% 15%, #f1edf5 0%, transparent 30%),
-                radial-gradient(circle at 10% 80%, #e2dce8 0%, transparent 35%),
+                radial-gradient(
+                    circle at 85% 15%,
+                    #f1edf5 0%,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 10% 80%,
+                    #e2dce8 0%,
+                    transparent 35%
+                ),
                 #e8e4ec;
+
             color: #222;
-            font-family: Arial, Helvetica, sans-serif;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
             line-height: 1.6;
         }
 
         .container {
             max-width: 900px;
-            margin: auto;
+            margin: 0 auto;
             padding: 0 30px;
         }
 
 
-        /* ---------- Header ---------- */
+        /* ==================================================
+           HEADER
+        ================================================== */
 
         header {
             padding: 28px 0;
-            border-bottom: 1px solid rgba(80, 70, 90, 0.12);
+
+            border-bottom:
+                1px solid rgba(80, 70, 90, 0.12);
         }
 
         nav {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
         }
 
         .name {
-            font-weight: bold;
             font-size: 18px;
+            font-weight: bold;
         }
 
         .nav-links {
@@ -61,6 +87,9 @@
         .nav-links a {
             color: #555;
             text-decoration: none;
+
+            transition:
+                color 0.2s ease;
         }
 
         .nav-links a:hover {
@@ -68,7 +97,9 @@
         }
 
 
-        /* ---------- Hero ---------- */
+        /* ==================================================
+           HERO
+        ================================================== */
 
         .hero {
             padding: 120px 0;
@@ -76,8 +107,13 @@
 
         .hero-content {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+
+            align-items:
+                center;
+
+            justify-content:
+                space-between;
+
             gap: 60px;
         }
 
@@ -92,40 +128,61 @@
         .hero-photo img {
             width: 300px;
             height: 300px;
+
             object-fit: cover;
+
             border-radius: 50%;
+
             display: block;
         }
 
         h1 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 60px;
             margin: 0 0 20px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 60px;
+
             letter-spacing: -2px;
+
             line-height: 1.1;
         }
 
         .subtitle {
-            font-size: 20px;
-            color: #555;
             margin-bottom: 25px;
+
+            font-size: 20px;
+
+            color: #555;
         }
 
         .intro {
             max-width: 650px;
+
             color: #666;
         }
 
         .links {
-            margin-top: 30px;
             display: flex;
+
             gap: 25px;
+
+            margin-top: 30px;
         }
 
         .links a {
             color: #222;
+
             text-decoration: none;
-            border-bottom: 1px solid #222;
+
+            border-bottom:
+                1px solid #222;
+
+            transition:
+                opacity 0.2s ease;
         }
 
         .links a:hover {
@@ -133,160 +190,153 @@
         }
 
 
-        /* ---------- Sections ---------- */
+        /* ==================================================
+           SECTIONS
+        ================================================== */
 
         section {
             padding: 70px 0;
-            border-top: 1px solid rgba(80, 70, 90, 0.12);
+
+            border-top:
+                1px solid rgba(80, 70, 90, 0.12);
         }
 
         h2 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 16px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #777;
             margin-bottom: 30px;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size: 16px;
+
+            text-transform:
+                uppercase;
+
+            letter-spacing: 2px;
+
+            color: #777;
         }
 
         .text {
             max-width: 700px;
+
             color: #555;
         }
 
 
-        <!-- ---------- Contact ---------- -->
+        /* ==================================================
+           CONTACT
+        ================================================== */
 
-<section id="contact">
+        #contact {
+            text-align: center;
+        }
 
-    <div class="container">
+        #contact h2 {
+            text-align: center;
+        }
 
-        <h2>Contact</h2>
+        .contact-links {
+            display: flex;
 
-        <div class="contact-links">
+            justify-content:
+                center;
 
-            <!-- LinkedIn -->
+            align-items:
+                center;
 
-            <a href="https://www.linkedin.com/in/dalia-ahmed99/"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="LinkedIn"
-               title="LinkedIn">
+            gap: 30px;
 
-                <svg class="linkedin-icon"
-                     viewBox="0 0 48 48"
-                     aria-hidden="true">
+            margin-top: 25px;
+        }
 
-                    <!-- Blue LinkedIn square -->
+        .contact-links a {
+            display: flex;
 
-                    <rect x="2"
-                          y="2"
-                          width="44"
-                          height="44"
-                          rx="4"
-                          fill="#0A66C2"/>
+            align-items:
+                center;
 
-                    <!-- White "in" -->
+            justify-content:
+                center;
 
-                    <circle cx="13"
-                            cy="16"
-                            r="3"
-                            fill="white"/>
+            width: 50px;
+            height: 50px;
 
-                    <rect x="10"
-                          y="21"
-                          width="6"
-                          height="17"
-                          fill="white"/>
+            text-decoration: none;
 
-                    <path fill="white"
-                          d="M20 21h6v2.4c1.1-1.8 3.1-3 5.7-3 5.5 0 7.3 3.6 7.3 8.3V38h-6V29.4c0-2.1-.1-4.9-3-4.9-2.9 0-3.4 2.3-3.4 4.7V38h-6z"/>
+            transition:
+                transform 0.2s ease,
+                opacity 0.2s ease;
+        }
 
-                </svg>
+        .contact-links a:hover {
+            transform:
+                translateY(-4px);
 
-            </a>
+            opacity:
+                0.75;
+        }
 
+        .contact-icon {
+            width: 36px;
+            height: 36px;
 
-            <!-- Gmail -->
-
-            <a href="mailto:dalia.ahmed1119@gmail.com"
-               aria-label="Gmail"
-               title="Gmail">
-
-                <svg class="gmail-icon"
-                     viewBox="0 0 48 48"
-                     aria-hidden="true">
-
-                    <!-- White background -->
-
-                    <rect x="3"
-                          y="6"
-                          width="42"
-                          height="36"
-                          rx="5"
-                          fill="white"/>
-
-                    <!-- Red M -->
-
-                    <path fill="#EA4335"
-                          d="M7 12v24h7V20l10 8 10-8v16h7V12L24 25 7 12z"/>
-
-                    <!-- Blue left section -->
-
-                    <path fill="#4285F4"
-                          d="M7 12v24h7V20z"/>
-
-                    <!-- Green right section -->
-
-                    <path fill="#34A853"
-                          d="M34 20v16h7V12z"/>
-
-                    <!-- Yellow diagonal -->
-
-                    <path fill="#FBBC04"
-                          d="M7 12l17 13 17-13h-8L24 20 15 12z"/>
-
-                </svg>
-
-            </a>
+            display: block;
+        }
 
 
-            <!-- GitHub -->
+        /* ==================================================
+           LINKEDIN
+        ================================================== */
 
-            <a href="https://github.com/DaliaAhmd"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="GitHub"
-               title="GitHub">
-
-                <svg class="github-icon"
-                     viewBox="0 0 24 24"
-                     aria-hidden="true">
-
-                    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.01c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-.93-.1-1.91-.47-1.91-2.09 0-.46.16-.84.43-1.13-.04-.1-.19-.54.04-1.12 0 0 .35-.11 1.16.43.34-.1.71-.15 1.08-.15s.74.05 1.08.15c.82-.55 1.17-.43 1.17-.43.23.58.08 1.02.04 1.12.27.29.43.67.43 1.13 0 1.63-.99 1.99-1.93 2.09.15.13.28.39.28.78v1.15c0 .31.21.66.79.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
-
-                </svg>
-
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
+        .linkedin-icon {
+            width: 36px;
+            height: 36px;
+        }
 
 
-        /* ---------- Footer ---------- */
+        /* ==================================================
+           GMAIL
+        ================================================== */
+
+        .gmail-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+
+        /* ==================================================
+           GITHUB
+        ================================================== */
+
+        .github-icon {
+            width: 36px;
+            height: 36px;
+
+            fill: #181717;
+        }
+
+
+        /* ==================================================
+           FOOTER
+        ================================================== */
 
         footer {
             padding: 50px 0;
+
             color: #999;
+
             font-size: 13px;
+
             text-align: center;
         }
 
 
-        /* ---------- Mobile ---------- */
+        /* ==================================================
+           MOBILE
+        ================================================== */
 
         @media (max-width: 650px) {
 
@@ -295,13 +345,18 @@
             }
 
             nav {
-                align-items: flex-start;
+                align-items:
+                    flex-start;
             }
 
             .nav-links {
                 gap: 12px;
-                flex-wrap: wrap;
-                justify-content: flex-end;
+
+                flex-wrap:
+                    wrap;
+
+                justify-content:
+                    flex-end;
             }
 
             .hero {
@@ -309,8 +364,12 @@
             }
 
             .hero-content {
-                flex-direction: column-reverse;
-                text-align: center;
+                flex-direction:
+                    column-reverse;
+
+                text-align:
+                    center;
+
                 gap: 40px;
             }
 
@@ -328,16 +387,17 @@
             }
 
             .links {
-                justify-content: center;
+                justify-content:
+                    center;
             }
 
             .contact-links {
                 gap: 25px;
             }
 
-            .contact-links img {
-                height: 32px;
-                width: 32px;
+            .contact-icon {
+                width: 34px;
+                height: 34px;
             }
 
         }
@@ -350,7 +410,9 @@
 <body>
 
 
-<!-- ---------- Header ---------- -->
+<!-- ==================================================
+     HEADER
+================================================== -->
 
 <header>
 
@@ -364,13 +426,21 @@
 
             <div class="nav-links">
 
-                <a href="#about">About</a>
+                <a href="#about">
+                    About
+                </a>
 
-                <a href="blog.html">Blog</a>
+                <a href="blog.html">
+                    Blog
+                </a>
 
-                <a href="#cv">CV</a>
+                <a href="#cv">
+                    CV
+                </a>
 
-                <a href="#contact">Contact</a>
+                <a href="#contact">
+                    Contact
+                </a>
 
             </div>
 
@@ -381,53 +451,82 @@
 </header>
 
 
-<!-- ---------- Main ---------- -->
+<!-- ==================================================
+     MAIN
+================================================== -->
 
 <main>
 
 
-<!-- ---------- Hero ---------- -->
+<!-- ==================================================
+     HERO
+================================================== -->
 
 <section class="hero">
 
     <div class="container hero-content">
 
+
+        <!-- Text -->
+
         <div class="hero-text">
 
-            <h1>Hello, I'm Dalia.</h1>
+            <h1>
+                Hello, I'm Dalia.
+            </h1>
+
 
             <div class="subtitle">
-                Research & Operations · AI Safety, Governance & Policy · Economics
+
+                Research & Operations ·
+                AI Safety, Governance & Policy ·
+                Economics
+
             </div>
 
+
             <p class="intro">
-                I’m interested in how technological change affects people,
-                institutions, and economies — and in how research, policy,
-                and governance can help shape better outcomes.
+
+                I’m interested in how technological change
+                affects people, institutions, and economies —
+                and in how research, policy, and governance
+                can help shape better outcomes.
+
             </p>
+
 
             <div class="links">
 
                 <a href="https://github.com/DaliaAhmd"
                    target="_blank"
                    rel="noopener noreferrer">
+
                     GitHub
+
                 </a>
+
 
                 <a href="https://www.linkedin.com/in/dalia-ahmed99/"
                    target="_blank"
                    rel="noopener noreferrer">
+
                     LinkedIn
+
                 </a>
 
+
                 <a href="mailto:dalia.ahmed1119@gmail.com">
+
                     Email
+
                 </a>
 
             </div>
 
         </div>
 
+
+        <!-- Photo -->
 
         <div class="hero-photo">
 
@@ -436,38 +535,54 @@
 
         </div>
 
+
     </div>
 
 </section>
 
 
-<!-- ---------- About ---------- -->
+<!-- ==================================================
+     ABOUT
+================================================== -->
 
 <section id="about">
 
     <div class="container">
 
-        <h2>About</h2>
+        <h2>
+            About
+        </h2>
+
 
         <div class="text">
 
             <p>
-                My background is in business and economics, with research
-                experience spanning economic history, financial systems,
-                and data analysis.
+
+                My background is in business and economics,
+                with research experience spanning economic
+                history, financial systems, and data analysis.
+
             </p>
 
-            <p>
-                More recently, I have been exploring AI safety, frontier AI
-                governance, technology policy, and the institutional
-                challenges created by increasingly capable AI systems.
-            </p>
 
             <p>
-                I am particularly interested in research and operations:
-                helping research teams work effectively, turning complex
-                questions into useful outputs, and building systems that
+
+                More recently, I have been exploring AI safety,
+                frontier AI governance, technology policy, and
+                the institutional challenges created by
+                increasingly capable AI systems.
+
+            </p>
+
+
+            <p>
+
+                I am particularly interested in research and
+                operations: helping research teams work
+                effectively, turning complex questions into
+                useful outputs, and building systems that
                 support good decision-making.
+
             </p>
 
         </div>
@@ -477,23 +592,33 @@
 </section>
 
 
-<!-- ---------- CV ---------- -->
+<!-- ==================================================
+     CV
+================================================== -->
 
 <section id="cv">
 
     <div class="container">
 
-        <h2>CV</h2>
+        <h2>
+            CV
+        </h2>
+
 
         <div class="text">
 
             <p>
-                My CV includes my research experience, education,
-                projects, and professional interests.
+
+                My CV includes my research experience,
+                education, projects, and professional interests.
+
             </p>
 
+
             <p>
+
                 CV coming soon.
+
             </p>
 
         </div>
@@ -503,54 +628,177 @@
 </section>
 
 
-<!-- ---------- Contact ---------- -->
+<!-- ==================================================
+     CONTACT
+================================================== -->
 
 <section id="contact">
 
     <div class="container">
 
-        <h2>Contact</h2>
+        <h2>
+            Contact
+        </h2>
+
 
         <div class="contact-links">
 
-            <!-- LinkedIn -->
 
-            <a class="linkedin"
-               href="https://www.linkedin.com/in/dalia-ahmed99/"
+            <!-- ==========================
+                 LINKEDIN
+            ========================== -->
+
+            <a href="https://www.linkedin.com/in/dalia-ahmed99/"
                target="_blank"
                rel="noopener noreferrer"
                aria-label="LinkedIn"
                title="LinkedIn">
 
-                <i class="fa-brands fa-linkedin"></i>
+                <svg class="contact-icon linkedin-icon"
+                     viewBox="0 0 48 48"
+                     xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true">
+
+                    <!-- Blue square -->
+
+                    <rect
+                        x="2"
+                        y="2"
+                        width="44"
+                        height="44"
+                        rx="5"
+                        fill="#0A66C2"/>
+
+
+                    <!-- White 'in' -->
+
+                    <circle
+                        cx="14"
+                        cy="15"
+                        r="3"
+                        fill="#FFFFFF"/>
+
+
+                    <rect
+                        x="11"
+                        y="21"
+                        width="6"
+                        height="17"
+                        fill="#FFFFFF"/>
+
+
+                    <path
+                        d="M21 21h6v2.3c1.1-1.8 3-2.9 5.5-2.9
+                           5 0 6.5 3.1 6.5 8V38h-6v-8.7
+                           c0-2.1-.1-4.8-2.9-4.8
+                           -2.7 0-3.1 2.2-3.1 4.7V38h-6z"
+                        fill="#FFFFFF"/>
+
+                </svg>
 
             </a>
 
 
-            <!-- Gmail -->
+            <!-- ==========================
+                 GMAIL
+            ========================== -->
 
-            <a class="gmail"
-               href="mailto:dalia.ahmed1119@gmail.com"
-               aria-label="Email"
+            <a href="mailto:dalia.ahmed1119@gmail.com"
+               aria-label="Gmail"
                title="Gmail">
 
-                <i class="fa-solid fa-envelope"></i>
+                <svg class="contact-icon gmail-icon"
+                     viewBox="0 0 48 48"
+                     xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true">
+
+                    <!-- White envelope -->
+
+                    <rect
+                        x="4"
+                        y="7"
+                        width="40"
+                        height="34"
+                        rx="4"
+                        fill="#FFFFFF"/>
+
+
+                    <!-- Red M -->
+
+                    <path
+                        d="M7 12v25h6V19.5L24 28l11-8.5V37h6V12
+                           L24 23.5z"
+                        fill="#EA4335"/>
+
+
+                    <!-- Blue left edge -->
+
+                    <path
+                        d="M7 12v25h6V19.5z"
+                        fill="#4285F4"/>
+
+
+                    <!-- Green right edge -->
+
+                    <path
+                        d="M35 19.5V37h6V12z"
+                        fill="#34A853"/>
+
+
+                    <!-- Yellow top -->
+
+                    <path
+                        d="M7 12l17 13.5L41 12h-7L24 20l-10-8z"
+                        fill="#FBBC04"/>
+
+                </svg>
 
             </a>
 
 
-            <!-- GitHub -->
+            <!-- ==========================
+                 GITHUB
+            ========================== -->
 
-            <a class="github"
-               href="https://github.com/DaliaAhmd"
+            <a href="https://github.com/DaliaAhmd"
                target="_blank"
                rel="noopener noreferrer"
                aria-label="GitHub"
                title="GitHub">
 
-                <i class="fa-brands fa-github"></i>
+                <svg class="contact-icon github-icon"
+                     viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg"
+                     aria-hidden="true">
+
+                    <path
+                        d="M12 .5C5.65.5.5 5.65.5 12
+                           c0 5.08 3.29 9.39 7.86 10.91
+                           .57.1.78-.25.78-.55v-2.01
+                           c-3.2.7-3.87-1.54-3.87-1.54
+                           -.52-1.33-1.28-1.69-1.28-1.69
+                           -1.05-.72.08-.71.08-.71
+                           1.16.08 1.77 1.19 1.77 1.19
+                           1.03 1.76 2.7 1.25 3.36.96
+                           .1-.75.4-1.25.73-1.54
+                           -2.55-.29-5.23-1.28-5.23-5.7
+                           0-1.26.45-2.29 1.19-3.1
+                           -.12-.29-.52-1.47.11-3.06
+                           0 0 .97-.31 3.18 1.18
+                           a11.1 11.1 0 0 1 5.79 0
+                           c2.21-1.49 3.18-1.18 3.18-1.18
+                           .63 1.59.23 2.77.11 3.06
+                           .74.81 1.19 1.84 1.19 3.1
+                           0 4.43-2.69 5.4-5.25 5.69
+                           .41.35.78 1.04.78 2.1v3.11
+                           c0 .3.21.66.79.55
+                           C20.21 21.39 23.5 17.08 23.5 12
+                           23.5 5.65 18.35.5 12 .5z"/>
+
+                </svg>
 
             </a>
+
 
         </div>
 
@@ -559,7 +807,12 @@
 </section>
 
 
-<!-- ---------- Footer ---------- -->
+</main>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
 
 <footer>
 
@@ -570,9 +823,6 @@
     </div>
 
 </footer>
-
-
-</main>
 
 
 </body>
