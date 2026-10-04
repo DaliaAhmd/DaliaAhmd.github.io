@@ -12,6 +12,12 @@
 
     <link rel="icon" type="image/png" href="Dalia.png">
 
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+          rel="stylesheet">
+
     <style>
 
         /* ==================================================
@@ -42,11 +48,12 @@
             color: #222;
 
             font-family:
+                "Inter",
                 Arial,
                 Helvetica,
                 sans-serif;
 
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
         .container {
@@ -100,13 +107,23 @@
         .nav-links {
             display: flex;
             gap: 25px;
+
+            font-family:
+                "Inter",
+                Arial,
+                Helvetica,
+                sans-serif;
+
             font-size: 14px;
+            font-weight: 400;
         }
 
         .nav-links a {
             color: #555;
             text-decoration: none;
-            transition: color 0.2s ease;
+
+            transition:
+                color 0.2s ease;
         }
 
         .nav-links a:hover {
@@ -135,8 +152,11 @@
         .hero-photo img {
             width: 300px;
             height: 300px;
+
             object-fit: cover;
+
             border-radius: 8px;
+
             display: block;
         }
 
@@ -162,25 +182,59 @@
         .subtitle {
             margin-bottom: 25px;
 
-            font-size: 19px;
+            font-family:
+                "Inter",
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 18px;
+            font-weight: 400;
+
             color: #555;
+
+            line-height: 1.6;
         }
 
         .intro {
-            max-width: 650px;
-            color: #666;
+            max-width: 620px;
+
+            font-family:
+                "Inter",
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 17px;
+            font-weight: 400;
+
+            color: #5f5b56;
+
+            line-height: 1.75;
+
+            letter-spacing: -0.1px;
         }
 
         .links {
             display: flex;
             gap: 25px;
+
             margin-top: 30px;
+
+            font-family:
+                "Inter",
+                Arial,
+                Helvetica,
+                sans-serif;
         }
 
         .links a {
             color: #222;
+
             text-decoration: none;
-            border-bottom: 1px solid #222;
+
+            border-bottom:
+                1px solid #222;
 
             transition:
                 opacity 0.2s ease;
@@ -214,13 +268,27 @@
             font-weight: normal;
 
             text-transform: uppercase;
+
             letter-spacing: 2px;
+
             color: #777;
         }
 
         .text {
             max-width: 700px;
-            color: #555;
+
+            font-family:
+                "Inter",
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 16px;
+            font-weight: 400;
+
+            color: #5f5b56;
+
+            line-height: 1.75;
         }
 
 
@@ -240,7 +308,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+
             gap: 35px;
+
             margin-top: 25px;
         }
 
@@ -296,6 +366,7 @@
         .github-icon {
             width: 48px;
             height: 48px;
+
             fill: #181717;
         }
 
@@ -308,7 +379,15 @@
             padding: 50px 0;
 
             color: #999;
+
+            font-family:
+                "Inter",
+                Arial,
+                Helvetica,
+                sans-serif;
+
             font-size: 13px;
+
             text-align: center;
         }
 
@@ -333,7 +412,9 @@
 
             .nav-links {
                 gap: 12px;
+
                 flex-wrap: wrap;
+
                 justify-content: flex-end;
             }
 
@@ -343,7 +424,9 @@
 
             .hero-content {
                 flex-direction: column;
+
                 text-align: center;
+
                 gap: 40px;
             }
 
@@ -357,7 +440,11 @@
             }
 
             .subtitle {
-                font-size: 18px;
+                font-size: 17px;
+            }
+
+            .intro {
+                font-size: 16px;
             }
 
             .links {
