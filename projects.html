@@ -13,7 +13,6 @@
     <link rel="icon" type="image/png" href="Dalia.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect"
           href="https://fonts.gstatic.com"
           crossorigin>
@@ -70,6 +69,8 @@
             padding: 0 30px;
         }
 
+        /* HEADER */
+
         header {
             padding: 28px 0;
 
@@ -79,6 +80,7 @@
 
         nav {
             display: flex;
+
             justify-content: space-between;
             align-items: center;
         }
@@ -86,16 +88,26 @@
         .name {
             font-size: 21px;
             font-weight: 600;
+
             letter-spacing: -0.6px;
         }
 
         .name a {
             color: #111;
+
             text-decoration: none;
+
+            transition:
+                opacity 0.2s ease;
+        }
+
+        .name a:hover {
+            opacity: 0.6;
         }
 
         .nav-links {
             display: flex;
+
             gap: 24px;
 
             font-size: 15px;
@@ -104,101 +116,168 @@
 
         .nav-links a {
             color: #111;
+
             text-decoration: none;
-            transition: opacity 0.2s ease;
+
+            transition:
+                opacity 0.2s ease;
         }
 
         .nav-links a:hover {
             opacity: 0.55;
         }
 
-        .page {
-            padding: 100px 0 120px;
-        }
+        /* PAGE HEADER */
 
         .page-header {
-            max-width: 700px;
-            margin-bottom: 70px;
+            padding: 110px 0 70px;
         }
 
-        h1 {
-            margin: 0 0 20px;
+        .page-header h1 {
+            margin: 0;
 
-            font-size: 54px;
-            font-weight: 500;
+            font-size: 52px;
+            font-weight: 600;
 
-            letter-spacing: -2.3px;
+            letter-spacing: -2px;
             line-height: 1;
         }
 
-        .page-intro {
-            margin: 0;
+        .page-header p {
+            max-width: 680px;
 
-            font-size: 18px;
-            line-height: 1.7;
+            margin: 25px 0 0;
+
+            font-size: 19px;
+            font-weight: 400;
+
+            line-height: 1.65;
         }
 
-        .projects {
-            display: grid;
+        /* PROJECT LIST */
 
-            grid-template-columns:
-                repeat(2, 1fr);
+        .projects-section {
+            padding: 0 0 90px;
+        }
 
-            gap: 24px;
+        .project-list {
+            border-top:
+                1px solid rgba(17, 17, 17, 0.12);
         }
 
         .project {
-            padding: 32px;
+            display: grid;
 
-            border:
-                1px solid rgba(17, 17, 17, 0.15);
+            grid-template-columns: 85px 1fr;
 
-            background:
-                rgba(241, 236, 227, 0.42);
+            gap: 35px;
 
-            transition:
-                transform 0.2s ease,
-                background 0.2s ease;
-        }
+            padding: 36px 0;
 
-        .project:hover {
-            transform: translateY(-4px);
-
-            background:
-                rgba(241, 236, 227, 0.7);
+            border-bottom:
+                1px solid rgba(17, 17, 17, 0.12);
         }
 
         .project-number {
+            padding-top: 5px;
+
             font-size: 13px;
             font-weight: 500;
 
-            margin-bottom: 45px;
+            letter-spacing: 1.2px;
+        }
 
-            opacity: 0.55;
+        .project-content {
+            max-width: 720px;
+        }
+
+        .project-category {
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            letter-spacing: 1.1px;
+
+            text-transform: uppercase;
+        }
+
+        .category-research {
+            color: #7a5b45;
+        }
+
+        .category-ai {
+            color: #68705a;
+        }
+
+        .category-economics {
+            color: #8d765f;
+        }
+
+        .category-data {
+            color: #a95f47;
         }
 
         .project h2 {
-            margin: 0 0 14px;
+            margin: 0 0 10px;
 
-            font-size: 26px;
-            font-weight: 500;
+            font-size: 27px;
+            font-weight: 600;
 
             letter-spacing: -0.8px;
+
+            line-height: 1.25;
         }
 
-        .project p {
+        .project h2 a {
+            color: #111;
+
+            text-decoration: none;
+        }
+
+        .project h2 a:hover {
+            opacity: 0.6;
+        }
+
+        .project-status {
+            display: inline-block;
+
+            margin-bottom: 14px;
+
+            font-size: 12px;
+            font-weight: 500;
+
+            letter-spacing: 0.4px;
+        }
+
+        .project-description {
             margin: 0;
 
             font-size: 17px;
-            line-height: 1.7;
+
+            line-height: 1.65;
+        }
+
+        .project-tools {
+            margin-top: 15px;
+
+            font-size: 13px;
+            font-weight: 500;
+
+            line-height: 1.6;
         }
 
         .project-link {
             display: inline-block;
 
-            margin-top: 24px;
+            margin-top: 17px;
 
             color: #111;
+
+            font-size: 14px;
+            font-weight: 500;
 
             text-decoration: none;
 
@@ -207,28 +286,28 @@
 
             padding-bottom: 2px;
 
-            font-size: 15px;
-            font-weight: 500;
+            transition:
+                opacity 0.2s ease;
         }
+
+        .project-link:hover {
+            opacity: 0.55;
+        }
+
+        /* FOOTER */
 
         footer {
             padding: 50px 0;
 
-            border-top:
-                1px solid rgba(17, 17, 17, 0.12);
-
-            text-align: center;
+            color: #111;
 
             font-size: 13px;
+            font-weight: 400;
+
+            text-align: center;
         }
 
-        @media (max-width: 850px) {
-
-            .nav-links {
-                gap: 15px;
-            }
-
-        }
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
@@ -240,23 +319,54 @@
                 align-items: flex-start;
             }
 
+            .name {
+                font-size: 19px;
+            }
+
             .nav-links {
                 gap: 12px;
+
                 flex-wrap: wrap;
+
                 justify-content: flex-end;
+
                 font-size: 14px;
             }
 
-            .page {
-                padding: 70px 0 90px;
+            .page-header {
+                padding: 80px 0 60px;
             }
 
-            h1 {
+            .page-header h1 {
                 font-size: 44px;
             }
 
-            .projects {
+            .page-header p {
+                font-size: 17px;
+            }
+
+            .projects-section {
+                padding-bottom: 70px;
+            }
+
+            .project {
                 grid-template-columns: 1fr;
+
+                gap: 8px;
+
+                padding: 30px 0;
+            }
+
+            .project-number {
+                padding-top: 0;
+            }
+
+            .project h2 {
+                font-size: 23px;
+            }
+
+            .project-description {
+                font-size: 16px;
             }
 
         }
@@ -283,7 +393,7 @@
 
             <div class="nav-links">
 
-                <a href="index.html#about">
+                <a href="about.html">
                     About
                 </a>
 
@@ -291,12 +401,12 @@
                     Blog
                 </a>
 
-                <a href="projects.html">
-                    Projects
-                </a>
-
                 <a href="readings.html">
                     Readings
+                </a>
+
+                <a href="projects.html">
+                    Projects
                 </a>
 
                 <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link"
@@ -317,9 +427,8 @@
 
 </header>
 
-<main>
 
-<section class="page">
+<main>
 
     <div class="container">
 
@@ -329,113 +438,299 @@
                 Projects
             </h1>
 
-            <p class="page-intro">
-                A collection of research, analysis, and independent projects
-                exploring economics, technology, AI governance, and related
-                questions.
+            <p>
+                Research and independent projects exploring economics,
+                financial systems, technology, AI, and public policy.
             </p>
 
         </div>
 
 
-        <div class="projects">
+        <div class="projects-section">
 
-            <article class="project">
-
-                <div class="project-number">
-                    01
-                </div>
-
-                <h2>
-                    Project Title
-                </h2>
-
-                <p>
-                    A brief description of the project, the question it
-                    explores, and what you produced.
-                </p>
-
-                <a href="#"
-                   class="project-link">
-                    View project →
-                </a>
-
-            </article>
+            <div class="project-list">
 
 
-            <article class="project">
+                <!-- PROJECT 1 -->
 
-                <div class="project-number">
-                    02
-                </div>
+                <article class="project">
 
-                <h2>
-                    Project Title
-                </h2>
+                    <div class="project-number">
+                        01
+                    </div>
 
-                <p>
-                    A brief description of the project, the question it
-                    explores, and what you produced.
-                </p>
+                    <div class="project-content">
 
-                <a href="#"
-                   class="project-link">
-                    View project →
-                </a>
+                        <div class="project-category category-ai">
+                            AI & Economics
+                        </div>
 
-            </article>
+                        <h2>
+                            <a href="#">
+                                AI Adoption and the Changing Landscape of Unemployment
+                            </a>
+                        </h2>
+
+                        <div class="project-status">
+                            In progress
+                        </div>
+
+                        <p class="project-description">
+                            An empirical project examining how AI adoption
+                            may affect unemployment and underemployment across
+                            sectors, with implications for labor markets and
+                            AI governance.
+                        </p>
+
+                        <div class="project-tools">
+                            OECD · ILO · WEF AI Index · Econometric Analysis
+                        </div>
+
+                        <a class="project-link"
+                           href="#">
+                            View project →
+                        </a>
+
+                    </div>
+
+                </article>
 
 
-            <article class="project">
+                <!-- PROJECT 2 -->
 
-                <div class="project-number">
-                    03
-                </div>
+                <article class="project">
 
-                <h2>
-                    Project Title
-                </h2>
+                    <div class="project-number">
+                        02
+                    </div>
 
-                <p>
-                    A brief description of the project, the question it
-                    explores, and what you produced.
-                </p>
+                    <div class="project-content">
 
-                <a href="#"
-                   class="project-link">
-                    View project →
-                </a>
+                        <div class="project-category category-research">
+                            Political Economy
+                        </div>
 
-            </article>
+                        <h2>
+                            <a href="#">
+                                The History of Separation Rules and Branching Restrictions in U.S. Banking
+                            </a>
+                        </h2>
+
+                        <div class="project-status">
+                            In progress · Data & Code
+                        </div>
+
+                        <p class="project-description">
+                            A historical-empirical study of U.S. banking
+                            separation and branching restrictions from the
+                            1920s through the late twentieth century, examining
+                            how regulatory changes affected banking structures
+                            and competition.
+                        </p>
+
+                        <div class="project-tools">
+                            FDIC API · OCR · LLM-assisted analysis · R
+                        </div>
+
+                        <a class="project-link"
+                           href="#">
+                            View project →
+                        </a>
+
+                    </div>
+
+                </article>
 
 
-            <article class="project">
+                <!-- PROJECT 3 -->
 
-                <div class="project-number">
-                    04
-                </div>
+                <article class="project">
 
-                <h2>
-                    Project Title
-                </h2>
+                    <div class="project-number">
+                        03
+                    </div>
 
-                <p>
-                    A brief description of the project, the question it
-                    explores, and what you produced.
-                </p>
+                    <div class="project-content">
 
-                <a href="#"
-                   class="project-link">
-                    View project →
-                </a>
+                        <div class="project-category category-economics">
+                            Economics
+                        </div>
 
-            </article>
+                        <h2>
+                            <a href="#">
+                                Financial Deregulation and the 2008 Financial Crisis
+                            </a>
+                        </h2>
+
+                        <div class="project-status">
+                            Full paper
+                        </div>
+
+                        <p class="project-description">
+                            A qualitative historical-institutional analysis
+                            tracing the evolution of U.S. banking and mortgage
+                            regulation from the 1920s to 2008 and examining
+                            mechanisms through which deregulation contributed
+                            to systemic risk.
+                        </p>
+
+                        <div class="project-tools">
+                            Historical research · Regulatory documents ·
+                            Institutional analysis
+                        </div>
+
+                        <a class="project-link"
+                           href="#">
+                            View project →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 4 -->
+
+                <article class="project">
+
+                    <div class="project-number">
+                        04
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-category category-research">
+                            Migration & Development
+                        </div>
+
+                        <h2>
+                            <a href="#">
+                                When Effort Meets Opportunity: The Egyptian Brain Drain to the United States
+                            </a>
+                        </h2>
+
+                        <div class="project-status">
+                            Preliminary draft
+                        </div>
+
+                        <p class="project-description">
+                            An exploratory study of skilled migration from
+                            Egypt to the United States, focusing on labor
+                            market distortions, perceptions of meritocracy,
+                            and the possible role of AI-driven structural
+                            transformation.
+                        </p>
+
+                        <div class="project-tools">
+                            Literature review · Economic analysis ·
+                            Migration research
+                        </div>
+
+                        <a class="project-link"
+                           href="#">
+                            View project →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 5 -->
+
+                <article class="project">
+
+                    <div class="project-number">
+                        05
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-category category-data">
+                            Data Analysis
+                        </div>
+
+                        <h2>
+                            <a href="#">
+                                A View of Egypt’s Economic Situation (1991–2022)
+                            </a>
+                        </h2>
+
+                        <div class="project-status">
+                            Full project · Data & Code
+                        </div>
+
+                        <p class="project-description">
+                            An analysis of Egypt’s macroeconomic development
+                            over three decades, examining major economic
+                            indicators and changes in the country's economic
+                            conditions.
+                        </p>
+
+                        <div class="project-tools">
+                            R · Data analysis · Visualization
+                        </div>
+
+                        <a class="project-link"
+                           href="#">
+                            View project →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PROJECT 6 -->
+
+                <article class="project">
+
+                    <div class="project-number">
+                        06
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-category category-data">
+                            Data Analytics
+                        </div>
+
+                        <h2>
+                            <a href="#">
+                                Chicago Bike Share Analysis
+                            </a>
+                        </h2>
+
+                        <div class="project-status">
+                            Full project · Data & Code
+                        </div>
+
+                        <p class="project-description">
+                            A data analytics project examining bike-share
+                            usage patterns using a large-scale dataset,
+                            from data preparation and SQL analysis through
+                            visualization and reporting.
+                        </p>
+
+                        <div class="project-tools">
+                            BigQuery · SQL · Tableau
+                        </div>
+
+                        <a class="project-link"
+                           href="#">
+                            View project →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
 
         </div>
 
     </div>
-
-</section>
 
 </main>
 
