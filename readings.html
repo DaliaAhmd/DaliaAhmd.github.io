@@ -12,9 +12,7 @@
 
     <link rel="icon" type="image/png" href="Dalia.png">
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect"
           href="https://fonts.gstatic.com"
           crossorigin>
@@ -66,10 +64,12 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 30px;
         }
+
+        /* HEADER */
 
         header {
             padding: 28px 0;
@@ -80,23 +80,34 @@
 
         nav {
             display: flex;
+
             justify-content: space-between;
             align-items: center;
         }
 
         .name {
-            font-size: 21px;
+            font-size: 25px;
             font-weight: 600;
-            letter-spacing: -0.6px;
+
+            letter-spacing: -0.9px;
         }
 
         .name a {
             color: #111;
+
             text-decoration: none;
+
+            transition:
+                opacity 0.2s ease;
+        }
+
+        .name a:hover {
+            opacity: 0.6;
         }
 
         .nav-links {
             display: flex;
+
             gap: 24px;
 
             font-size: 15px;
@@ -105,81 +116,117 @@
 
         .nav-links a {
             color: #111;
+
             text-decoration: none;
-            transition: opacity 0.2s ease;
+
+            transition:
+                opacity 0.2s ease;
         }
 
         .nav-links a:hover {
             opacity: 0.55;
         }
 
-        .page {
-            padding: 100px 0 120px;
-        }
+        /* PAGE HEADER */
 
         .page-header {
-            max-width: 700px;
-            margin-bottom: 70px;
+            padding: 110px 0 70px;
         }
 
-        h1 {
-            margin: 0 0 20px;
+        .page-header h1 {
+            margin: 0;
 
-            font-size: 54px;
-            font-weight: 500;
+            font-size: 52px;
+            font-weight: 600;
 
-            letter-spacing: -2.3px;
+            letter-spacing: -2px;
             line-height: 1;
         }
 
-        .page-intro {
-            margin: 0;
+        .page-header p {
+            max-width: 680px;
 
-            font-size: 18px;
-            line-height: 1.7;
+            margin: 25px 0 0;
+
+            font-size: 19px;
+            font-weight: 400;
+
+            line-height: 1.65;
         }
 
-        .readings {
+        /* READINGS */
+
+        .readings-section {
+            padding: 0 0 90px;
+        }
+
+        .reading-list {
             border-top:
-                1px solid rgba(17, 17, 17, 0.15);
+                1px solid rgba(17, 17, 17, 0.12);
         }
 
         .reading {
             display: grid;
 
-            grid-template-columns: 110px 1fr;
+            grid-template-columns: 125px 1fr;
 
             gap: 35px;
 
-            padding: 30px 0;
+            padding: 32px 0;
 
             border-bottom:
-                1px solid rgba(17, 17, 17, 0.15);
+                1px solid rgba(17, 17, 17, 0.12);
         }
 
         .reading-category {
-            font-size: 13px;
-            font-weight: 500;
+            padding-top: 5px;
 
-            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 600;
 
             letter-spacing: 1px;
 
-            opacity: 0.55;
+            text-transform: uppercase;
+        }
+
+        .category-ai {
+            color: #68705a;
+        }
+
+        .category-governance {
+            color: #7a5b45;
+        }
+
+        .category-economics {
+            color: #8d765f;
+        }
+
+        .category-technology {
+            color: #a95f47;
+        }
+
+        .reading-content {
+            max-width: 720px;
         }
 
         .reading h2 {
             margin: 0 0 8px;
 
-            font-size: 23px;
-            font-weight: 500;
+            font-size: 25px;
+            font-weight: 600;
 
             letter-spacing: -0.7px;
+
+            line-height: 1.3;
         }
 
         .reading h2 a {
             color: #111;
+
             text-decoration: none;
+
+            transition:
+                opacity 0.2s ease;
         }
 
         .reading h2 a:hover {
@@ -189,37 +236,59 @@
         .reading-meta {
             margin-bottom: 12px;
 
-            font-size: 14px;
+            font-size: 13px;
+            font-weight: 500;
 
-            opacity: 0.6;
+            letter-spacing: 0.2px;
         }
 
-        .reading p {
+        .reading-description {
             margin: 0;
 
             font-size: 17px;
 
-            line-height: 1.7;
+            line-height: 1.65;
         }
+
+        .reading-link {
+            display: inline-block;
+
+            margin-top: 15px;
+
+            color: #111;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            text-decoration: none;
+
+            border-bottom:
+                1px solid #111;
+
+            padding-bottom: 2px;
+
+            transition:
+                opacity 0.2s ease;
+        }
+
+        .reading-link:hover {
+            opacity: 0.55;
+        }
+
+        /* FOOTER */
 
         footer {
             padding: 50px 0;
 
-            border-top:
-                1px solid rgba(17, 17, 17, 0.12);
-
-            text-align: center;
+            color: #111;
 
             font-size: 13px;
+            font-weight: 400;
+
+            text-align: center;
         }
 
-        @media (max-width: 850px) {
-
-            .nav-links {
-                gap: 15px;
-            }
-
-        }
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
@@ -231,25 +300,52 @@
                 align-items: flex-start;
             }
 
+            .name {
+                font-size: 21px;
+            }
+
             .nav-links {
                 gap: 12px;
+
                 flex-wrap: wrap;
+
                 justify-content: flex-end;
+
                 font-size: 14px;
             }
 
-            .page {
-                padding: 70px 0 90px;
+            .page-header {
+                padding: 80px 0 60px;
             }
 
-            h1 {
+            .page-header h1 {
                 font-size: 44px;
+            }
+
+            .page-header p {
+                font-size: 17px;
             }
 
             .reading {
                 grid-template-columns: 1fr;
 
                 gap: 8px;
+
+                padding: 29px 0;
+            }
+
+            .reading-category {
+                padding-top: 0;
+
+                margin-bottom: 3px;
+            }
+
+            .reading h2 {
+                font-size: 22px;
+            }
+
+            .reading-description {
+                font-size: 16px;
             }
 
         }
@@ -276,7 +372,7 @@
 
             <div class="nav-links">
 
-                <a href="index.html#about">
+                <a href="about.html">
                     About
                 </a>
 
@@ -284,12 +380,12 @@
                     Blog
                 </a>
 
-                <a href="projects.html">
-                    Projects
-                </a>
-
                 <a href="readings.html">
                     Readings
+                </a>
+
+                <a href="projects.html">
+                    Projects
                 </a>
 
                 <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link"
@@ -310,9 +406,8 @@
 
 </header>
 
-<main>
 
-<section class="page">
+<main>
 
     <div class="container">
 
@@ -322,142 +417,228 @@
                 Readings
             </h1>
 
-            <p class="page-intro">
-                Papers, articles, reports, and other ideas I’ve found
-                interesting or useful.
+            <p>
+                Papers, articles, reports, and other resources that have
+                shaped how I think about AI, governance, economics,
+                technology, and research.
             </p>
 
         </div>
 
 
-        <div class="readings">
+        <div class="readings-section">
+
+            <div class="reading-list">
 
 
-            <article class="reading">
+                <!-- READING 1 -->
 
-                <div class="reading-category">
-                    AI Safety
-                </div>
+                <article class="reading">
 
-                <div>
-
-                    <h2>
-                        <a href="#"
-                           target="_blank"
-                           rel="noopener noreferrer">
-                            Reading Title
-                        </a>
-                    </h2>
-
-                    <div class="reading-meta">
-                        Author · Year
+                    <div class="reading-category category-ai">
+                        AI Safety
                     </div>
 
-                    <p>
-                        A short note about why this reading is interesting,
-                        what question it addresses, or what you took from it.
-                    </p>
+                    <div class="reading-content">
 
-                </div>
+                        <h2>
+                            <a href="#"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Safety and Alignment in an Era of Long-Horizon Models
+                            </a>
+                        </h2>
 
-            </article>
+                        <div class="reading-meta">
+                            OpenAI · 2026
+                        </div>
 
+                        <p class="reading-description">
+                            A useful introduction to the challenge of
+                            evaluating and controlling AI systems that may
+                            operate autonomously for increasingly long
+                            periods of time.
+                        </p>
 
-            <article class="reading">
-
-                <div class="reading-category">
-                    Governance
-                </div>
-
-                <div>
-
-                    <h2>
-                        <a href="#"
+                        <a class="reading-link"
+                           href="#"
                            target="_blank"
                            rel="noopener noreferrer">
-                            Reading Title
+                            Read →
                         </a>
-                    </h2>
 
-                    <div class="reading-meta">
-                        Author · Year
                     </div>
 
-                    <p>
-                        A short note about the reading and why it is worth
-                        recommending.
-                    </p>
-
-                </div>
-
-            </article>
+                </article>
 
 
-            <article class="reading">
+                <!-- READING 2 -->
 
-                <div class="reading-category">
-                    Economics
-                </div>
+                <article class="reading">
 
-                <div>
+                    <div class="reading-category category-governance">
+                        AI Governance
+                    </div>
 
-                    <h2>
-                        <a href="#"
+                    <div class="reading-content">
+
+                        <h2>
+                            <a href="#"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Anthropic’s Responsible Scaling Policy
+                            </a>
+                        </h2>
+
+                        <div class="reading-meta">
+                            Anthropic · 2026
+                        </div>
+
+                        <p class="reading-description">
+                            A practical example of a frontier AI developer
+                            translating safety assessments into conditional
+                            commitments and operational restrictions.
+                        </p>
+
+                        <a class="reading-link"
+                           href="#"
                            target="_blank"
                            rel="noopener noreferrer">
-                            Reading Title
+                            Read →
                         </a>
-                    </h2>
 
-                    <div class="reading-meta">
-                        Author · Year
                     </div>
 
-                    <p>
-                        A short note about the reading and the idea or
-                        question that stood out to you.
-                    </p>
-
-                </div>
-
-            </article>
+                </article>
 
 
-            <article class="reading">
+                <!-- READING 3 -->
 
-                <div class="reading-category">
-                    Technology
-                </div>
+                <article class="reading">
 
-                <div>
+                    <div class="reading-category category-ai">
+                        AI Strategy
+                    </div>
 
-                    <h2>
-                        <a href="#"
+                    <div class="reading-content">
+
+                        <h2>
+                            <a href="#"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                An International Agreement to Prevent the Premature Creation of Artificial Superintelligence
+                            </a>
+                        </h2>
+
+                        <div class="reading-meta">
+                            Aaron Scher, David Abecassis, Peter Barnett & Brian Abeyta · 2025
+                        </div>
+
+                        <p class="reading-description">
+                            A proposal for international coordination around
+                            the development of advanced AI, particularly useful
+                            for thinking about verification, enforcement,
+                            and conditions for resuming development.
+                        </p>
+
+                        <a class="reading-link"
+                           href="#"
                            target="_blank"
                            rel="noopener noreferrer">
-                            Reading Title
+                            Read →
                         </a>
-                    </h2>
 
-                    <div class="reading-meta">
-                        Author · Year
                     </div>
 
-                    <p>
-                        A short note explaining why this reading belongs
-                        in your collection.
-                    </p>
+                </article>
 
-                </div>
 
-            </article>
+                <!-- READING 4 -->
 
+                <article class="reading">
+
+                    <div class="reading-category category-economics">
+                        Economics
+                    </div>
+
+                    <div class="reading-content">
+
+                        <h2>
+                            <a href="#"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Financial Regulation, Deregulation, and Systemic Risk
+                            </a>
+                        </h2>
+
+                        <div class="reading-meta">
+                            Selected research literature
+                        </div>
+
+                        <p class="reading-description">
+                            Papers and historical research that are useful
+                            for understanding how regulatory institutions,
+                            incentives, and financial structures interact
+                            during periods of major economic change.
+                        </p>
+
+                        <a class="reading-link"
+                           href="#"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- READING 5 -->
+
+                <article class="reading">
+
+                    <div class="reading-category category-technology">
+                        Technology
+                    </div>
+
+                    <div class="reading-content">
+
+                        <h2>
+                            <a href="#"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                AI, Labor Markets, and the Future of Work
+                            </a>
+                        </h2>
+
+                        <div class="reading-meta">
+                            Selected research and reports
+                        </div>
+
+                        <p class="reading-description">
+                            Research on AI adoption, employment, task
+                            transformation, and the broader economic
+                            consequences of increasingly capable technology.
+                        </p>
+
+                        <a class="reading-link"
+                           href="#"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
 
         </div>
 
     </div>
-
-</section>
 
 </main>
 
