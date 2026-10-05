@@ -97,65 +97,175 @@
 
             <!-- CATEGORY FILTERS -->
 
-            <div class="category-boxes">
+       /* =========================================================
+   CATEGORY FILTER BOXES
+========================================================= */
 
-                <button
-                    class="category-box category-all active"
-                    type="button"
-                    data-filter="all">
+.category-boxes {
+    display: flex;
 
-                    All
+    flex-wrap: wrap;
 
-                </button>
+    gap: 10px;
 
-                <button
-                    class="category-box category-ai"
-                    type="button"
-                    data-filter="ai">
+    margin-top: 24px;
+}
 
-                    AI Safety
+.category-box {
+    appearance: none;
 
-                </button>
+    display: inline-flex;
 
-                <button
-                    class="category-box category-governance"
-                    type="button"
-                    data-filter="governance">
+    align-items: center;
 
-                    Governance
+    padding: 9px 17px;
 
-                </button>
+    border: 1.5px solid var(--border-strong);
 
-                <button
-                    class="category-box category-economics"
-                    type="button"
-                    data-filter="economics">
+    border-radius: 999px;
 
-                    Economics
+    background: rgba(255, 255, 255, 0.42);
 
-                </button>
+    color: var(--text);
 
-                <button
-                    class="category-box category-technology"
-                    type="button"
-                    data-filter="technology">
+    font-family: inherit;
 
-                    Technology
+    font-size: 14px;
 
-                </button>
+    font-weight: 600;
 
-                <button
-                    class="category-box category-research"
-                    type="button"
-                    data-filter="research">
+    line-height: 1.2;
 
-                    Research
+    letter-spacing: 0.1px;
 
-                </button>
+    cursor: pointer;
 
-            </div>
+    box-shadow:
+        0 1px 2px rgba(23, 22, 20, 0.05);
 
-        </div>
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.category-box:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 10px rgba(23, 22, 20, 0.10);
+}
+
+
+/* ACTIVE */
+
+.category-box.active {
+    font-weight: 700;
+}
+
+
+/* AI SAFETY */
+
+.category-box.category-ai:hover,
+.category-box.category-ai.active {
+    background: var(--sage);
+
+    border-color: var(--sage);
+
+    color: #ffffff;
+}
+
+
+/* GOVERNANCE */
+
+.category-box.category-governance:hover,
+.category-box.category-governance.active {
+    background: var(--navy);
+
+    border-color: var(--navy);
+
+    color: #ffffff;
+}
+
+
+/* ECONOMICS */
+
+.category-box.category-economics:hover,
+.category-box.category-economics.active {
+    background: var(--dark-brown);
+
+    border-color: var(--dark-brown);
+
+    color: #ffffff;
+}
+
+
+/* TECHNOLOGY */
+
+.category-box.category-technology:hover,
+.category-box.category-technology.active {
+    background: var(--maroon);
+
+    border-color: var(--maroon);
+
+    color: #ffffff;
+}
+
+
+/* RESEARCH */
+
+.category-box.category-research:hover,
+.category-box.category-research.active {
+    background: var(--rust);
+
+    border-color: var(--rust);
+
+    color: #ffffff;
+}
+
+
+/* ALL */
+
+.category-box.category-all:hover,
+.category-box.category-all.active {
+    background: var(--text);
+
+    border-color: var(--text);
+
+    color: #ffffff;
+}
+
+
+/* FILTERED ITEMS */
+
+.filter-item {
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.filter-item.hidden {
+    display: none;
+}
+
+
+/* NO RESULTS */
+
+.no-results {
+    display: none;
+
+    padding: 35px 0;
+
+    color: var(--text-soft);
+
+    font-size: 17px;
+}
+
+.no-results.visible {
+    display: block;
+}
 
 
         <!-- BLOG POSTS -->
