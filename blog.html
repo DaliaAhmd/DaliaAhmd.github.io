@@ -94,30 +94,69 @@
                 governance, economics, technology, and research.
             </p>
 
-        <div class="category-boxes">
 
-    <a class="category-box" href="#">
-        AI Safety
-    </a>
+            <!-- CATEGORY FILTERS -->
 
-    <a class="category-box" href="#">
-        Governance
-    </a>
+            <div class="category-boxes">
 
-    <a class="category-box" href="#">
-        Economics
-    </a>
+                <button
+                    class="category-box category-all active"
+                    type="button"
+                    data-filter="all">
 
-    <a class="category-box" href="#">
-        Technology
-    </a>
+                    All
 
-    <a class="category-box" href="#">
-        Research
-    </a>
+                </button>
 
-</div>
-</div>
+                <button
+                    class="category-box category-ai"
+                    type="button"
+                    data-filter="ai">
+
+                    AI Safety
+
+                </button>
+
+                <button
+                    class="category-box category-governance"
+                    type="button"
+                    data-filter="governance">
+
+                    Governance
+
+                </button>
+
+                <button
+                    class="category-box category-economics"
+                    type="button"
+                    data-filter="economics">
+
+                    Economics
+
+                </button>
+
+                <button
+                    class="category-box category-technology"
+                    type="button"
+                    data-filter="technology">
+
+                    Technology
+
+                </button>
+
+                <button
+                    class="category-box category-research"
+                    type="button"
+                    data-filter="research">
+
+                    Research
+
+                </button>
+
+            </div>
+
+        </div>
+
 
         <!-- BLOG POSTS -->
 
@@ -128,7 +167,9 @@
 
                 <!-- POST 1 -->
 
-                <article class="post">
+                <article
+                    class="post filter-item"
+                    data-categories="ai governance">
 
                     <div class="post-date">
                         2026
@@ -137,7 +178,11 @@
                     <div class="post-content">
 
                         <div class="post-category category-ai">
-                            AI & Governance
+                            AI Safety
+                        </div>
+
+                        <div class="post-category category-governance">
+                            Governance
                         </div>
 
                         <h2>
@@ -166,7 +211,9 @@
 
                 <!-- POST 2 -->
 
-                <article class="post">
+                <article
+                    class="post filter-item"
+                    data-categories="research">
 
                     <div class="post-date">
                         2026
@@ -204,7 +251,9 @@
 
                 <!-- POST 3 -->
 
-                <article class="post">
+                <article
+                    class="post filter-item"
+                    data-categories="economics">
 
                     <div class="post-date">
                         2025
@@ -240,6 +289,13 @@
                 </article>
 
 
+                <!-- NO RESULTS -->
+
+                <div class="no-results">
+                    No posts in this category yet.
+                </div>
+
+
             </div>
 
         </div>
@@ -256,6 +312,87 @@
     </div>
 
 </footer>
+
+
+<script>
+
+    const filterButtons =
+        document.querySelectorAll(".category-box");
+
+    const filterItems =
+        document.querySelectorAll(".filter-item");
+
+    const noResults =
+        document.querySelector(".no-results");
+
+
+    filterButtons.forEach(function(button) {
+
+        button.addEventListener("click", function() {
+
+            const selectedCategory =
+                button.dataset.filter;
+
+
+            /* Update active button */
+
+            filterButtons.forEach(function(item) {
+
+                item.classList.remove("active");
+
+            });
+
+            button.classList.add("active");
+
+
+            /* Filter posts */
+
+            let visibleCount = 0;
+
+
+            filterItems.forEach(function(item) {
+
+                const categories =
+                    item.dataset.categories.split(" ");
+
+
+                const matches =
+                    selectedCategory === "all" ||
+                    categories.includes(selectedCategory);
+
+
+                if (matches) {
+
+                    item.classList.remove("hidden");
+
+                    visibleCount++;
+
+                } else {
+
+                    item.classList.add("hidden");
+
+                }
+
+            });
+
+
+            /* Show / hide empty message */
+
+            if (visibleCount === 0) {
+
+                noResults.classList.add("visible");
+
+            } else {
+
+                noResults.classList.remove("visible");
+
+            }
+
+        });
+
+    });
+
+</script>
 
 </body>
 
