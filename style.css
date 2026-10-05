@@ -2,6 +2,7 @@
    DALIA AHMED — WEBSITE STYLES
 ========================================================= */
 
+
 /* =========================================================
    COLOR PALETTE
 ========================================================= */
@@ -23,6 +24,8 @@
     --warm-gold: #b28b52;
 
     --beige: #8d765f;
+
+    --light-brown: #a88d72;
 
     --border: rgba(17, 17, 17, 0.12);
 
@@ -127,7 +130,7 @@ nav {
 }
 
 .name a {
-      color: var(--brown);
+    color: var(--brown);
 
     text-decoration: none;
 
@@ -138,6 +141,7 @@ nav {
 
 .name a:hover {
     color: var(--deep-olive);
+
     opacity: 0.8;
 }
 
@@ -297,13 +301,13 @@ h1 {
 
     color: var(--text);
 
-    font-size: 56px;
+    font-size: 48px;
 
     font-weight: 600;
 
-    letter-spacing: -2.5px;
+    letter-spacing: -2px;
 
-    line-height: 0.98;
+    line-height: 1;
 }
 
 .subtitle {
@@ -384,7 +388,7 @@ h1 {
 #activity h2 {
     margin: 0 0 42px;
 
-    color: #a88d72;
+    color: var(--light-brown);
 
     font-size: 29px;
 
@@ -1215,7 +1219,7 @@ footer {
     }
 
     h1 {
-        font-size: 44px;
+        font-size: 38px;
     }
 
     .subtitle {
