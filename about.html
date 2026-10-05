@@ -20,325 +20,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-
-            background:
-                radial-gradient(
-                    circle at 8% 10%,
-                    rgba(176, 172, 135, 0.48) 0,
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 92% 22%,
-                    rgba(141, 118, 95, 0.28) 0,
-                    transparent 28%
-                ),
-                radial-gradient(
-                    circle at 18% 88%,
-                    rgba(141, 118, 95, 0.22) 0,
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 82% 85%,
-                    rgba(176, 172, 135, 0.35) 0,
-                    transparent 26%
-                ),
-                #e7dfd0;
-
-            color: #111;
-
-            font-family:
-                "Inter Tight",
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 30px;
-        }
-
-        header {
-            padding: 28px 0;
-
-            border-bottom:
-                1px solid rgba(17, 17, 17, 0.12);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .name {
-            font-size: 21px;
-            font-weight: 600;
-            letter-spacing: -0.6px;
-        }
-
-        .name a {
-            color: #111;
-            text-decoration: none;
-
-            transition:
-                opacity 0.2s ease;
-        }
-
-        .name a:hover {
-            opacity: 0.6;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 24px;
-
-            font-size: 15px;
-            font-weight: 500;
-        }
-
-        .nav-links a {
-            color: #111;
-            text-decoration: none;
-
-            transition:
-                opacity 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            opacity: 0.55;
-        }
-
-        /* PAGE INTRO */
-
-        .page-header {
-            padding: 110px 0 70px;
-        }
-
-        .page-header h1 {
-            margin: 0;
-
-            font-size: 52px;
-            font-weight: 600;
-
-            letter-spacing: -2px;
-            line-height: 1;
-        }
-
-        .page-header p {
-            max-width: 650px;
-
-            margin: 25px 0 0;
-
-            font-size: 19px;
-            font-weight: 400;
-
-            line-height: 1.65;
-        }
-
-        /* CONTENT */
-
-        section {
-            padding: 75px 0;
-
-            border-top:
-                1px solid rgba(17, 17, 17, 0.12);
-        }
-
-        .section-label {
-            margin: 0 0 28px;
-
-            font-size: 14px;
-            font-weight: 600;
-
-            text-transform: uppercase;
-
-            letter-spacing: 1.8px;
-        }
-
-        .text {
-            max-width: 720px;
-        }
-
-        .text p {
-            margin: 0 0 28px;
-
-            font-size: 18px;
-            font-weight: 400;
-
-            line-height: 1.75;
-        }
-
-        .text p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* INTERESTS */
-
-        .interest-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, minmax(0, 1fr));
-
-            gap: 18px;
-        }
-
-        .interest {
-            padding: 27px 28px;
-
-            border:
-                1px solid rgba(17, 17, 17, 0.13);
-
-            background:
-                rgba(255, 255, 255, 0.18);
-        }
-
-        .interest h3 {
-            margin: 0 0 10px;
-
-            font-size: 21px;
-            font-weight: 600;
-
-            letter-spacing: -0.5px;
-        }
-
-        .interest p {
-            margin: 0;
-
-            font-size: 16px;
-
-            line-height: 1.6;
-        }
-
-        .interest:nth-child(1) {
-            border-top: 3px solid #68705a;
-        }
-
-        .interest:nth-child(2) {
-            border-top: 3px solid #7a5b45;
-        }
-
-        .interest:nth-child(3) {
-            border-top: 3px solid #a95f47;
-        }
-
-        .interest:nth-child(4) {
-            border-top: 3px solid #8d765f;
-        }
-
-        /* BACK LINK */
-
-        .back-link {
-            display: inline-block;
-
-            margin-top: 45px;
-
-            color: #111;
-
-            font-size: 15px;
-            font-weight: 500;
-
-            text-decoration: none;
-
-            border-bottom:
-                1px solid #111;
-
-            padding-bottom: 2px;
-
-            transition:
-                opacity 0.2s ease;
-        }
-
-        .back-link:hover {
-            opacity: 0.55;
-        }
-
-        /* FOOTER */
-
-        footer {
-            padding: 50px 0;
-
-            color: #111;
-
-            font-size: 13px;
-            font-weight: 400;
-
-            text-align: center;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 700px) {
-
-            .container {
-                padding: 0 20px;
-            }
-
-            nav {
-                align-items: flex-start;
-            }
-
-            .name {
-                font-size: 19px;
-            }
-
-            .nav-links {
-                gap: 12px;
-
-                flex-wrap: wrap;
-
-                justify-content: flex-end;
-
-                font-size: 14px;
-            }
-
-            .page-header {
-                padding: 80px 0 60px;
-            }
-
-            .page-header h1 {
-                font-size: 44px;
-            }
-
-            .page-header p {
-                font-size: 17px;
-            }
-
-            section {
-                padding: 65px 0;
-            }
-
-            .text p {
-                font-size: 17px;
-            }
-
-            .interest-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .interest h3 {
-                font-size: 20px;
-            }
-
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -397,6 +79,8 @@
 
 <main>
 
+    <!-- PAGE HEADER -->
+
     <div class="container">
 
         <div class="page-header">
@@ -414,6 +98,8 @@
 
     </div>
 
+
+    <!-- BACKGROUND -->
 
     <section>
 
@@ -453,6 +139,8 @@
 
     </section>
 
+
+    <!-- CURRENT INTERESTS -->
 
     <section>
 
@@ -529,6 +217,8 @@
 
     </section>
 
+
+    <!-- WHAT I'M BUILDING TOWARD -->
 
     <section>
 
