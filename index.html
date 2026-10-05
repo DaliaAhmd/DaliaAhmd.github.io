@@ -73,6 +73,8 @@
             padding: 0 30px;
         }
 
+        /* HEADER */
+
         header {
             padding: 28px 0;
 
@@ -82,18 +84,21 @@
 
         nav {
             display: flex;
+
             justify-content: space-between;
             align-items: center;
         }
 
         .name {
-            font-size: 21px;
+            font-size: 25px;
             font-weight: 600;
-            letter-spacing: -0.6px;
+
+            letter-spacing: -0.9px;
         }
 
         .name a {
             color: #111;
+
             text-decoration: none;
 
             transition:
@@ -106,6 +111,7 @@
 
         .nav-links {
             display: flex;
+
             gap: 24px;
 
             font-size: 15px;
@@ -114,6 +120,7 @@
 
         .nav-links a {
             color: #111;
+
             text-decoration: none;
 
             transition:
@@ -132,7 +139,9 @@
 
         .hero-content {
             display: flex;
+
             align-items: center;
+
             gap: 75px;
         }
 
@@ -162,6 +171,7 @@
             font-weight: 600;
 
             letter-spacing: -2.5px;
+
             line-height: 0.98;
         }
 
@@ -195,6 +205,7 @@
 
         .links {
             display: flex;
+
             gap: 28px;
 
             margin-top: 30px;
@@ -233,8 +244,8 @@
         h2 {
             margin: 0 0 34px;
 
-            font-size: 15px;
-            font-weight: 600;
+            font-size: 18px;
+            font-weight: 700;
 
             text-transform: uppercase;
 
@@ -247,6 +258,7 @@
 
         .activity {
             display: flex;
+
             flex-direction: column;
         }
 
@@ -257,7 +269,7 @@
 
             gap: 18px;
 
-            padding: 25px 0;
+            padding: 27px 0;
 
             border-top:
                 1px solid rgba(17, 17, 17, 0.11);
@@ -265,14 +277,15 @@
 
         .activity-item:first-child {
             border-top: 0;
+
             padding-top: 0;
         }
 
         .activity-date {
-            padding-top: 3px;
+            padding-top: 5px;
 
             font-size: 13px;
-            font-weight: 500;
+            font-weight: 600;
 
             letter-spacing: 0.8px;
 
@@ -290,23 +303,24 @@
         .activity-marker::before {
             content: "";
 
-            width: 9px;
-            height: 9px;
+            width: 10px;
+            height: 10px;
 
-            margin-top: 8px;
+            margin-top: 9px;
 
             border-radius: 50%;
 
             background: #68705a;
         }
 
-        .activity-item:not(:last-child) .activity-marker::after {
+        .activity-item:not(:last-child)
+        .activity-marker::after {
             content: "";
 
             position: absolute;
 
-            top: 24px;
-            bottom: -25px;
+            top: 26px;
+            bottom: -27px;
 
             width: 1px;
 
@@ -315,27 +329,27 @@
         }
 
         .activity-content {
-            max-width: 700px;
+            max-width: 720px;
         }
 
         .activity-title {
-            margin: 0 0 7px;
+            margin: 0 0 8px;
 
-            font-size: 21px;
-            font-weight: 600;
+            font-size: 24px;
+            font-weight: 700;
 
-            letter-spacing: -0.5px;
+            letter-spacing: -0.7px;
 
-            line-height: 1.3;
+            line-height: 1.25;
         }
 
         .activity-description {
             margin: 0;
 
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 400;
 
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         .activity-category {
@@ -344,7 +358,7 @@
             margin-top: 12px;
 
             font-size: 11px;
-            font-weight: 600;
+            font-weight: 700;
 
             letter-spacing: 1.1px;
 
@@ -424,6 +438,7 @@
 
         .contact-links a:hover {
             transform: translateY(-5px);
+
             opacity: 0.75;
         }
 
@@ -493,7 +508,7 @@
             }
 
             .name {
-                font-size: 19px;
+                font-size: 21px;
             }
 
             .nav-links {
@@ -543,18 +558,28 @@
                 padding: 70px 0;
             }
 
+            h2 {
+                font-size: 17px;
+
+                margin-bottom: 30px;
+            }
+
             .activity-item {
                 grid-template-columns: 72px 16px 1fr;
 
                 gap: 12px;
             }
 
+            .activity-date {
+                font-size: 12px;
+            }
+
             .activity-title {
-                font-size: 19px;
+                font-size: 21px;
             }
 
             .activity-description {
-                font-size: 15px;
+                font-size: 16px;
             }
 
             .contact-links {
@@ -587,9 +612,11 @@
         <nav>
 
             <div class="name">
+
                 <a href="index.html">
                     Dalia Ahmed
                 </a>
+
             </div>
 
             <div class="nav-links">
@@ -698,6 +725,7 @@
             </h2>
 
             <div class="activity">
+
 
                 <article class="activity-item">
 
@@ -816,6 +844,7 @@
 
                 </article>
 
+
             </div>
 
         </div>
@@ -834,6 +863,7 @@
             </h2>
 
             <div class="contact-links">
+
 
                 <a href="https://www.linkedin.com/in/dalia-ahmed99/"
                    target="_blank"
@@ -949,6 +979,7 @@
                     </svg>
 
                 </a>
+
 
             </div>
 
