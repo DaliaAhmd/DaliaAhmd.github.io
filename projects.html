@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Projects — Dalia Ahmed</title>
+
+    <link rel="icon" type="image/png" href="Dalia.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            background:
+                radial-gradient(
+                    circle at 8% 10%,
+                    rgba(176, 172, 135, 0.48) 0,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 92% 22%,
+                    rgba(141, 118, 95, 0.28) 0,
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 18% 88%,
+                    rgba(141, 118, 95, 0.22) 0,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 82% 85%,
+                    rgba(176, 172, 135, 0.35) 0,
+                    transparent 26%
+                ),
+                #e7dfd0;
+
+            color: #111;
+
+            font-family:
+                "Inter Tight",
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        header {
+            padding: 28px 0;
+
+            border-bottom:
+                1px solid rgba(17, 17, 17, 0.12);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .name {
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: -0.6px;
+        }
+
+        .name a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: #111;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.55;
+        }
+
+        .page {
+            padding: 100px 0 120px;
+        }
+
+        .page-header {
+            max-width: 700px;
+            margin-bottom: 70px;
+        }
+
+        h1 {
+            margin: 0 0 20px;
+
+            font-size: 54px;
+            font-weight: 500;
+
+            letter-spacing: -2.3px;
+            line-height: 1;
+        }
+
+        .page-intro {
+            margin: 0;
+
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .projects {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 24px;
+        }
+
+        .project {
+            padding: 32px;
+
+            border:
+                1px solid rgba(17, 17, 17, 0.15);
+
+            background:
+                rgba(241, 236, 227, 0.42);
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-4px);
+
+            background:
+                rgba(241, 236, 227, 0.7);
+        }
+
+        .project-number {
+            font-size: 13px;
+            font-weight: 500;
+
+            margin-bottom: 45px;
+
+            opacity: 0.55;
+        }
+
+        .project h2 {
+            margin: 0 0 14px;
+
+            font-size: 26px;
+            font-weight: 500;
+
+            letter-spacing: -0.8px;
+        }
+
+        .project p {
+            margin: 0;
+
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .project-link {
+            display: inline-block;
+
+            margin-top: 24px;
+
+            color: #111;
+
+            text-decoration: none;
+
+            border-bottom:
+                1px solid #111;
+
+            padding-bottom: 2px;
+
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        footer {
+            padding: 50px 0;
+
+            border-top:
+                1px solid rgba(17, 17, 17, 0.12);
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                gap: 15px;
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .container {
+                padding: 0 20px;
+            }
+
+            nav {
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                font-size: 14px;
+            }
+
+            .page {
+                padding: 70px 0 90px;
+            }
+
+            h1 {
+                font-size: 44px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <div class="name">
+
+                <a href="index.html">
+                    Dalia Ahmed
+                </a>
+
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="readings.html">
+                    Readings
+                </a>
+
+                <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    CV
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<main>
+
+<section class="page">
+
+    <div class="container">
+
+        <div class="page-header">
+
+            <h1>
+                Projects
+            </h1>
+
+            <p class="page-intro">
+                A collection of research, analysis, and independent projects
+                exploring economics, technology, AI governance, and related
+                questions.
+            </p>
+
+        </div>
+
+
+        <div class="projects">
+
+            <article class="project">
+
+                <div class="project-number">
+                    01
+                </div>
+
+                <h2>
+                    Project Title
+                </h2>
+
+                <p>
+                    A brief description of the project, the question it
+                    explores, and what you produced.
+                </p>
+
+                <a href="#"
+                   class="project-link">
+                    View project →
+                </a>
+
+            </article>
+
+
+            <article class="project">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <h2>
+                    Project Title
+                </h2>
+
+                <p>
+                    A brief description of the project, the question it
+                    explores, and what you produced.
+                </p>
+
+                <a href="#"
+                   class="project-link">
+                    View project →
+                </a>
+
+            </article>
+
+
+            <article class="project">
+
+                <div class="project-number">
+                    03
+                </div>
+
+                <h2>
+                    Project Title
+                </h2>
+
+                <p>
+                    A brief description of the project, the question it
+                    explores, and what you produced.
+                </p>
+
+                <a href="#"
+                   class="project-link">
+                    View project →
+                </a>
+
+            </article>
+
+
+            <article class="project">
+
+                <div class="project-number">
+                    04
+                </div>
+
+                <h2>
+                    Project Title
+                </h2>
+
+                <p>
+                    A brief description of the project, the question it
+                    explores, and what you produced.
+                </p>
+
+                <a href="#"
+                   class="project-link">
+                    View project →
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+        © 2026 Dalia Ahmed
+    </div>
+
+</footer>
+
+</body>
+
+</html>
