@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>About — Dalia Ahmed</title>
+
+    <link rel="icon" type="image/png" href="Dalia.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+
+            background:
+                radial-gradient(
+                    circle at 8% 10%,
+                    rgba(176, 172, 135, 0.48) 0,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 92% 22%,
+                    rgba(141, 118, 95, 0.28) 0,
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 18% 88%,
+                    rgba(141, 118, 95, 0.22) 0,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 82% 85%,
+                    rgba(176, 172, 135, 0.35) 0,
+                    transparent 26%
+                ),
+                #e7dfd0;
+
+            color: #111;
+
+            font-family:
+                "Inter Tight",
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        header {
+            padding: 28px 0;
+
+            border-bottom:
+                1px solid rgba(17, 17, 17, 0.12);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .name {
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: -0.6px;
+        }
+
+        .name a {
+            color: #111;
+            text-decoration: none;
+
+            transition:
+                opacity 0.2s ease;
+        }
+
+        .name a:hover {
+            opacity: 0.6;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: #111;
+            text-decoration: none;
+
+            transition:
+                opacity 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.55;
+        }
+
+        /* PAGE INTRO */
+
+        .page-header {
+            padding: 110px 0 70px;
+        }
+
+        .page-header h1 {
+            margin: 0;
+
+            font-size: 52px;
+            font-weight: 600;
+
+            letter-spacing: -2px;
+            line-height: 1;
+        }
+
+        .page-header p {
+            max-width: 650px;
+
+            margin: 25px 0 0;
+
+            font-size: 19px;
+            font-weight: 400;
+
+            line-height: 1.65;
+        }
+
+        /* CONTENT */
+
+        section {
+            padding: 75px 0;
+
+            border-top:
+                1px solid rgba(17, 17, 17, 0.12);
+        }
+
+        .section-label {
+            margin: 0 0 28px;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.8px;
+        }
+
+        .text {
+            max-width: 720px;
+        }
+
+        .text p {
+            margin: 0 0 28px;
+
+            font-size: 18px;
+            font-weight: 400;
+
+            line-height: 1.75;
+        }
+
+        .text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* INTERESTS */
+
+        .interest-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 18px;
+        }
+
+        .interest {
+            padding: 27px 28px;
+
+            border:
+                1px solid rgba(17, 17, 17, 0.13);
+
+            background:
+                rgba(255, 255, 255, 0.18);
+        }
+
+        .interest h3 {
+            margin: 0 0 10px;
+
+            font-size: 21px;
+            font-weight: 600;
+
+            letter-spacing: -0.5px;
+        }
+
+        .interest p {
+            margin: 0;
+
+            font-size: 16px;
+
+            line-height: 1.6;
+        }
+
+        .interest:nth-child(1) {
+            border-top: 3px solid #68705a;
+        }
+
+        .interest:nth-child(2) {
+            border-top: 3px solid #7a5b45;
+        }
+
+        .interest:nth-child(3) {
+            border-top: 3px solid #a95f47;
+        }
+
+        .interest:nth-child(4) {
+            border-top: 3px solid #8d765f;
+        }
+
+        /* BACK LINK */
+
+        .back-link {
+            display: inline-block;
+
+            margin-top: 45px;
+
+            color: #111;
+
+            font-size: 15px;
+            font-weight: 500;
+
+            text-decoration: none;
+
+            border-bottom:
+                1px solid #111;
+
+            padding-bottom: 2px;
+
+            transition:
+                opacity 0.2s ease;
+        }
+
+        .back-link:hover {
+            opacity: 0.55;
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding: 50px 0;
+
+            color: #111;
+
+            font-size: 13px;
+            font-weight: 400;
+
+            text-align: center;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .container {
+                padding: 0 20px;
+            }
+
+            nav {
+                align-items: flex-start;
+            }
+
+            .name {
+                font-size: 19px;
+            }
+
+            .nav-links {
+                gap: 12px;
+
+                flex-wrap: wrap;
+
+                justify-content: flex-end;
+
+                font-size: 14px;
+            }
+
+            .page-header {
+                padding: 80px 0 60px;
+            }
+
+            .page-header h1 {
+                font-size: 44px;
+            }
+
+            .page-header p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+
+            .text p {
+                font-size: 17px;
+            }
+
+            .interest-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .interest h3 {
+                font-size: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <div class="name">
+
+                <a href="index.html">
+                    Dalia Ahmed
+                </a>
+
+            </div>
+
+            <div class="nav-links">
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+                <a href="readings.html">
+                    Readings
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    CV
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <div class="container">
+
+        <div class="page-header">
+
+            <h1>
+                About
+            </h1>
+
+            <p>
+                A little more about my background, interests, and the kinds
+                of questions I’m interested in working on.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-label">
+                Background
+            </h2>
+
+            <div class="text">
+
+                <p>
+                    My background is in business and economics, with research
+                    experience spanning economic history, financial systems,
+                    regulation, and data analysis.
+                </p>
+
+                <p>
+                    During my undergraduate studies, I became interested in
+                    understanding how institutions shape economic outcomes.
+                    That led me toward research involving historical
+                    financial systems, regulatory documents, and large
+                    economic datasets.
+                </p>
+
+                <p>
+                    I have also worked in coordination and communications
+                    roles, where I supported students, faculty, events,
+                    logistics, and large-scale activities. These experiences
+                    made me particularly interested in the operational side
+                    of research and organizations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-label">
+                Current Interests
+            </h2>
+
+            <div class="interest-grid">
+
+                <div class="interest">
+
+                    <h3>
+                        AI Safety
+                    </h3>
+
+                    <p>
+                        How increasingly capable AI systems can be developed
+                        and deployed safely, including questions around
+                        control, evaluations, alignment, and systemic risk.
+                    </p>
+
+                </div>
+
+
+                <div class="interest">
+
+                    <h3>
+                        AI Governance
+                    </h3>
+
+                    <p>
+                        How institutions, governments, and international
+                        actors can coordinate around advanced AI and create
+                        effective governance frameworks.
+                    </p>
+
+                </div>
+
+
+                <div class="interest">
+
+                    <h3>
+                        Technology & Policy
+                    </h3>
+
+                    <p>
+                        The effects of technological change on labor,
+                        institutions, state capacity, economic systems,
+                        and public policy.
+                    </p>
+
+                </div>
+
+
+                <div class="interest">
+
+                    <h3>
+                        Research & Operations
+                    </h3>
+
+                    <p>
+                        Helping research teams work effectively through
+                        coordination, project management, systems design,
+                        and turning complex questions into useful outputs.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="container">
+
+            <h2 class="section-label">
+                What I’m Building Toward
+            </h2>
+
+            <div class="text">
+
+                <p>
+                    I’m interested in roles that sit between research and
+                    operations: understanding complex problems while also
+                    helping the people working on them collaborate,
+                    organize projects, and produce high-quality work.
+                </p>
+
+                <p>
+                    Over time, I hope to work at the intersection of
+                    advanced AI governance, public policy, and research
+                    operations.
+                </p>
+
+                <a class="back-link"
+                   href="index.html">
+                    ← Back to home
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+        © 2026 Dalia Ahmed
+    </div>
+
+</footer>
+
+</body>
+
+</html>
