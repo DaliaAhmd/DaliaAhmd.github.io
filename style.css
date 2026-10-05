@@ -127,7 +127,7 @@ nav {
 }
 
 .name a {
-    color: var(--deep-olive);
+      color: var(--brown);
 
     text-decoration: none;
 
@@ -137,9 +137,8 @@ nav {
 }
 
 .name a:hover {
-    color: var(--olive);
-
-    opacity: 0.75;
+    color: var(--deep-olive);
+    opacity: 0.8;
 }
 
 
@@ -385,7 +384,7 @@ h1 {
 #activity h2 {
     margin: 0 0 42px;
 
-    color: var(--deep-olive);
+    color: #a88d72;
 
     font-size: 29px;
 
