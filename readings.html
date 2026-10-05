@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Readings — Dalia Ahmed</title>
+
+    <link rel="icon" type="image/png" href="Dalia.png">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            background:
+                radial-gradient(
+                    circle at 8% 10%,
+                    rgba(176, 172, 135, 0.48) 0,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 92% 22%,
+                    rgba(141, 118, 95, 0.28) 0,
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 18% 88%,
+                    rgba(141, 118, 95, 0.22) 0,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 82% 85%,
+                    rgba(176, 172, 135, 0.35) 0,
+                    transparent 26%
+                ),
+                #e7dfd0;
+
+            color: #111;
+
+            font-family:
+                "Inter Tight",
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        header {
+            padding: 28px 0;
+
+            border-bottom:
+                1px solid rgba(17, 17, 17, 0.12);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .name {
+            font-size: 21px;
+            font-weight: 600;
+            letter-spacing: -0.6px;
+        }
+
+        .name a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .nav-links a {
+            color: #111;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.55;
+        }
+
+        .page {
+            padding: 100px 0 120px;
+        }
+
+        .page-header {
+            max-width: 700px;
+            margin-bottom: 70px;
+        }
+
+        h1 {
+            margin: 0 0 20px;
+
+            font-size: 54px;
+            font-weight: 500;
+
+            letter-spacing: -2.3px;
+            line-height: 1;
+        }
+
+        .page-intro {
+            margin: 0;
+
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .readings {
+            border-top:
+                1px solid rgba(17, 17, 17, 0.15);
+        }
+
+        .reading {
+            display: grid;
+
+            grid-template-columns: 110px 1fr;
+
+            gap: 35px;
+
+            padding: 30px 0;
+
+            border-bottom:
+                1px solid rgba(17, 17, 17, 0.15);
+        }
+
+        .reading-category {
+            font-size: 13px;
+            font-weight: 500;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            opacity: 0.55;
+        }
+
+        .reading h2 {
+            margin: 0 0 8px;
+
+            font-size: 23px;
+            font-weight: 500;
+
+            letter-spacing: -0.7px;
+        }
+
+        .reading h2 a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        .reading h2 a:hover {
+            opacity: 0.6;
+        }
+
+        .reading-meta {
+            margin-bottom: 12px;
+
+            font-size: 14px;
+
+            opacity: 0.6;
+        }
+
+        .reading p {
+            margin: 0;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+        footer {
+            padding: 50px 0;
+
+            border-top:
+                1px solid rgba(17, 17, 17, 0.12);
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+        @media (max-width: 850px) {
+
+            .nav-links {
+                gap: 15px;
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .container {
+                padding: 0 20px;
+            }
+
+            nav {
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                font-size: 14px;
+            }
+
+            .page {
+                padding: 70px 0 90px;
+            }
+
+            h1 {
+                font-size: 44px;
+            }
+
+            .reading {
+                grid-template-columns: 1fr;
+
+                gap: 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="container">
+
+        <nav>
+
+            <div class="name">
+
+                <a href="index.html">
+                    Dalia Ahmed
+                </a>
+
+            </div>
+
+            <div class="nav-links">
+
+                <a href="index.html#about">
+                    About
+                </a>
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="readings.html">
+                    Readings
+                </a>
+
+                <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    CV
+                </a>
+
+                <a href="index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<main>
+
+<section class="page">
+
+    <div class="container">
+
+        <div class="page-header">
+
+            <h1>
+                Readings
+            </h1>
+
+            <p class="page-intro">
+                Papers, articles, reports, and other ideas I’ve found
+                interesting or useful.
+            </p>
+
+        </div>
+
+
+        <div class="readings">
+
+
+            <article class="reading">
+
+                <div class="reading-category">
+                    AI Safety
+                </div>
+
+                <div>
+
+                    <h2>
+                        <a href="#"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Reading Title
+                        </a>
+                    </h2>
+
+                    <div class="reading-meta">
+                        Author · Year
+                    </div>
+
+                    <p>
+                        A short note about why this reading is interesting,
+                        what question it addresses, or what you took from it.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="reading">
+
+                <div class="reading-category">
+                    Governance
+                </div>
+
+                <div>
+
+                    <h2>
+                        <a href="#"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Reading Title
+                        </a>
+                    </h2>
+
+                    <div class="reading-meta">
+                        Author · Year
+                    </div>
+
+                    <p>
+                        A short note about the reading and why it is worth
+                        recommending.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="reading">
+
+                <div class="reading-category">
+                    Economics
+                </div>
+
+                <div>
+
+                    <h2>
+                        <a href="#"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Reading Title
+                        </a>
+                    </h2>
+
+                    <div class="reading-meta">
+                        Author · Year
+                    </div>
+
+                    <p>
+                        A short note about the reading and the idea or
+                        question that stood out to you.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="reading">
+
+                <div class="reading-category">
+                    Technology
+                </div>
+
+                <div>
+
+                    <h2>
+                        <a href="#"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Reading Title
+                        </a>
+                    </h2>
+
+                    <div class="reading-meta">
+                        Author · Year
+                    </div>
+
+                    <p>
+                        A short note explaining why this reading belongs
+                        in your collection.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+        © 2026 Dalia Ahmed
+    </div>
+
+</footer>
+
+</body>
+
+</html>
