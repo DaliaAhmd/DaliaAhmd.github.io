@@ -12,56 +12,73 @@
 
     <link rel="icon" type="image/png" href="Dalia.png">
 
-    <!-- Inter Font -->
+    <!-- Inter Tight Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
 
         body {
             margin: 0;
 
             background:
                 radial-gradient(
-                    circle at 10% 15%,
-                    rgba(190, 160, 130, 0.18) 0,
-                    transparent 28%
-                ),
-                radial-gradient(
-                    circle at 90% 80%,
-                    rgba(170, 145, 120, 0.16) 0,
+                    circle at 8% 10%,
+                    rgba(176, 172, 135, 0.48) 0,
                     transparent 30%
                 ),
                 radial-gradient(
-                    circle at 75% 10%,
-                    rgba(255, 255, 255, 0.55) 0,
-                    transparent 22%
+                    circle at 92% 22%,
+                    rgba(141, 118, 95, 0.28) 0,
+                    transparent 28%
                 ),
-                #e8dfd2;
+                radial-gradient(
+                    circle at 18% 88%,
+                    rgba(141, 118, 95, 0.22) 0,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 82% 85%,
+                    rgba(176, 172, 135, 0.35) 0,
+                    transparent 26%
+                ),
+                #e7dfd0;
 
-            color: #222;
+            color: #111;
 
             font-family:
-                "Inter",
+                "Inter Tight",
                 Arial,
                 Helvetica,
                 sans-serif;
 
-            line-height: 1.7;
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 30px;
         }
 
         header {
             padding: 28px 0;
+
             border-bottom:
-                1px solid rgba(80, 70, 60, 0.12);
+                1px solid rgba(17, 17, 17, 0.12);
         }
 
         nav {
@@ -72,18 +89,19 @@
 
         .name {
             font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+                "Inter Tight",
+                Arial,
+                Helvetica,
+                sans-serif;
 
-            font-size: 22px;
-            font-weight: bold;
+            font-size: 21px;
+            font-weight: 600;
 
-            letter-spacing: -0.3px;
+            letter-spacing: -0.6px;
         }
 
         .name a {
-            color: #222;
+            color: #111;
             text-decoration: none;
 
             transition:
@@ -91,43 +109,43 @@
         }
 
         .name a:hover {
-            opacity: 0.65;
+            opacity: 0.6;
         }
 
         .nav-links {
             display: flex;
-            gap: 25px;
+            gap: 28px;
 
             font-family:
-                "Inter",
+                "Inter Tight",
                 Arial,
                 Helvetica,
                 sans-serif;
 
-            font-size: 14px;
-            font-weight: 400;
+            font-size: 15px;
+            font-weight: 500;
         }
 
         .nav-links a {
-            color: #222;
+            color: #111;
             text-decoration: none;
 
             transition:
-                color 0.2s ease;
+                opacity 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: #000;
+            opacity: 0.55;
         }
 
         .hero {
-            padding: 120px 0;
+            padding: 120px 0 130px;
         }
 
         .hero-content {
             display: flex;
             align-items: center;
-            gap: 70px;
+            gap: 75px;
         }
 
         .hero-photo {
@@ -140,7 +158,7 @@
 
             object-fit: cover;
 
-            border-radius: 8px;
+            border-radius: 6px;
 
             display: block;
         }
@@ -150,25 +168,47 @@
         }
 
         h1 {
-            margin: 0 0 20px;
+            margin: 0 0 18px;
 
             font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+                "Inter Tight",
+                Arial,
+                Helvetica,
+                sans-serif;
 
-            font-size: 48px;
-            font-weight: normal;
+            font-size: 56px;
+            font-weight: 500;
 
-            letter-spacing: -1.5px;
-            line-height: 1.1;
+            letter-spacing: -2.5px;
+            line-height: 0.98;
         }
 
         .subtitle {
-            margin-bottom: 25px;
+            margin-bottom: 26px;
 
             font-family:
-                "Inter",
+                "Inter Tight",
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 18px;
+            font-weight: 500;
+
+            color: #111;
+
+            line-height: 1.45;
+
+            letter-spacing: -0.3px;
+        }
+
+        .intro {
+            max-width: 610px;
+
+            margin-top: 0;
+
+            font-family:
+                "Inter Tight",
                 Arial,
                 Helvetica,
                 sans-serif;
@@ -176,94 +216,99 @@
             font-size: 18px;
             font-weight: 400;
 
-            color: #222;
+            color: #111;
 
-            line-height: 1.6;
-        }
+            line-height: 1.7;
 
-        .intro {
-            max-width: 620px;
-
-            font-family:
-                "Inter",
-                Arial,
-                Helvetica,
-                sans-serif;
-
-            font-size: 17px;
-            font-weight: 400;
-
-            color: #222;
-
-            line-height: 1.75;
-
-            letter-spacing: -0.1px;
+            letter-spacing: -0.2px;
         }
 
         .links {
             display: flex;
-            gap: 25px;
+            gap: 28px;
 
             margin-top: 30px;
 
             font-family:
-                "Inter",
+                "Inter Tight",
                 Arial,
                 Helvetica,
                 sans-serif;
+
+            font-size: 15px;
+            font-weight: 500;
         }
 
         .links a {
-            color: #222;
+            color: #111;
+
             text-decoration: none;
+
             border-bottom:
-                1px solid #222;
+                1px solid #111;
+
+            padding-bottom: 2px;
 
             transition:
                 opacity 0.2s ease;
         }
 
         .links a:hover {
-            opacity: 0.6;
+            opacity: 0.55;
         }
 
         section {
-            padding: 70px 0;
+            padding: 90px 0;
+
             border-top:
-                1px solid rgba(80, 70, 60, 0.12);
+                1px solid rgba(17, 17, 17, 0.12);
         }
 
         h2 {
-            margin-bottom: 30px;
+            margin: 0 0 30px;
 
             font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 16px;
-            font-weight: normal;
-
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #222;
-        }
-
-        .text {
-            max-width: 700px;
-
-            font-family:
-                "Inter",
+                "Inter Tight",
                 Arial,
                 Helvetica,
                 sans-serif;
 
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: 600;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.8px;
+
+            color: #111;
+        }
+
+        .text {
+            max-width: 720px;
+
+            font-family:
+                "Inter Tight",
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 18px;
             font-weight: 400;
 
-            color: #222;
+            color: #111;
 
             line-height: 1.75;
+
+            letter-spacing: -0.15px;
+        }
+
+        .text p {
+            margin-top: 0;
+            margin-bottom: 28px;
+        }
+
+        .text p:last-child {
+            margin-bottom: 0;
         }
 
         #contact {
@@ -276,17 +321,21 @@
 
         .contact-links {
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             gap: 35px;
 
-            margin-top: 25px;
+            margin-top: 30px;
         }
 
         .contact-links a {
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             width: 60px;
@@ -321,24 +370,28 @@
         .github-icon {
             width: 48px;
             height: 48px;
+
             fill: #181717;
         }
 
         footer {
             padding: 50px 0;
-            color: #222;
+
+            color: #111;
 
             font-family:
-                "Inter",
+                "Inter Tight",
                 Arial,
                 Helvetica,
                 sans-serif;
 
             font-size: 13px;
+            font-weight: 400;
+
             text-align: center;
         }
 
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
 
             .container {
                 padding: 0 20px;
@@ -349,32 +402,40 @@
             }
 
             .name {
-                font-size: 20px;
+                font-size: 19px;
             }
 
             .nav-links {
-                gap: 12px;
+                gap: 14px;
+
                 flex-wrap: wrap;
+
                 justify-content: flex-end;
+
+                font-size: 14px;
             }
 
             .hero {
-                padding: 80px 0;
+                padding: 80px 0 90px;
             }
 
             .hero-content {
                 flex-direction: column;
+
                 text-align: center;
-                gap: 40px;
+
+                gap: 42px;
             }
 
             .hero-photo img {
-                width: 220px;
-                height: 220px;
+                width: 230px;
+                height: 230px;
             }
 
             h1 {
-                font-size: 40px;
+                font-size: 44px;
+
+                letter-spacing: -1.8px;
             }
 
             .subtitle {
@@ -382,11 +443,19 @@
             }
 
             .intro {
-                font-size: 16px;
+                font-size: 17px;
             }
 
             .links {
                 justify-content: center;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .text {
+                font-size: 17px;
             }
 
             .contact-links {
@@ -413,20 +482,28 @@
 <body>
 
 <header>
+
     <div class="container">
+
         <nav>
 
             <div class="name">
+
                 <a href="index.html">
                     Dalia Ahmed
                 </a>
+
             </div>
 
             <div class="nav-links">
 
-                <a href="#about">About</a>
+                <a href="#about">
+                    About
+                </a>
 
-                <a href="blog.html">Blog</a>
+                <a href="blog.html">
+                    Blog
+                </a>
 
                 <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link"
                    target="_blank"
@@ -434,12 +511,16 @@
                     CV
                 </a>
 
-                <a href="#contact">Contact</a>
+                <a href="#contact">
+                    Contact
+                </a>
 
             </div>
 
         </nav>
+
     </div>
+
 </header>
 
 <main>
@@ -449,8 +530,10 @@
     <div class="container hero-content">
 
         <div class="hero-photo">
+
             <img src="Dalia.png"
                  alt="Dalia Ahmed">
+
         </div>
 
         <div class="hero-text">
@@ -495,11 +578,14 @@
 
 </section>
 
+
 <section id="about">
 
     <div class="container">
 
-        <h2>About</h2>
+        <h2>
+            About
+        </h2>
 
         <div class="text">
 
@@ -528,13 +614,17 @@
 
 </section>
 
+
 <section id="contact">
 
     <div class="container">
 
-        <h2>Contact</h2>
+        <h2>
+            Contact
+        </h2>
 
         <div class="contact-links">
+
 
             <a href="https://www.linkedin.com/in/dalia-ahmed99/"
                target="_blank"
@@ -579,6 +669,7 @@
 
             </a>
 
+
             <a href="mailto:dalia.ahmed1119@gmail.com"
                aria-label="Email"
                title="Email">
@@ -609,6 +700,7 @@
                 </svg>
 
             </a>
+
 
             <a href="https://github.com/DaliaAhmd"
                target="_blank"
@@ -657,6 +749,7 @@
 
 </main>
 
+
 <footer>
 
     <div class="container">
@@ -664,6 +757,7 @@
     </div>
 
 </footer>
+
 
 </body>
 
