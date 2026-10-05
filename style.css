@@ -1,17 +1,9 @@
-/* =========================================================
-   DALIA AHMED — SHARED WEBSITE STYLES
-========================================================= */
-
-
-/* =========================================================
-   COLOR PALETTE
-========================================================= */
-
 :root {
-
     --background: #e7dfd0;
 
     --text: #111111;
+
+    --maroon: #6b2737;
 
     --navy: #26384a;
 
@@ -19,18 +11,11 @@
 
     --olive: #596248;
 
-    --name-color: #67453f;
-
     --dark-brown: #5f4a3a;
-
-    --light-brown: #917866;
-
-    --terracotta: #8a5144;
 
     --border: rgba(17, 17, 17, 0.14);
 
     --border-light: rgba(17, 17, 17, 0.11);
-
 }
 
 
@@ -85,7 +70,7 @@ body {
 
 
 /* =========================================================
-   GLOBAL CONTAINER
+   CONTAINER
 ========================================================= */
 
 .container {
@@ -132,7 +117,7 @@ nav {
 }
 
 .name a {
-    color: var(--name-color);
+    color: var(--maroon);
 
     text-decoration: none;
 
@@ -190,7 +175,7 @@ nav {
 .page-header h1 {
     margin: 0;
 
-    color: var(--navy);
+    color: var(--text);
 
     font-size: 52px;
 
@@ -230,7 +215,7 @@ section {
 .section-label {
     margin: 0 0 28px;
 
-    color: var(--navy);
+    color: var(--text);
 
     font-size: 18px;
 
@@ -301,12 +286,14 @@ section {
 }
 
 
-/* HI, I'M DALIA */
+/* =========================================================
+   HERO TITLE
+========================================================= */
 
 h1 {
     margin: 0 0 18px;
 
-    color: var(--navy);
+    color: var(--text);
 
     font-size: 48px;
 
@@ -397,7 +384,7 @@ h1 {
 #activity h2 {
     margin: 0 0 42px;
 
-    color: var(--light-brown);
+    color: var(--text);
 
     font-size: 29px;
 
@@ -442,7 +429,7 @@ h1 {
 .activity-date {
     padding-top: 4px;
 
-    color: #111111;
+    color: var(--text);
 
     font-size: 13px;
 
@@ -487,7 +474,7 @@ h1 {
 
 .activity-item:nth-child(3)
 .activity-marker::before {
-    background: var(--name-color);
+    background: var(--maroon);
 }
 
 .activity-item:nth-child(4)
@@ -561,7 +548,9 @@ h1 {
 }
 
 
-/* ACTIVITY CATEGORY COLORS */
+/* =========================================================
+   ACTIVITY COLORS
+========================================================= */
 
 .category-olive {
     color: var(--olive);
@@ -572,11 +561,11 @@ h1 {
 }
 
 .category-terracotta {
-    color: var(--name-color);
+    color: var(--maroon);
 }
 
 .category-beige {
-    color: var(--light-brown);
+    color: var(--dark-green);
 }
 
 
@@ -598,7 +587,9 @@ h1 {
 }
 
 
-/* BLOG POSTS */
+/* =========================================================
+   BLOG POSTS
+========================================================= */
 
 .post {
     display: grid;
@@ -614,13 +605,10 @@ h1 {
         1px solid var(--border);
 }
 
-
-/* BLOG DATES — BLACK */
-
 .post-date {
     padding-top: 4px;
 
-    color: #111111;
+    color: var(--text);
 
     font-size: 13px;
 
@@ -650,7 +638,7 @@ h1 {
 }
 
 
-/* BLOG CATEGORY COLORS */
+/* BLOG CATEGORIES */
 
 .post-category.category-ai {
     color: var(--dark-green);
@@ -661,7 +649,7 @@ h1 {
 }
 
 .post-category.category-writing {
-    color: var(--name-color);
+    color: var(--maroon);
 }
 
 .post-category.category-economics {
@@ -669,7 +657,7 @@ h1 {
 }
 
 
-/* BLOG TITLE */
+/* BLOG TITLES — BLACK */
 
 .post h2 {
     margin: 0 0 10px;
@@ -686,7 +674,7 @@ h1 {
 }
 
 .post h2 a {
-    color: inherit;
+    color: var(--text);
 
     text-decoration: none;
 
@@ -743,7 +731,7 @@ h1 {
 }
 
 
-/* READING CATEGORY COLORS */
+/* READING CATEGORIES */
 
 .category-ai {
     color: var(--dark-green);
@@ -758,12 +746,15 @@ h1 {
 }
 
 .category-technology {
-    color: var(--name-color);
+    color: var(--maroon);
 }
 
 .reading-content {
     max-width: 720px;
 }
+
+
+/* READING TITLES — BLACK */
 
 .reading h2 {
     margin: 0 0 8px;
@@ -780,7 +771,7 @@ h1 {
 }
 
 .reading h2 a {
-    color: inherit;
+    color: var(--text);
 
     text-decoration: none;
 
@@ -798,7 +789,7 @@ h1 {
 .reading-meta {
     margin-bottom: 12px;
 
-    color: #111111;
+    color: var(--text);
 
     font-size: 13px;
 
@@ -836,13 +827,10 @@ h1 {
         1px solid var(--border);
 }
 
-
-/* PROJECT NUMBERS — BLACK */
-
 .project-number {
     padding-top: 5px;
 
-    color: #111111;
+    color: var(--text);
 
     font-size: 13px;
 
@@ -870,7 +858,7 @@ h1 {
 }
 
 
-/* PROJECT CATEGORY COLORS */
+/* PROJECT CATEGORIES */
 
 .project-category.category-research {
     color: var(--dark-brown);
@@ -885,11 +873,11 @@ h1 {
 }
 
 .project-category.category-data {
-    color: var(--name-color);
+    color: var(--maroon);
 }
 
 
-/* PROJECT TITLE */
+/* PROJECT TITLES — BLACK */
 
 .project h2 {
     margin: 0 0 10px;
@@ -906,7 +894,7 @@ h1 {
 }
 
 .project h2 a {
-    color: inherit;
+    color: var(--text);
 
     text-decoration: none;
 
@@ -926,7 +914,7 @@ h1 {
 
     margin-bottom: 14px;
 
-    color: #111111;
+    color: var(--text);
 
     font-size: 12px;
 
@@ -1004,7 +992,7 @@ h1 {
 }
 
 
-/* INTEREST CARD COLORS */
+/* INTEREST CARD ACCENTS */
 
 .interest:nth-child(1) {
     border-top:
@@ -1018,7 +1006,7 @@ h1 {
 
 .interest:nth-child(3) {
     border-top:
-        3px solid var(--name-color);
+        3px solid var(--maroon);
 }
 
 .interest:nth-child(4) {
@@ -1078,7 +1066,7 @@ h1 {
 #contact h2 {
     margin: 0 0 34px;
 
-    color: var(--navy);
+    color: var(--text);
 
     font-size: 18px;
 
