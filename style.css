@@ -13,21 +13,24 @@
 
     --text: #111111;
 
-    --olive: #68705a;
+    /* Main dark palette */
+    --dark-red: #6b3f3a;
 
-    --deep-olive: #4f5745;
+    --dark-brown: #5f4a3a;
 
-    --brown: #7a5b45;
+    --olive: #596248;
 
-    --terracotta: #a95f47;
+    --dark-green: #3f5144;
 
-    --warm-gold: #b28b52;
+    /* Supporting colors */
+    --terracotta: #8a5144;
 
-    --beige: #8d765f;
+    --warm-brown: #765f4c;
 
-    --light-brown: #a88d72;
+    --light-brown: #947863;
 
-    --border: rgba(17, 17, 17, 0.12);
+    /* Lines */
+    --border: rgba(17, 17, 17, 0.14);
 
     --border-light: rgba(17, 17, 17, 0.11);
 
@@ -52,22 +55,22 @@ body {
     background:
         radial-gradient(
             circle at 8% 10%,
-            rgba(176, 172, 135, 0.48) 0,
+            rgba(142, 128, 96, 0.30) 0,
             transparent 30%
         ),
         radial-gradient(
             circle at 92% 22%,
-            rgba(141, 118, 95, 0.28) 0,
+            rgba(108, 82, 62, 0.20) 0,
             transparent 28%
         ),
         radial-gradient(
             circle at 18% 88%,
-            rgba(141, 118, 95, 0.22) 0,
+            rgba(108, 82, 62, 0.16) 0,
             transparent 30%
         ),
         radial-gradient(
             circle at 82% 85%,
-            rgba(176, 172, 135, 0.35) 0,
+            rgba(142, 128, 96, 0.24) 0,
             transparent 26%
         ),
         var(--background);
@@ -117,7 +120,9 @@ nav {
 }
 
 
-/* NAME */
+/* =========================================================
+   NAME
+========================================================= */
 
 .name {
     font-size: 29px;
@@ -130,7 +135,7 @@ nav {
 }
 
 .name a {
-    color: var(--brown);
+    color: var(--dark-red);
 
     text-decoration: none;
 
@@ -140,13 +145,15 @@ nav {
 }
 
 .name a:hover {
-    color: var(--deep-olive);
+    color: var(--dark-brown);
 
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 
-/* NAVIGATION */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 .nav-links {
     display: flex;
@@ -169,7 +176,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: var(--olive);
+    color: var(--dark-green);
 
     opacity: 1;
 }
@@ -226,7 +233,7 @@ section {
 .section-label {
     margin: 0 0 28px;
 
-    color: var(--deep-olive);
+    color: var(--dark-green);
 
     font-size: 18px;
 
@@ -296,6 +303,9 @@ section {
     flex: 1;
 }
 
+
+/* HI, I'M DALIA */
+
 h1 {
     margin: 0 0 18px;
 
@@ -313,7 +323,7 @@ h1 {
 .subtitle {
     margin-bottom: 26px;
 
-    color: var(--deep-olive);
+    color: var(--dark-green);
 
     font-size: 18px;
 
@@ -341,7 +351,9 @@ h1 {
 }
 
 
-/* HERO LINKS */
+/* =========================================================
+   HERO LINKS
+========================================================= */
 
 .links {
     display: flex;
@@ -356,12 +368,12 @@ h1 {
 }
 
 .links a {
-    color: var(--deep-olive);
+    color: var(--dark-green);
 
     text-decoration: none;
 
     border-bottom:
-        1px solid var(--olive);
+        1px solid var(--dark-green);
 
     padding-bottom: 2px;
 
@@ -371,9 +383,9 @@ h1 {
 }
 
 .links a:hover {
-    color: var(--terracotta);
+    color: var(--dark-red);
 
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 
@@ -410,7 +422,8 @@ h1 {
 .activity-item {
     display: grid;
 
-    grid-template-columns: 95px 18px 1fr;
+    grid-template-columns:
+        95px 18px 1fr;
 
     gap: 18px;
 
@@ -429,7 +442,7 @@ h1 {
 .activity-date {
     padding-top: 4px;
 
-    color: var(--brown);
+    color: var(--dark-brown);
 
     font-size: 13px;
 
@@ -441,7 +454,9 @@ h1 {
 }
 
 
-/* ACTIVITY TIMELINE */
+/* =========================================================
+   ACTIVITY TIMELINE
+========================================================= */
 
 .activity-marker {
     position: relative;
@@ -467,17 +482,17 @@ h1 {
 
 .activity-item:nth-child(2)
 .activity-marker::before {
-    background: var(--brown);
+    background: var(--dark-green);
 }
 
 .activity-item:nth-child(3)
 .activity-marker::before {
-    background: var(--terracotta);
+    background: var(--dark-red);
 }
 
 .activity-item:nth-child(4)
 .activity-marker::before {
-    background: var(--warm-gold);
+    background: var(--dark-brown);
 }
 
 .activity-item:not(:last-child)
@@ -497,7 +512,9 @@ h1 {
 }
 
 
-/* ACTIVITY CONTENT */
+/* =========================================================
+   ACTIVITY CONTENT
+========================================================= */
 
 .activity-content {
     max-width: 720px;
@@ -544,22 +561,22 @@ h1 {
 }
 
 
-/* ACTIVITY COLORS */
+/* ACTIVITY CATEGORY COLORS */
 
 .category-olive {
     color: var(--olive);
 }
 
 .category-brown {
-    color: var(--brown);
+    color: var(--dark-brown);
 }
 
 .category-terracotta {
-    color: var(--terracotta);
+    color: var(--dark-red);
 }
 
 .category-beige {
-    color: var(--beige);
+    color: var(--warm-brown);
 }
 
 
@@ -581,12 +598,15 @@ h1 {
 }
 
 
-/* BLOG POST */
+/* =========================================================
+   BLOG POSTS
+========================================================= */
 
 .post {
     display: grid;
 
-    grid-template-columns: 115px 1fr;
+    grid-template-columns:
+        115px 1fr;
 
     gap: 35px;
 
@@ -599,7 +619,7 @@ h1 {
 .post-date {
     padding-top: 4px;
 
-    color: var(--brown);
+    color: var(--dark-brown);
 
     font-size: 13px;
 
@@ -636,15 +656,15 @@ h1 {
 }
 
 .post-category.category-research {
-    color: var(--brown);
+    color: var(--dark-brown);
 }
 
 .post-category.category-writing {
-    color: var(--terracotta);
+    color: var(--dark-red);
 }
 
 .post-category.category-economics {
-    color: var(--warm-gold);
+    color: var(--warm-brown);
 }
 
 
@@ -675,7 +695,7 @@ h1 {
 }
 
 .post h2 a:hover {
-    color: var(--olive);
+    color: var(--dark-red);
 
     opacity: 1;
 }
@@ -698,7 +718,8 @@ h1 {
 .reading {
     display: grid;
 
-    grid-template-columns: 125px 1fr;
+    grid-template-columns:
+        125px 1fr;
 
     gap: 35px;
 
@@ -728,15 +749,15 @@ h1 {
 }
 
 .category-governance {
-    color: var(--deep-olive);
+    color: var(--dark-green);
 }
 
 .category-economics {
-    color: var(--warm-gold);
+    color: var(--warm-brown);
 }
 
 .category-technology {
-    color: var(--terracotta);
+    color: var(--dark-red);
 }
 
 .reading-content {
@@ -768,7 +789,7 @@ h1 {
 }
 
 .reading h2 a:hover {
-    color: var(--olive);
+    color: var(--dark-green);
 
     opacity: 1;
 }
@@ -776,7 +797,7 @@ h1 {
 .reading-meta {
     margin-bottom: 12px;
 
-    color: var(--brown);
+    color: var(--dark-brown);
 
     font-size: 13px;
 
@@ -803,7 +824,8 @@ h1 {
 .project {
     display: grid;
 
-    grid-template-columns: 85px 1fr;
+    grid-template-columns:
+        85px 1fr;
 
     gap: 35px;
 
@@ -816,7 +838,7 @@ h1 {
 .project-number {
     padding-top: 5px;
 
-    color: var(--brown);
+    color: var(--dark-brown);
 
     font-size: 13px;
 
@@ -847,7 +869,7 @@ h1 {
 /* PROJECT CATEGORY COLORS */
 
 .project-category.category-research {
-    color: var(--brown);
+    color: var(--dark-brown);
 }
 
 .project-category.category-ai {
@@ -855,11 +877,11 @@ h1 {
 }
 
 .project-category.category-economics {
-    color: var(--warm-gold);
+    color: var(--warm-brown);
 }
 
 .project-category.category-data {
-    color: var(--terracotta);
+    color: var(--dark-red);
 }
 
 
@@ -890,7 +912,7 @@ h1 {
 }
 
 .project h2 a:hover {
-    color: var(--olive);
+    color: var(--dark-green);
 
     opacity: 1;
 }
@@ -900,7 +922,7 @@ h1 {
 
     margin-bottom: 14px;
 
-    color: var(--brown);
+    color: var(--dark-brown);
 
     font-size: 12px;
 
@@ -922,7 +944,7 @@ h1 {
 .project-tools {
     margin-top: 15px;
 
-    color: var(--deep-olive);
+    color: var(--dark-green);
 
     font-size: 13px;
 
@@ -987,17 +1009,17 @@ h1 {
 
 .interest:nth-child(2) {
     border-top:
-        3px solid var(--deep-olive);
+        3px solid var(--dark-green);
 }
 
 .interest:nth-child(3) {
     border-top:
-        3px solid var(--terracotta);
+        3px solid var(--dark-red);
 }
 
 .interest:nth-child(4) {
     border-top:
-        3px solid var(--brown);
+        3px solid var(--dark-brown);
 }
 
 
@@ -1013,7 +1035,7 @@ h1 {
 
     margin-top: 15px;
 
-    color: var(--deep-olive);
+    color: var(--dark-green);
 
     font-size: 14px;
 
@@ -1022,7 +1044,7 @@ h1 {
     text-decoration: none;
 
     border-bottom:
-        1px solid var(--olive);
+        1px solid var(--dark-green);
 
     padding-bottom: 2px;
 
@@ -1035,9 +1057,9 @@ h1 {
 .project-link:hover,
 .reading-link:hover,
 .back-link:hover {
-    color: var(--terracotta);
+    color: var(--dark-red);
 
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 
@@ -1052,7 +1074,7 @@ h1 {
 #contact h2 {
     margin: 0 0 34px;
 
-    color: var(--deep-olive);
+    color: var(--dark-green);
 
     font-size: 18px;
 
@@ -1133,7 +1155,7 @@ h1 {
 footer {
     padding: 50px 0;
 
-    color: var(--deep-olive);
+    color: var(--dark-brown);
 
     font-size: 13px;
 
@@ -1235,11 +1257,7 @@ footer {
     }
 
 
-    /* SECTIONS */
-
-    section {
-        padding: 70px 0;
-    }
+    /* PAGE HEADERS */
 
     .page-header {
         padding: 80px 0 60px;
@@ -1251,6 +1269,13 @@ footer {
 
     .page-header p {
         font-size: 17px;
+    }
+
+
+    /* SECTIONS */
+
+    section {
+        padding: 70px 0;
     }
 
 
