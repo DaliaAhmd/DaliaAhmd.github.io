@@ -8,40 +8,54 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <title>Blog · Dalia Ahmed</title>
+    <title>Blog — Dalia Ahmed</title>
 
     <link rel="icon" type="image/png" href="Dalia.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
     <style>
 
-        /* ==================================================
-           GENERAL
-        ================================================== */
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             margin: 0;
 
             background:
                 radial-gradient(
-                    circle at 10% 15%,
-                    rgba(190, 160, 130, 0.18) 0,
-                    transparent 28%
-                ),
-                radial-gradient(
-                    circle at 90% 80%,
-                    rgba(170, 145, 120, 0.16) 0,
+                    circle at 8% 10%,
+                    rgba(176, 172, 135, 0.48) 0,
                     transparent 30%
                 ),
                 radial-gradient(
-                    circle at 75% 10%,
-                    rgba(255, 255, 255, 0.55) 0,
-                    transparent 22%
+                    circle at 92% 22%,
+                    rgba(141, 118, 95, 0.28) 0,
+                    transparent 28%
                 ),
-                #e8dfd2;
+                radial-gradient(
+                    circle at 18% 88%,
+                    rgba(141, 118, 95, 0.22) 0,
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 82% 85%,
+                    rgba(176, 172, 135, 0.35) 0,
+                    transparent 26%
+                ),
+                #e7dfd0;
 
-            color: #222;
+            color: #111;
 
             font-family:
+                "Inter Tight",
                 Arial,
                 Helvetica,
                 sans-serif;
@@ -50,43 +64,37 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 30px;
         }
 
-
-        /* ==================================================
-           HEADER
-        ================================================== */
+        /* HEADER */
 
         header {
             padding: 28px 0;
 
             border-bottom:
-                1px solid rgba(80, 70, 60, 0.12);
+                1px solid rgba(17, 17, 17, 0.12);
         }
 
         nav {
             display: flex;
+
             justify-content: space-between;
             align-items: center;
         }
 
         .name {
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+            font-size: 21px;
+            font-weight: 600;
 
-            font-size: 22px;
-            font-weight: bold;
-
-            letter-spacing: -0.3px;
+            letter-spacing: -0.6px;
         }
 
         .name a {
-            color: #222;
+            color: #111;
+
             text-decoration: none;
 
             transition:
@@ -94,179 +102,196 @@
         }
 
         .name a:hover {
-            opacity: 0.65;
+            opacity: 0.6;
         }
 
         .nav-links {
             display: flex;
-            gap: 25px;
-            font-size: 14px;
+
+            gap: 24px;
+
+            font-size: 15px;
+            font-weight: 500;
         }
 
         .nav-links a {
-            color: #555;
+            color: #111;
+
             text-decoration: none;
 
             transition:
-                color 0.2s ease;
+                opacity 0.2s ease;
         }
 
         .nav-links a:hover {
-            color: #000;
+            opacity: 0.55;
         }
 
+        /* PAGE HEADER */
 
-        /* ==================================================
-           BLOG HEADER
-        ================================================== */
-
-        .blog-header {
-            padding: 100px 0 60px;
+        .page-header {
+            padding: 110px 0 70px;
         }
 
-        .blog-header h1 {
-            margin: 0 0 15px;
+        .page-header h1 {
+            margin: 0;
 
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
+            font-size: 52px;
+            font-weight: 600;
 
-            font-size: 48px;
-            font-weight: normal;
-
-            letter-spacing: -1.5px;
-            line-height: 1.1;
+            letter-spacing: -2px;
+            line-height: 1;
         }
 
-        .blog-intro {
+        .page-header p {
             max-width: 650px;
 
-            color: #666;
-            font-size: 18px;
+            margin: 25px 0 0;
+
+            font-size: 19px;
+            font-weight: 400;
+
+            line-height: 1.65;
         }
 
+        /* BLOG */
 
-        /* ==================================================
-           CATEGORIES
-        ================================================== */
-
-        .categories {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-
-            margin: 10px 0 55px;
+        .blog-section {
+            padding: 0 0 90px;
         }
 
-        .category {
-            border:
-                1px solid rgba(80, 70, 60, 0.18);
-
-            border-radius: 30px;
-
-            padding: 8px 17px;
-
-            color: #555;
-            text-decoration: none;
-
-            font-size: 14px;
-
-            background:
-                rgba(255, 255, 255, 0.22);
-
-            cursor: pointer;
-
-            transition:
-                all 0.2s ease;
+        .blog-list {
+            border-top:
+                1px solid rgba(17, 17, 17, 0.12);
         }
-
-        .category:hover,
-        .category.active {
-            background: #665b4f;
-            color: white;
-            border-color: #665b4f;
-        }
-
-
-        /* ==================================================
-           BLOG POSTS
-        ================================================== */
 
         .post {
-            padding: 30px 0;
+            display: grid;
 
-            border-top:
-                1px solid rgba(80, 70, 60, 0.12);
+            grid-template-columns: 115px 1fr;
+
+            gap: 35px;
+
+            padding: 32px 0;
+
+            border-bottom:
+                1px solid rgba(17, 17, 17, 0.12);
         }
 
-        .post:last-child {
-            border-bottom:
-                1px solid rgba(80, 70, 60, 0.12);
+        .post-date {
+            padding-top: 4px;
+
+            font-size: 13px;
+            font-weight: 500;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+        .post-content {
+            max-width: 700px;
         }
 
         .post-category {
-            font-size: 12px;
+            display: inline-block;
+
+            margin-bottom: 10px;
+
+            font-size: 11px;
+            font-weight: 600;
+
+            letter-spacing: 1.1px;
 
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-
-            color: #8a7562;
-
-            margin-bottom: 8px;
         }
 
-        .post-title {
-            font-family:
-                Georgia,
-                "Times New Roman",
-                serif;
-
-            font-size: 28px;
-            font-weight: normal;
-
-            margin-bottom: 8px;
+        .category-ai {
+            color: #68705a;
         }
 
-        .post-title a {
-            color: #222;
+        .category-research {
+            color: #7a5b45;
+        }
+
+        .category-writing {
+            color: #a95f47;
+        }
+
+        .category-economics {
+            color: #8d765f;
+        }
+
+        .post h2 {
+            margin: 0 0 10px;
+
+            font-size: 27px;
+            font-weight: 600;
+
+            letter-spacing: -0.8px;
+
+            line-height: 1.25;
+        }
+
+        .post h2 a {
+            color: #111;
+
             text-decoration: none;
         }
 
-        .post-title a:hover {
-            opacity: 0.65;
-        }
-
-        .post-meta {
-            font-size: 13px;
-            color: #999;
-
-            margin-bottom: 10px;
+        .post h2 a:hover {
+            opacity: 0.6;
         }
 
         .post-description {
-            max-width: 700px;
-            color: #666;
+            margin: 0;
+
+            font-size: 17px;
+
+            line-height: 1.65;
         }
 
+        .read-more {
+            display: inline-block;
 
-        /* ==================================================
-           FOOTER
-        ================================================== */
+            margin-top: 14px;
+
+            color: #111;
+
+            font-size: 14px;
+            font-weight: 500;
+
+            text-decoration: none;
+
+            border-bottom:
+                1px solid #111;
+
+            padding-bottom: 2px;
+
+            transition:
+                opacity 0.2s ease;
+        }
+
+        .read-more:hover {
+            opacity: 0.55;
+        }
+
+        /* FOOTER */
 
         footer {
-            padding: 70px 0;
+            padding: 50px 0;
 
-            color: #999;
+            color: #111;
+
             font-size: 13px;
+            font-weight: 400;
+
+            text-align: center;
         }
 
+        /* MOBILE */
 
-        /* ==================================================
-           MOBILE
-        ================================================== */
-
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
 
             .container {
                 padding: 0 20px;
@@ -277,29 +302,53 @@
             }
 
             .name {
-                font-size: 20px;
+                font-size: 19px;
             }
 
             .nav-links {
                 gap: 12px;
+
                 flex-wrap: wrap;
+
                 justify-content: flex-end;
+
+                font-size: 14px;
             }
 
-            .blog-header {
-                padding: 70px 0 40px;
+            .page-header {
+                padding: 80px 0 60px;
             }
 
-            .blog-header h1 {
-                font-size: 40px;
+            .page-header h1 {
+                font-size: 44px;
             }
 
-            .blog-intro {
+            .page-header p {
                 font-size: 17px;
             }
 
-            .post-title {
-                font-size: 24px;
+            .blog-section {
+                padding-bottom: 70px;
+            }
+
+            .post {
+                grid-template-columns: 1fr;
+
+                gap: 8px;
+
+                padding: 28px 0;
+            }
+
+            .post-date {
+                padding-top: 0;
+            }
+
+            .post h2 {
+                font-size: 23px;
+            }
+
+            .post-description {
+                font-size: 16px;
             }
 
         }
@@ -308,13 +357,7 @@
 
 </head>
 
-
 <body>
-
-
-<!-- ==================================================
-     HEADER
-================================================== -->
 
 <header>
 
@@ -330,10 +373,9 @@
 
             </div>
 
-
             <div class="nav-links">
 
-                <a href="index.html#about">
+                <a href="about.html">
                     About
                 </a>
 
@@ -341,7 +383,17 @@
                     Blog
                 </a>
 
-                <a href="index.html#cv">
+                <a href="readings.html">
+                    Readings
+                </a>
+
+                <a href="projects.html">
+                    Projects
+                </a>
+
+                <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link"
+                   target="_blank"
+                   rel="noopener noreferrer">
                     CV
                 </a>
 
@@ -358,167 +410,138 @@
 </header>
 
 
-<!-- ==================================================
-     BLOG
-================================================== -->
-
 <main>
 
+    <div class="container">
 
-    <!-- ==========================
-         BLOG HEADER
-    ========================== -->
-
-    <section class="blog-header">
-
-        <div class="container">
+        <div class="page-header">
 
             <h1>
                 Blog
             </h1>
 
-            <p class="blog-intro">
-                Notes, essays, and research on AI safety, economics,
-                history, technology, and governance.
+            <p>
+                Notes, reflections, and longer-form writing on AI,
+                governance, economics, technology, and research.
             </p>
 
         </div>
 
-    </section>
+
+        <div class="blog-section">
+
+            <div class="blog-list">
 
 
-    <div class="container">
+                <!-- POST 1 -->
+
+                <article class="post">
+
+                    <div class="post-date">
+                        2026
+                    </div>
+
+                    <div class="post-content">
+
+                        <div class="post-category category-ai">
+                            AI & Governance
+                        </div>
+
+                        <h2>
+                            <a href="#">
+                                Writing on AI Safety and Governance
+                            </a>
+                        </h2>
+
+                        <p class="post-description">
+                            Essays and notes exploring how increasingly
+                            capable AI systems may affect institutions,
+                            governance, and society.
+                        </p>
+
+                        <a class="read-more"
+                           href="#">
+                            Read → 
+                        </a>
+
+                    </div>
+
+                </article>
 
 
-        <!-- ==========================
-             CATEGORIES
-        ========================== -->
+                <!-- POST 2 -->
 
-        <div class="categories">
+                <article class="post">
 
-            <a class="category active"
-               onclick="filterPosts('all', this)">
-                All
-            </a>
+                    <div class="post-date">
+                        2026
+                    </div>
 
-            <a class="category"
-               onclick="filterPosts('ai-safety', this)">
-                AI Safety
-            </a>
+                    <div class="post-content">
 
-            <a class="category"
-               onclick="filterPosts('economics', this)">
-                Economics
-            </a>
+                        <div class="post-category category-research">
+                            Research
+                        </div>
 
-            <a class="category"
-               onclick="filterPosts('history', this)">
-                History
-            </a>
+                        <h2>
+                            <a href="#">
+                                Notes from Independent Research
+                            </a>
+                        </h2>
 
-        </div>
+                        <p class="post-description">
+                            Reflections on research questions, methods,
+                            evidence, and the process of turning broad
+                            questions into concrete projects.
+                        </p>
 
+                        <a class="read-more"
+                           href="#">
+                            Read →
+                        </a>
 
-        <!-- ==========================
-             POSTS
-        ========================== -->
+                    </div>
 
-        <div id="posts">
-
-
-            <!-- ==========================
-                 AI SAFETY
-            ========================== -->
-
-            <article class="post"
-                     data-category="ai-safety">
-
-                <div class="post-category">
-                    AI Safety
-                </div>
-
-                <div class="post-title">
-
-                    <a href="#">
-                        Coming soon
-                    </a>
-
-                </div>
-
-                <div class="post-meta">
-                    AI Safety · 2026
-                </div>
-
-                <div class="post-description">
-                    Essays and notes on AI safety, frontier AI,
-                    alignment, control, and the governance of
-                    increasingly capable AI systems.
-                </div>
-
-            </article>
+                </article>
 
 
-            <!-- ==========================
-                 ECONOMICS
-            ========================== -->
+                <!-- POST 3 -->
 
-            <article class="post"
-                     data-category="economics">
+                <article class="post">
 
-                <div class="post-category">
-                    Economics
-                </div>
+                    <div class="post-date">
+                        2025
+                    </div>
 
-                <div class="post-title">
+                    <div class="post-content">
 
-                    <a href="#">
-                        Coming soon
-                    </a>
+                        <div class="post-category category-economics">
+                            Economics
+                        </div>
 
-                </div>
+                        <h2>
+                            <a href="#">
+                                Financial Systems and Economic Change
+                            </a>
+                        </h2>
 
-                <div class="post-meta">
-                    Economics · 2026
-                </div>
+                        <p class="post-description">
+                            Writing and reflections emerging from research
+                            into financial regulation, banking, economic
+                            institutions, and historical change.
+                        </p>
 
-                <div class="post-description">
-                    Writing on economic systems, technological change,
-                    labor, financial institutions, and political economy.
-                </div>
+                        <a class="read-more"
+                           href="#">
+                            Read →
+                        </a>
 
-            </article>
+                    </div>
+
+                </article>
 
 
-            <!-- ==========================
-                 HISTORY
-            ========================== -->
-
-            <article class="post"
-                     data-category="history">
-
-                <div class="post-category">
-                    History
-                </div>
-
-                <div class="post-title">
-
-                    <a href="#">
-                        Coming soon
-                    </a>
-
-                </div>
-
-                <div class="post-meta">
-                    History · 2026
-                </div>
-
-                <div class="post-description">
-                    Historical notes and research on institutions,
-                    economic history, technology, and political change.
-                </div>
-
-            </article>
-
+            </div>
 
         </div>
 
@@ -527,65 +550,13 @@
 </main>
 
 
-<!-- ==================================================
-     FOOTER
-================================================== -->
-
 <footer>
 
     <div class="container">
-
         © 2026 Dalia Ahmed
-
     </div>
 
 </footer>
-
-
-<!-- ==================================================
-     CATEGORY FILTER
-================================================== -->
-
-<script>
-
-    function filterPosts(category, button) {
-
-        const posts =
-            document.querySelectorAll(".post");
-
-        const buttons =
-            document.querySelectorAll(".category");
-
-
-        buttons.forEach(button => {
-            button.classList.remove("active");
-        });
-
-
-        button.classList.add("active");
-
-
-        posts.forEach(post => {
-
-            if (
-                category === "all" ||
-                post.dataset.category === category
-            ) {
-
-                post.style.display = "block";
-
-            } else {
-
-                post.style.display = "none";
-
-            }
-
-        });
-
-    }
-
-</script>
-
 
 </body>
 
