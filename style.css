@@ -89,7 +89,7 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .blog-list,.reading-list,.project-list{border-top:1px solid var(--line)}
 .post,.reading,.project{display:grid;grid-template-columns:105px minmax(0,1fr);gap:32px;padding:34px 0;border-bottom:1px solid var(--line)}
 .post-content,.reading-content,.project-content{max-width:740px;min-width:0}
-.post-date,.project-date,.reading-category,.project-number{padding-top:5px;color:var(--muted);font-size:12px;font-weight:700;line-height:1.6}
+.post-date,.project-date,.reading-category,.project-number{padding-top:7px;color:var(--muted);font-size:14px;font-weight:700;line-height:1.8}
 .post h2,.project h2{margin:0 0 4px;font-size:clamp(23px,3vw,27px);font-weight:700;letter-spacing:-.5px;line-height:1.4}
 .reading h2{margin:0 0 12px;font-size:clamp(22px,3vw,25px);font-weight:700;line-height:1.4}
 .post h2 a,.reading h2 a,.project h2 a{color:var(--text)}
@@ -97,7 +97,7 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .post-title-bold,.post-title-bold a{font-weight:800}
 .post-date{margin:0}
 .post-subtitle{margin:0 0 14px;color:var(--muted);font-family:var(--editorial-font);font-size:18px;font-style:italic;line-height:1.7}
-.post-description,.reading-description,.project-description,.blog-description{margin:0;color:var(--muted);font-size:14px;line-height:1.8}
+.post-description,.reading-description,.project-description,.blog-description{margin:0;color:var(--muted);font-size:12px;line-height:1.6}
 .reading-meta{margin:0 0 12px;font-size:13px;font-weight:600;line-height:1.7}
 .project-status{display:inline-block;margin:0 0 14px;color:var(--muted);font-size:12px;font-weight:600}
 .project-tools{margin-top:15px;color:var(--sage);font-size:13px;font-weight:600;line-height:1.8}
