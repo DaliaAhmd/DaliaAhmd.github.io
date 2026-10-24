@@ -22,11 +22,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:28px}
 .name{flex-shrink:0;font-size:27px;font-weight:700;letter-spacing:-.9px;line-height:1.25}
 .name a{color:var(--maroon)}
 .nav-links{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:10px 22px;font-size:14px;font-weight:700;line-height:1.5}
-.nav-links a{color:var(--text);transition:color .18s,opacity .18s}
-.nav-links a:nth-child(2){color:var(--maroon)}
-.nav-links a:nth-child(3){color:var(--navy)}
-.nav-links a:nth-child(4){color:var(--terracotta)}
-body:has(.hero) .nav-links a{color:#000;font-size:16px;font-weight:700}
+.nav-links a{color:#000!important;font-size:16px!important;font-weight:700!important;transition:color .18s,opacity .18s}
 .nav-links a:hover,.links a:hover,.read-more:hover,.project-link:hover,.reading-link:hover,.back-link:hover,.article-back-link:hover{opacity:.72}
 
 /* Page headings */
@@ -46,7 +42,7 @@ body:has(.readings-section){background:linear-gradient(135deg,#f3f7f5,#f7f7f1 56
 body:has(.projects-section){background:linear-gradient(135deg,#faf4ed,#f8f4ef 56%,#f6f1e9)}
 body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#f3f1f7)}
 
-/* Home hero and decorations */
+/* Homepage */
 .hero{position:relative;padding:98px 0 100px;border-top:0}
 .hero-content{display:flex;align-items:center;gap:64px}
 .hero-photo{position:relative;flex-shrink:0;isolation:isolate}
@@ -55,7 +51,7 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .hero-photo img{display:block;width:270px;height:270px;border-radius:5px;object-fit:cover;box-shadow:0 16px 36px rgba(48,39,31,.1)}
 .hero-text{flex:1;min-width:0}
 .hero h1{margin:0 0 20px;color:var(--text);font-size:clamp(38px,5vw,50px);font-weight:700;letter-spacing:-1.8px;line-height:1.12}
-.subtitle {margin: 0 0 24px;color: var(--maroon);font-size: 17px;font-weight: 700;line-height: 1.7;}
+.subtitle{margin:0 0 24px;color:var(--maroon);font-size:17px;font-weight:700;line-height:1.7}
 .intro{max-width:630px;margin:0;font-size:18px;line-height:1.9}
 .links{display:flex;flex-wrap:wrap;gap:14px 25px;margin-top:30px;font-size:15px;font-weight:700}
 .links a{color:var(--navy)}
@@ -77,32 +73,70 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .activity-description{margin:0;color:var(--muted);font-size:16px;line-height:1.85}
 .activity-category{display:inline-block;margin-top:13px;font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase}
 
-/* Category labels and filters */
+/* Category colors */
 .category-ai,.category-olive{color:var(--olive)}
 .category-governance,.category-data{color:var(--navy)}
-.category-research,.category-terracotta{color:var(--terracotta)}
-.category-economics,.category-brown{color:var(--brown)}
+.category-research,.category-terracotta,.category-financial-crisis{color:var(--terracotta)}
+.category-economics,.category-brown,.category-economic-history{color:var(--brown)}
 .category-technology,.category-writing{color:var(--maroon)}
 .category-beige{color:#88796b}
+
+/* Consistent pastel category boxes across pages */
 .category-boxes{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0 40px}
-.category-box{appearance:none;padding:9px 14px;border:0;border-bottom:2px solid transparent;border-radius:5px;color:var(--text);background:#f4f1ec;font-family:var(--body-font);font-size:13px;font-weight:700;line-height:1.5;cursor:pointer;transition:background .18s,border-color .18s,transform .18s}
+.category-box{appearance:none;padding:9px 14px;border:0;border-bottom:2px solid transparent;border-radius:5px;color:#000!important;background:#efede9;font-family:var(--body-font);font-size:13px;font-weight:700;line-height:1.5;cursor:pointer;transition:background .18s,border-color .18s,transform .18s}
 .category-box:hover{transform:translateY(-1px)}
-.category-box.active{border-bottom-color:currentColor}
-.category-box.category-all{background:#efede9;color:var(--text)}
-.category-box.category-ai{background:var(--pastel-sage);color:var(--sage)}
-.category-box.category-governance{background:var(--pastel-blue);color:var(--navy)}
-.category-box.category-economics{background:var(--pastel-cream);color:var(--brown)}
-.category-box.category-technology{background:var(--pastel-rose);color:var(--maroon)}
-.category-box.category-research{background:var(--pastel-peach);color:var(--terracotta)}
-/* Economic history and financial crisis labels */
-.category-economic-history {color: var(--brown);}
-.category-financial-crisis {color: var(--terracotta);}
-/* Matching pastel filter boxes */
-.category-box.category-economic-history {background: var(--pastel-cream);color: var(--brown);}
-.category-box.category-financial-crisis {background: var(--pastel-peach);color: var(--terracotta);}
-.filter-item.hidden{display:none}
+.category-box.active{border-bottom-color:#000}
+.category-box.category-all{background:#efede9;color:#000!important}
+.category-box.category-ai{background:var(--pastel-sage);color:#000!important}
+.category-box.category-governance{background:var(--pastel-blue);color:#000!important}
+.category-box.category-economics,.category-box.category-economic-history{background:var(--pastel-cream);color:#000!important}
+.category-box.category-technology{background:var(--pastel-rose);color:#000!important}
+.category-box.category-research,.category-box.category-financial-crisis{background:var(--pastel-peach);color:#000!important}
+
+/* Category labels displayed beside posts and articles */
+.post-category span,.project-category span,.article-topics span,.activity-category,
+.post-category.category-ai,.post-category.category-governance,
+.post-category.category-economics,.post-category.category-economic-history,
+.post-category.category-financial-crisis,.post-category.category-technology,
+.post-category.category-research,.post-category.category-data,
+.post-category.category-terracotta,.post-category.category-olive {
+  display:inline-block;
+  padding:5px 9px;
+  border-radius:5px;
+  color:#000!important;
+  background:#efede9;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.5px;
+  line-height:1.6;
+  text-transform:uppercase;
+}
+
+.post-category .category-ai,.project-category .category-ai,.article-topics .category-ai,.activity-category.category-ai{background:var(--pastel-sage)}
+.post-category .category-governance,.project-category .category-governance,.article-topics .category-governance,.activity-category.category-governance{background:var(--pastel-blue)}
+.post-category .category-economics,.post-category .category-economic-history,
+.project-category .category-economics,.project-category .category-economic-history,
+.article-topics .category-economics,.article-topics .category-economic-history,
+.activity-category.category-economics{background:var(--pastel-cream)}
+.post-category .category-financial-crisis,.post-category .category-terracotta,
+.project-category .category-financial-crisis,.project-category .category-terracotta,
+.article-topics .category-financial-crisis,.article-topics .category-terracotta,
+.activity-category.category-financial-crisis{background:var(--pastel-peach)}
+.post-category .category-technology,.post-category .category-writing,
+.project-category .category-technology,.article-topics .category-technology{background:var(--pastel-rose)}
+.post-category .category-research,.project-category .category-research,
+.article-topics .category-research,.activity-category.category-research{background:var(--pastel-peach)}
+
+.post-category.category-ai{background:var(--pastel-sage)}
+.post-category.category-governance{background:var(--pastel-blue)}
+.post-category.category-economics,.post-category.category-economic-history{background:var(--pastel-cream)}
+.post-category.category-financial-crisis,.post-category.category-research{background:var(--pastel-peach)}
+.post-category.category-technology{background:var(--pastel-rose)}
+
+.filter-item.hidden,.filter-item[hidden]{display:none!important}
 .no-results{display:none;margin-top:26px;color:var(--muted)}
 .no-results.visible{display:block}
+.no-results[hidden]{display:none!important}
 
 /* Blog, readings and projects */
 .blog-section,.readings-section,.projects-section{padding:0 0 90px;border-top:0}
@@ -111,7 +145,6 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .post-date,.reading-category,.project-number{padding-top:5px;color:var(--muted);font-size:12px;font-weight:700;line-height:1.6}
 .post-content,.reading-content,.project-content{max-width:740px;min-width:0}
 .post-category,.project-category{display:flex;flex-wrap:wrap;gap:8px 12px;margin-bottom:12px}
-.post-category span,.project-category span{font-size:11px;font-weight:700;letter-spacing:.6px;line-height:1.6;text-transform:uppercase}
 .post h2,.project h2{margin:0 0 12px;font-size:clamp(23px,3vw,27px);font-weight:700;letter-spacing:-.5px;line-height:1.4}
 .reading h2{margin:0 0 12px;font-size:clamp(22px,3vw,25px);font-weight:700;line-height:1.4}
 .post h2 a,.reading h2 a,.project h2 a{color:var(--text)}
@@ -150,11 +183,10 @@ footer{padding:38px 0;color:var(--muted);font-size:13px;text-align:center}
 .article-page{padding-top:58px;padding-bottom:100px}
 .article-back-link{margin:0 0 42px}
 .article-header{max-width:800px;margin:0 auto 50px;padding-bottom:36px;border-bottom:1px solid var(--line)}
-.article-topics{display:flex;flex-wrap:wrap;gap:10px 18px;margin-bottom:25px}
-.article-topics span{font-size:11px;font-weight:800;letter-spacing:.8px;line-height:1.6;text-transform:uppercase}
+.article-topics{display:flex;flex-wrap:wrap;gap:10px 8px;margin-bottom:25px}
 .article-title{max-width:760px;margin:0;color:var(--text);font-size:clamp(32px,3.8vw,40px);font-weight:800;letter-spacing:-.8px;line-height:1.2}
 .article-title strong{font-weight:800}
-.article-subtitle{max-width:700px;margin:24px 0 0;color:#55504b;font-family:var(--editorial-font);font-size:clamp(20px,2vw,20px);font-style:italic;line-height:1.7}
+.article-subtitle{max-width:700px;margin:24px 0 0;color:#55504b;font-family:var(--editorial-font);font-size:20px;font-style:italic;line-height:1.7}
 .article-byline{margin:26px 0 0;color:var(--muted);font-size:14px;font-weight:700}
 .article-body{max-width:720px;margin:0 auto}
 .article-body p{margin:0 0 30px;color:#282623;font-family:var(--editorial-font);font-size:19px;line-height:1.95}
@@ -184,7 +216,7 @@ body:has(.interest-grid) .page-header::after{border:1px solid rgba(85,113,93,.28
   nav{align-items:flex-start;gap:14px}
   .name{font-size:22px}
   .nav-links{justify-content:flex-end;gap:8px 12px;font-size:13px}
-  body:has(.hero) .nav-links a{font-size:14px}
+  .nav-links a{font-size:14px!important}
   .page-header{padding:62px 0 38px}
   .page-header h1{font-size:clamp(35px,9vw,44px);letter-spacing:-1.2px}
   .page-header p{margin-top:17px;font-size:16px}
@@ -219,7 +251,7 @@ body:has(.interest-grid) .page-header::after{border:1px solid rgba(85,113,93,.28
   .article-page{padding-top:35px;padding-bottom:70px}
   .article-back-link{margin-bottom:30px}
   .article-header{margin-bottom:35px;padding-bottom:27px}
-  .article-topics{gap:8px 13px;margin-bottom:19px}
+  .article-topics{gap:8px;margin-bottom:19px}
   .article-title{font-size:30px;letter-spacing:-.5px;line-height:1.2}
   .article-subtitle{margin-top:19px;font-size:20px;line-height:1.65}
   .article-byline{margin-top:22px}
@@ -227,26 +259,6 @@ body:has(.interest-grid) .page-header::after{border:1px solid rgba(85,113,93,.28
   .article-footer-link{margin-top:38px;padding-top:21px}
   body:has(.blog-section) .page-header::after,body:has(.readings-section) .page-header::after,body:has(.projects-section) .page-header::after,body:has(.interest-grid) .page-header::after{top:88px;right:1%;width:45px;height:45px;opacity:.55}
   footer{padding:29px 0}
-}
-
-/* Keep navigation identical across all pages */
-.nav-links a,
-.nav-links a:nth-child(2),
-.nav-links a:nth-child(3),
-.nav-links a:nth-child(4) {
-  color: #000 !important;
-  font-size: 16px !important;
-  font-weight: 700 !important;
-}
-
-/* Consistent mobile navigation */
-@media (max-width: 700px) {
-  .nav-links a,
-  .nav-links a:nth-child(2),
-  .nav-links a:nth-child(3),
-  .nav-links a:nth-child(4) {
-    font-size: 14px !important;
-  }
 }
 
 @media(prefers-reduced-motion:reduce){
