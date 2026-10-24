@@ -78,10 +78,10 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .category-boxes .category-box:hover{background:#e5e1db}
 .category-boxes .category-box.active{border-bottom-color:#333}
 
-/* Category labels: matching font and soft grey */
+/* Category labels: maroon, regular weight */
 .post-category{display:flex;flex-wrap:wrap;gap:8px 12px;margin:0 0 12px}
-.post-category span,.project-category,.reading-category,.article-topics span,.activity-category{font-family:var(--body-font);color:#85817c;
-  font-size:14px!important;font-weight:700;letter-spacing:.2px;line-height:1.6;text-transform:none}
+.post-category span,.project-category,.reading-category,.article-topics span,.activity-category{font-family:var(--body-font);
+  color:var(--maroon);font-size:14px!important;font-weight:400!important;letter-spacing:.2px;line-height:1.6;text-transform:none}
 .project-category{margin:0 0 12px}
 
 /* Blog, Readings and Projects */
