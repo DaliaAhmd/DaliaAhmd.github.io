@@ -78,10 +78,10 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .category-boxes .category-box:hover{background:#e5e1db}
 .category-boxes .category-box.active{border-bottom-color:#333}
 
-/* Category labels: larger, dark grey, bold */
+/* Category labels: editorial font and soft grey */
 .post-category{display:flex;flex-wrap:wrap;gap:8px 12px;margin:0 0 12px}
 .post-category span,.project-category,.reading-category,.article-topics span,.activity-category{
-display:inline-block;padding:0;background:transparent;color:var(--muted);font-size:14px!important;font-weight:700;letter-spacing:.4px;line-height:1.6;text-transform:none}
+font-family:var(--editorial-font);color:#85817c;font-size:14px!important;font-weight:600;letter-spacing:.2px;line-height:1.6;text-transform:none}
 .project-category{margin:0 0 12px}
 
 /* Blog, Readings and Projects */
