@@ -22,11 +22,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:28px}
 .name{flex-shrink:0;font-size:27px;font-weight:700;letter-spacing:-.9px;line-height:1.25}
 .name a{color:var(--maroon)}
 .nav-links{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:10px 22px;font-size:14px;font-weight:700;line-height:1.5}
-.nav-links a{color:var(--text);transition:color .18s,opacity .18s}
-.nav-links a:nth-child(2){color:var(--maroon)}
-.nav-links a:nth-child(3){color:var(--navy)}
-.nav-links a:nth-child(4){color:var(--terracotta)}
-body:has(.hero) .nav-links a{color:#000;font-size:16px;font-weight:700}
+.nav-links a{color:#000!important;font-size:16px!important;font-weight:700!important;transition:color .18s,opacity .18s}
 .nav-links a:hover,.links a:hover,.read-more:hover,.project-link:hover,.reading-link:hover,.back-link:hover,.article-back-link:hover{opacity:.72}
 
 /* Page headings */
@@ -46,7 +42,7 @@ body:has(.readings-section){background:linear-gradient(135deg,#f3f7f5,#f7f7f1 56
 body:has(.projects-section){background:linear-gradient(135deg,#faf4ed,#f8f4ef 56%,#f6f1e9)}
 body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#f3f1f7)}
 
-/* Home hero and decorations */
+/* Homepage */
 .hero{position:relative;padding:98px 0 100px;border-top:0}
 .hero-content{display:flex;align-items:center;gap:64px}
 .hero-photo{position:relative;flex-shrink:0;isolation:isolate}
@@ -55,7 +51,7 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .hero-photo img{display:block;width:270px;height:270px;border-radius:5px;object-fit:cover;box-shadow:0 16px 36px rgba(48,39,31,.1)}
 .hero-text{flex:1;min-width:0}
 .hero h1{margin:0 0 20px;color:var(--text);font-size:clamp(38px,5vw,50px);font-weight:700;letter-spacing:-1.8px;line-height:1.12}
-.subtitle {margin: 0 0 24px;color: var(--maroon);font-size: 17px;font-weight: 700;line-height: 1.7;}
+.subtitle{margin:0 0 24px;color:var(--maroon);font-size:17px;font-weight:700;line-height:1.7}
 .intro{max-width:630px;margin:0;font-size:18px;line-height:1.9}
 .links{display:flex;flex-wrap:wrap;gap:14px 25px;margin-top:30px;font-size:15px;font-weight:700}
 .links a{color:var(--navy)}
@@ -77,11 +73,11 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .activity-description{margin:0;color:var(--muted);font-size:16px;line-height:1.85}
 .activity-category{display:inline-block;margin-top:13px;font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase}
 
-/* Category labels and filters */
+/* Categories and filter buttons */
 .category-ai,.category-olive{color:var(--olive)}
 .category-governance,.category-data{color:var(--navy)}
-.category-research,.category-terracotta{color:var(--terracotta)}
-.category-economics,.category-brown{color:var(--brown)}
+.category-research,.category-terracotta,.category-financial-crisis{color:var(--terracotta)}
+.category-economics,.category-brown,.category-economic-history{color:var(--brown)}
 .category-technology,.category-writing{color:var(--maroon)}
 .category-beige{color:#88796b}
 .category-boxes{display:flex;flex-wrap:wrap;gap:9px;margin:24px 0 40px}
@@ -91,18 +87,13 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .category-box.category-all{background:#efede9;color:var(--text)}
 .category-box.category-ai{background:var(--pastel-sage);color:var(--sage)}
 .category-box.category-governance{background:var(--pastel-blue);color:var(--navy)}
-.category-box.category-economics{background:var(--pastel-cream);color:var(--brown)}
+.category-box.category-economics,.category-box.category-economic-history{background:var(--pastel-cream);color:var(--brown)}
 .category-box.category-technology{background:var(--pastel-rose);color:var(--maroon)}
-.category-box.category-research{background:var(--pastel-peach);color:var(--terracotta)}
-/* Economic history and financial crisis labels */
-.category-economic-history {color: var(--brown);}
-.category-financial-crisis {color: var(--terracotta);}
-/* Matching pastel filter boxes */
-.category-box.category-economic-history {background: var(--pastel-cream);color: var(--brown);}
-.category-box.category-financial-crisis {background: var(--pastel-peach);color: var(--terracotta);}
-.filter-item.hidden{display:none}
+.category-box.category-research,.category-box.category-financial-crisis{background:var(--pastel-peach);color:var(--terracotta)}
+.filter-item.hidden,.filter-item[hidden]{display:none!important}
 .no-results{display:none;margin-top:26px;color:var(--muted)}
 .no-results.visible{display:block}
+.no-results[hidden]{display:none!important}
 
 /* Blog, readings and projects */
 .blog-section,.readings-section,.projects-section{padding:0 0 90px;border-top:0}
@@ -125,6 +116,18 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .read-more,.project-link,.reading-link,.back-link,.article-back-link{display:inline-block;margin-top:16px;color:var(--navy);font-size:14px;font-weight:700;transition:color .18s,opacity .18s}
 .read-more:hover,.project-link:hover,.reading-link:hover,.back-link:hover,.article-back-link:hover{color:var(--maroon)}
 
+/* Blog layout: category beside post, date below title */
+.post{grid-template-columns:145px minmax(0,1fr);column-gap:32px;row-gap:0}
+.post-content{display:contents}
+.post > .post-date{grid-column:2;grid-row:2;margin:0 0 12px;padding:0}
+.post > .post-content > .post-category{grid-column:1;grid-row:1 / span 6;display:flex;flex-direction:column;align-items:flex-start;gap:6px;margin:5px 0 0}
+.post > .post-content > h2{grid-column:2;grid-row:1;margin:0}
+.post > .post-content > .post-subtitle{grid-column:2;grid-row:3;margin:0 0 18px}
+.post:has(.post-subtitle) .post-description{grid-column:2;grid-row:4}
+.post:not(:has(.post-subtitle)) .post-description{grid-column:2;grid-row:3}
+.post:has(.post-subtitle) .read-more{grid-column:2;grid-row:5}
+.post:not(:has(.post-subtitle)) .read-more{grid-column:2;grid-row:4}
+
 /* About page */
 .interest-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 36px}
 .interest{padding:22px 0 8px;border-top:2px solid var(--line)}
@@ -146,7 +149,7 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .github-icon{fill:#181717}
 footer{padding:38px 0;color:var(--muted);font-size:13px;text-align:center}
 
-/* Banking Without Boundaries article */
+/* Article page */
 .article-page{padding-top:58px;padding-bottom:100px}
 .article-back-link{margin:0 0 42px}
 .article-header{max-width:800px;margin:0 auto 50px;padding-bottom:36px;border-bottom:1px solid var(--line)}
@@ -154,7 +157,7 @@ footer{padding:38px 0;color:var(--muted);font-size:13px;text-align:center}
 .article-topics span{font-size:11px;font-weight:800;letter-spacing:.8px;line-height:1.6;text-transform:uppercase}
 .article-title{max-width:760px;margin:0;color:var(--text);font-size:clamp(32px,3.8vw,40px);font-weight:800;letter-spacing:-.8px;line-height:1.2}
 .article-title strong{font-weight:800}
-.article-subtitle{max-width:700px;margin:24px 0 0;color:#55504b;font-family:var(--editorial-font);font-size:clamp(20px,2vw,20px);font-style:italic;line-height:1.7}
+.article-subtitle{max-width:700px;margin:24px 0 0;color:#55504b;font-family:var(--editorial-font);font-size:20px;font-style:italic;line-height:1.7}
 .article-byline{margin:26px 0 0;color:var(--muted);font-size:14px;font-weight:700}
 .article-body{max-width:720px;margin:0 auto}
 .article-body p{margin:0 0 30px;color:#282623;font-family:var(--editorial-font);font-size:19px;line-height:1.95}
@@ -162,7 +165,7 @@ footer{padding:38px 0;color:var(--muted);font-size:13px;text-align:center}
 .article-footer-link{max-width:720px;margin:52px auto 0;padding-top:25px;border-top:1px solid var(--line)}
 .article-footer-link .article-back-link{margin:0}
 
-/* Decorative page accents */
+/* Decorative accents */
 body:has(.blog-section) .page-header::after,body:has(.readings-section) .page-header::after,body:has(.projects-section) .page-header::after,body:has(.interest-grid) .page-header::after{content:"";position:absolute;top:110px;right:7%;width:68px;height:68px;pointer-events:none}
 body:has(.blog-section) .page-header::after{border:1px solid rgba(113,55,71,.24);transform:rotate(20deg)}
 body:has(.readings-section) .page-header::after{background:var(--pastel-blue);opacity:.7;transform:rotate(12deg)}
@@ -175,6 +178,7 @@ body:has(.interest-grid) .page-header::after{border:1px solid rgba(85,113,93,.28
   .hero-photo img{width:235px;height:235px}
   .nav-links{gap:9px 15px}
   .post,.reading,.project{grid-template-columns:88px minmax(0,1fr);gap:24px}
+  .post{grid-template-columns:125px minmax(0,1fr);column-gap:24px;row-gap:0}
 }
 
 /* Mobile */
@@ -184,7 +188,7 @@ body:has(.interest-grid) .page-header::after{border:1px solid rgba(85,113,93,.28
   nav{align-items:flex-start;gap:14px}
   .name{font-size:22px}
   .nav-links{justify-content:flex-end;gap:8px 12px;font-size:13px}
-  body:has(.hero) .nav-links a{font-size:14px}
+  .nav-links a{font-size:14px!important}
   .page-header{padding:62px 0 38px}
   .page-header h1{font-size:clamp(35px,9vw,44px);letter-spacing:-1.2px}
   .page-header p{margin-top:17px;font-size:16px}
@@ -207,6 +211,16 @@ body:has(.interest-grid) .page-header::after{border:1px solid rgba(85,113,93,.28
   .category-box{padding:8px 11px;font-size:12px}
   .blog-section,.readings-section,.projects-section{padding-bottom:70px}
   .post,.reading,.project{grid-template-columns:minmax(0,1fr);gap:8px;padding:27px 0 30px}
+  .post{display:grid;grid-template-columns:1fr;column-gap:0;row-gap:0}
+  .post-content{display:contents}
+  .post > .post-content > .post-category{grid-column:1;grid-row:1;flex-direction:row;flex-wrap:wrap;gap:8px 12px;margin:0 0 10px}
+  .post > .post-content > h2{grid-column:1;grid-row:2;margin:0 0 4px;font-size:22px;letter-spacing:-.3px}
+  .post > .post-date{grid-column:1;grid-row:3;margin:0 0 12px;padding:0;font-size:11px}
+  .post > .post-content > .post-subtitle{grid-column:1;grid-row:4;margin:0 0 15px;font-size:17px}
+  .post:has(.post-subtitle) .post-description{grid-column:1;grid-row:5}
+  .post:not(:has(.post-subtitle)) .post-description{grid-column:1;grid-row:4}
+  .post:has(.post-subtitle) .read-more{grid-column:1;grid-row:6}
+  .post:not(:has(.post-subtitle)) .read-more{grid-column:1;grid-row:5}
   .post-date,.reading-category,.project-number{padding-top:0;font-size:11px}
   .post-category,.project-category{margin-bottom:10px}
   .post h2,.reading h2,.project h2{margin-bottom:10px;font-size:22px;letter-spacing:-.3px}
@@ -227,26 +241,6 @@ body:has(.interest-grid) .page-header::after{border:1px solid rgba(85,113,93,.28
   .article-footer-link{margin-top:38px;padding-top:21px}
   body:has(.blog-section) .page-header::after,body:has(.readings-section) .page-header::after,body:has(.projects-section) .page-header::after,body:has(.interest-grid) .page-header::after{top:88px;right:1%;width:45px;height:45px;opacity:.55}
   footer{padding:29px 0}
-}
-
-/* Keep navigation identical across all pages */
-.nav-links a,
-.nav-links a:nth-child(2),
-.nav-links a:nth-child(3),
-.nav-links a:nth-child(4) {
-  color: #000 !important;
-  font-size: 16px !important;
-  font-weight: 700 !important;
-}
-
-/* Consistent mobile navigation */
-@media (max-width: 700px) {
-  .nav-links a,
-  .nav-links a:nth-child(2),
-  .nav-links a:nth-child(3),
-  .nav-links a:nth-child(4) {
-    font-size: 14px !important;
-  }
 }
 
 @media(prefers-reduced-motion:reduce){
