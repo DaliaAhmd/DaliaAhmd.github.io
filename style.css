@@ -94,6 +94,12 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .category-box.category-economics{background:var(--pastel-cream);color:var(--brown)}
 .category-box.category-technology{background:var(--pastel-rose);color:var(--maroon)}
 .category-box.category-research{background:var(--pastel-peach);color:var(--terracotta)}
+/* Economic history and financial crisis labels */
+.category-economic-history {color: var(--brown);}
+.category-financial-crisis {color: var(--terracotta);}
+/* Matching pastel filter boxes */
+.category-box.category-economic-history {background: var(--pastel-cream);color: var(--brown);}
+.category-box.category-financial-crisis {background: var(--pastel-peach);color: var(--terracotta);}
 .filter-item.hidden{display:none}
 .no-results{display:none;margin-top:26px;color:var(--muted)}
 .no-results.visible{display:block}
