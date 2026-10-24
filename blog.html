@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- 1. Page settings -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog — Dalia Ahmed</title>
@@ -8,19 +9,27 @@
   <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
+
+<!-- 2. Navigation menu -->
 <header><div class="container"><nav>
   <div class="name"><a href="index.html">Dalia Ahmed</a></div>
   <div class="nav-links">
-    <a href="about.html">About</a><a href="blog.html">Blog</a><a href="readings.html">Readings</a><a href="projects.html">Projects</a>
+    <a href="about.html">About</a>
+    <a href="blog.html">Blog</a>
+    <a href="readings.html">Readings</a>
+    <a href="projects.html">Projects</a>
     <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link" target="_blank" rel="noopener noreferrer">CV</a>
     <a href="index.html#contact">Contact</a>
   </div>
 </nav></div></header>
 
+<!-- 3. Blog introduction and category filters -->
 <main class="container">
   <div class="page-header">
     <h1>Blog</h1>
     <p>Notes, reflections, and longer-form writing on AI, governance, economics, technology, and research.</p>
+
+    <!-- Category filter buttons -->
     <div class="category-boxes">
       <button class="category-box active" data-filter="all" type="button">All</button>
       <button class="category-box" data-filter="ai" type="button">AI Safety</button>
@@ -30,13 +39,20 @@
       <button class="category-box" data-filter="financial-crisis" type="button">Financial Crisis</button>
       <button class="category-box" data-filter="technology" type="button">Technology</button>
       <button class="category-box" data-filter="research" type="button">Research</button>
+    </div>
   </div>
 
+  <!-- 4. Blog posts -->
   <section class="blog-section"><div class="blog-list">
+
+    <!-- Blog 1: Banking Without Boundaries -->
     <article class="post filter-item" data-categories="economic-history financial-crisis">
-      <div class="post-date">2026</div>
+      <div class="post-date">October 2025</div>
       <div class="post-content">
-        <div class="post-category"><span>Economic History</span><span>Financial Crisis</span></div>
+        <div class="post-category">
+          <span>Economic History</span>
+          <span>Financial Crisis</span>
+        </div>
         <h2 class="post-title-bold"><a href="banking-without-boundaries.html">Banking Without Boundaries</a></h2>
         <p class="post-subtitle">How the repeal of Glass–Steagall and branching deregulation reshaped American banking</p>
         <p class="post-description">How the deregulation of U.S. banking reshaped American economic history and contributed to the 2008 financial crisis.</p>
@@ -44,18 +60,23 @@
       </div>
     </article>
 
+    <!-- Blog 2: AI Safety and Governance -->
     <article class="post filter-item" data-categories="ai governance">
-      <div class="post-date">2026</div>
+      <div class="post-date">Month 2026</div>
       <div class="post-content">
-        <div class="post-category"><span>AI Safety</span><span>Governance</span></div>
+        <div class="post-category">
+          <span>AI Safety</span>
+          <span>Governance</span>
+        </div>
         <h2><a href="#">Writing on AI Safety and Governance</a></h2>
         <p class="post-description">Essays and notes exploring how increasingly capable AI systems may affect institutions, governance, and society.</p>
         <a class="read-more" href="#">Read →</a>
       </div>
     </article>
 
+    <!-- Blog 3: Independent Research -->
     <article class="post filter-item" data-categories="research">
-      <div class="post-date">2026</div>
+      <div class="post-date">Month 2026</div>
       <div class="post-content">
         <div class="post-category"><span>Research</span></div>
         <h2><a href="#">Notes from Independent Research</a></h2>
@@ -64,21 +85,30 @@
       </div>
     </article>
 
+    <!-- Blog 4: Financial Systems and Economic Change -->
     <article class="post filter-item" data-categories="economics economic-history">
-      <div class="post-date">2025</div>
+      <div class="post-date">Month 2025</div>
       <div class="post-content">
-        <div class="post-category"><span>Economics</span><span>Economic History</span></div>
+        <div class="post-category">
+          <span>Economics</span>
+          <span>Economic History</span>
+        </div>
         <h2><a href="#">Financial Systems and Economic Change</a></h2>
         <p class="post-description">Reflections on financial regulation, banking, economic institutions, and historical change.</p>
         <a class="read-more" href="#">Read →</a>
       </div>
     </article>
 
+    <!-- Message shown when a category has no matching posts -->
     <p class="no-results">No posts in this category yet.</p>
+
   </div></section>
 </main>
 
+<!-- 5. Footer -->
 <footer><div class="container">© 2026 Dalia Ahmed</div></footer>
+
+<!-- 6. Category filtering logic -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const buttons = document.querySelectorAll(".category-box[data-filter]");
@@ -101,5 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
   filterItems("all");
 });
 </script>
+
 </body>
 </html>
