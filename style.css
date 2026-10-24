@@ -277,3 +277,14 @@ body:has(.interest-grid) .page-header::after{border:1px solid rgba(85,113,93,.28
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
+
+
+/* Remove backgrounds from blog post category labels */
+.post-category,
+.post-category span {
+  background: transparent !important;
+  color: #000 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: 700;
+}
