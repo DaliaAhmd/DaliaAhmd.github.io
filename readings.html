@@ -1,392 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="style.css?v=4">
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Readings — Dalia Ahmed</title>
-
-    <link rel="icon" type="image/png" href="Dalia.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Readings — Dalia Ahmed</title>
+  <link rel="icon" href="Dalia.png">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
-
 <body>
+<header><div class="container"><nav>
+  <div class="name"><a href="index.html">Dalia Ahmed</a></div>
+  <div class="nav-links">
+    <a href="about.html">About</a><a href="blog.html">Blog</a><a href="readings.html">Readings</a><a href="projects.html">Projects</a>
+    <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link" target="_blank" rel="noopener noreferrer">CV</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav></div></header>
 
-<header>
-
-    <div class="container">
-
-        <nav>
-
-            <div class="name">
-
-                <a href="index.html">
-                    Dalia Ahmed
-                </a>
-
-            </div>
-
-            <div class="nav-links">
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="blog.html">
-                    Blog
-                </a>
-
-                <a href="readings.html">
-                    Readings
-                </a>
-
-                <a href="projects.html">
-                    Projects
-                </a>
-
-                <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    CV
-                </a>
-
-                <a href="index.html#contact">
-                    Contact
-                </a>
-
-            </div>
-
-        </nav>
-
+<main class="container">
+  <div class="page-header">
+    <h1>Readings</h1>
+    <p>Papers, articles, reports, and other resources that have shaped how I think about AI, governance, economics, technology, and research.</p>
+    <div class="category-boxes">
+      <button class="category-box active" data-filter="all" type="button">All</button>
+      <button class="category-box" data-filter="ai" type="button">AI Safety</button>
+      <button class="category-box" data-filter="governance" type="button">Governance</button>
+      <button class="category-box" data-filter="economics" type="button">Economics</button>
+      <button class="category-box" data-filter="economic-history" type="button">Economic History</button>
+      <button class="category-box" data-filter="financial-crisis" type="button">Financial Crisis</button>
+      <button class="category-box" data-filter="technology" type="button">Technology</button>
+      <button class="category-box" data-filter="research" type="button">Research</button>
     </div>
-
-</header>
-
-
-<main>
-
-    <div class="container">
-
-        <!-- PAGE HEADER -->
-
-        <div class="page-header">
-
-            <h1>
-                Readings
-            </h1>
-
-            <p>
-                Papers, articles, reports, and other resources that have
-                shaped how I think about AI, governance, economics,
-                technology, and research.
-            </p>
-
-        <div class="category-boxes">
-
-    <a class="category-box" href="#">
-        AI Safety
-    </a>
-
-    <a class="category-box" href="#">
-        Governance
-    </a>
-
-    <a class="category-box" href="#">
-        Economics
-    </a>
-
-    <a class="category-box" href="#">
-        Technology
-    </a>
-
-    <a class="category-box" href="#">
-        Research
-    </a>
-
-</div>
-        <!-- READINGS -->
-
-        <div class="readings-section">
-
-            <div class="reading-list">
-
-
-                <!-- READING 1 -->
-
-                <article class="reading">
-
-                    <div class="reading-category category-ai">
-                        AI Safety
-                    </div>
-
-                    <div class="reading-content">
-
-                        <h2>
-
-                            <a href="#"
-                               target="_blank"
-                               rel="noopener noreferrer">
-
-                                Safety and Alignment in an Era of Long-Horizon Models
-
-                            </a>
-
-                        </h2>
-
-                        <div class="reading-meta">
-                            OpenAI · 2026
-                        </div>
-
-                        <p class="reading-description">
-
-                            A useful introduction to the challenge of
-                            evaluating and controlling AI systems that may
-                            operate autonomously for increasingly long
-                            periods of time.
-
-                        </p>
-
-                        <a class="reading-link"
-                           href="#"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            Read →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- READING 2 -->
-
-                <article class="reading">
-
-                    <div class="reading-category category-governance">
-                        AI Governance
-                    </div>
-
-                    <div class="reading-content">
-
-                        <h2>
-
-                            <a href="#"
-                               target="_blank"
-                               rel="noopener noreferrer">
-
-                                Anthropic’s Responsible Scaling Policy
-
-                            </a>
-
-                        </h2>
-
-                        <div class="reading-meta">
-                            Anthropic · 2026
-                        </div>
-
-                        <p class="reading-description">
-
-                            A practical example of a frontier AI developer
-                            translating safety assessments into conditional
-                            commitments and operational restrictions.
-
-                        </p>
-
-                        <a class="reading-link"
-                           href="#"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            Read →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- READING 3 -->
-
-                <article class="reading">
-
-                    <div class="reading-category category-ai">
-                        AI Strategy
-                    </div>
-
-                    <div class="reading-content">
-
-                        <h2>
-
-                            <a href="#"
-                               target="_blank"
-                               rel="noopener noreferrer">
-
-                                An International Agreement to Prevent the
-                                Premature Creation of Artificial Superintelligence
-
-                            </a>
-
-                        </h2>
-
-                        <div class="reading-meta">
-                            Aaron Scher, David Abecassis, Peter Barnett & Brian Abeyta · 2025
-                        </div>
-
-                        <p class="reading-description">
-
-                            A proposal for international coordination around
-                            the development of advanced AI, particularly useful
-                            for thinking about verification, enforcement,
-                            and conditions for resuming development.
-
-                        </p>
-
-                        <a class="reading-link"
-                           href="#"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            Read →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- READING 4 -->
-
-                <article class="reading">
-
-                    <div class="reading-category category-economics">
-                        Economics
-                    </div>
-
-                    <div class="reading-content">
-
-                        <h2>
-
-                            <a href="#"
-                               target="_blank"
-                               rel="noopener noreferrer">
-
-                                Financial Regulation, Deregulation, and Systemic Risk
-
-                            </a>
-
-                        </h2>
-
-                        <div class="reading-meta">
-                            Selected research literature
-                        </div>
-
-                        <p class="reading-description">
-
-                            Papers and historical research that are useful
-                            for understanding how regulatory institutions,
-                            incentives, and financial structures interact
-                            during periods of major economic change.
-
-                        </p>
-
-                        <a class="reading-link"
-                           href="#"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            Explore →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- READING 5 -->
-
-                <article class="reading">
-
-                    <div class="reading-category category-technology">
-                        Technology
-                    </div>
-
-                    <div class="reading-content">
-
-                        <h2>
-
-                            <a href="#"
-                               target="_blank"
-                               rel="noopener noreferrer">
-
-                                AI, Labor Markets, and the Future of Work
-
-                            </a>
-
-                        </h2>
-
-                        <div class="reading-meta">
-                            Selected research and reports
-                        </div>
-
-                        <p class="reading-description">
-
-                            Research on AI adoption, employment, task
-                            transformation, and the broader economic
-                            consequences of increasingly capable technology.
-
-                        </p>
-
-                        <a class="reading-link"
-                           href="#"
-                           target="_blank"
-                           rel="noopener noreferrer">
-
-                            Explore →
-
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
+  </div>
+
+  <section class="readings-section"><div class="reading-list">
+    <article class="reading filter-item" data-categories="ai">
+      <div class="reading-category">AI Safety</div>
+      <div class="reading-content">
+        <h2><a href="#" target="_blank" rel="noopener noreferrer">Safety and Alignment in an Era of Long-Horizon Models</a></h2>
+        <div class="reading-meta">OpenAI · 2026</div>
+        <p class="reading-description">An introduction to evaluating and controlling AI systems that may operate autonomously for increasingly long periods.</p>
+        <a class="reading-link" href="#" target="_blank" rel="noopener noreferrer">Read →</a>
+      </div>
+    </article>
+
+    <article class="reading filter-item" data-categories="governance">
+      <div class="reading-category">AI Governance</div>
+      <div class="reading-content">
+        <h2><a href="#" target="_blank" rel="noopener noreferrer">Anthropic’s Responsible Scaling Policy</a></h2>
+        <div class="reading-meta">Anthropic · 2026</div>
+        <p class="reading-description">An example of a frontier AI developer translating safety assessments into conditional commitments and operational restrictions.</p>
+        <a class="reading-link" href="#" target="_blank" rel="noopener noreferrer">Read →</a>
+      </div>
+    </article>
+
+    <article class="reading filter-item" data-categories="ai governance">
+      <div class="reading-category">AI Strategy</div>
+      <div class="reading-content">
+        <h2><a href="#" target="_blank" rel="noopener noreferrer">An International Agreement to Prevent the Premature Creation of Artificial Superintelligence</a></h2>
+        <div class="reading-meta">Aaron Scher, David Abecassis, Peter Barnett &amp; Brian Abeyta · 2025</div>
+        <p class="reading-description">A proposal for international coordination around advanced AI, particularly verification, enforcement, and conditions for resuming development.</p>
+        <a class="reading-link" href="#" target="_blank" rel="noopener noreferrer">Read →</a>
+      </div>
+    </article>
+
+    <article class="reading filter-item" data-categories="economics economic-history financial-crisis research">
+      <div class="reading-category">Economics</div>
+      <div class="reading-content">
+        <h2><a href="#" target="_blank" rel="noopener noreferrer">Financial Regulation, Deregulation, and Systemic Risk</a></h2>
+        <div class="reading-meta">Selected research literature</div>
+        <p class="reading-description">Research on how regulatory institutions, incentives, and financial structures interact during periods of major economic change.</p>
+        <a class="reading-link" href="#" target="_blank" rel="noopener noreferrer">Explore →</a>
+      </div>
+    </article>
+
+    <article class="reading filter-item" data-categories="technology economics research">
+      <div class="reading-category">Technology</div>
+      <div class="reading-content">
+        <h2><a href="#" target="_blank" rel="noopener noreferrer">AI, Labor Markets, and the Future of Work</a></h2>
+        <div class="reading-meta">Selected research and reports</div>
+        <p class="reading-description">Research on AI adoption, employment, task transformation, and the economic consequences of increasingly capable technology.</p>
+        <a class="reading-link" href="#" target="_blank" rel="noopener noreferrer">Explore →</a>
+      </div>
+    </article>
+
+    <p class="no-results">No readings in this category yet.</p>
+  </div></section>
 </main>
 
+<footer><div class="container">© 2026 Dalia Ahmed</div></footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".category-box[data-filter]");
+  const items = document.querySelectorAll(".filter-item");
+  const message = document.querySelector(".no-results");
 
-<footer>
+  function filterItems(category) {
+    let count = 0;
+    items.forEach(item => {
+      const categories = (item.dataset.categories || "").split(/\s+/);
+      const show = category === "all" || categories.includes(category);
+      item.classList.toggle("hidden", !show);
+      if (show) count++;
+    });
+    buttons.forEach(button => button.classList.toggle("active", button.dataset.filter === category));
+    message.classList.toggle("visible", count === 0);
+  }
 
-    <div class="container">
-        © 2026 Dalia Ahmed
-    </div>
-
-</footer>
-
+  buttons.forEach(button => button.addEventListener("click", () => filterItems(button.dataset.filter)));
+  filterItems("all");
+});
+</script>
 </body>
-
 </html>
