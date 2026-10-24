@@ -235,3 +235,30 @@ body:has(.interest-grid) .page-header::after { border: 1px solid rgba(85,113,93,
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+
+/* Homepage navigation: slightly larger, bold, and black */
+body:has(.hero) .nav-links a {
+    color: #000000 !important;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Banking Without Boundaries: slightly smaller title */
+.article-title {
+    font-size: clamp(32px, 3.8vw, 40px);
+    letter-spacing: -0.8px;
+    line-height: 1.2;
+}
+
+/* Mobile adjustments */
+@media (max-width: 700px) {
+    body:has(.hero) .nav-links a {
+        font-size: 14px;
+    }
+
+    .article-title {
+        font-size: 30px;
+        letter-spacing: -0.5px;
+    }
+}
