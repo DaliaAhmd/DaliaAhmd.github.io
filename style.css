@@ -261,6 +261,18 @@ body:has(.interest-grid) .page-header::after{border:1px solid rgba(85,113,93,.28
   footer{padding:29px 0}
 }
 
+/* Match Blog filters to Projects and Readings */
+.category-boxes .category-box {
+  background: #f4f1ec !important;
+  color: #000 !important;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.category-boxes .category-box.active {
+  border-bottom-color: #000;
+}
+
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
