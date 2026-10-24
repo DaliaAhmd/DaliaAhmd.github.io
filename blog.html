@@ -1,378 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="style.css?v=4">
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Blog — Dalia Ahmed</title>
-
-    <link rel="icon" type="image/png" href="Dalia.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Dalia Ahmed</title>
+  <link rel="icon" type="image/png" href="Dalia.png">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
-
 <body>
+  <header><div class="container"><nav>
+    <div class="name"><a href="index.html">Dalia Ahmed</a></div>
+    <div class="nav-links">
+      <a href="about.html">About</a><a href="blog.html">Blog</a>
+      <a href="readings.html">Readings</a><a href="projects.html">Projects</a>
+      <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link" target="_blank" rel="noopener noreferrer">CV</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </nav></div></header>
 
-<header>
-
-    <div class="container">
-
-        <nav>
-
-            <div class="name">
-
-                <a href="index.html">
-                    Dalia Ahmed
-                </a>
-
-            </div>
-
-            <div class="nav-links">
-
-                <a href="about.html">
-                    About
-                </a>
-
-                <a href="blog.html">
-                    Blog
-                </a>
-
-                <a href="readings.html">
-                    Readings
-                </a>
-
-                <a href="projects.html">
-                    Projects
-                </a>
-
-                <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    CV
-                </a>
-
-                <a href="index.html#contact">
-                    Contact
-                </a>
-
-            </div>
-
-        </nav>
-
+  <main class="container">
+    <div class="page-header">
+      <h1>Blog</h1>
+      <p>Notes, reflections, and longer-form writing on AI, governance, economics, technology, and research.</p>
+      <div class="category-boxes">
+        <button class="category-box category-all active" data-filter="all" type="button">All</button>
+        <button class="category-box category-ai" data-filter="ai" type="button">AI Safety</button>
+        <button class="category-box category-governance" data-filter="governance" type="button">Governance</button>
+        <button class="category-box category-economics" data-filter="economics" type="button">Economics</button>
+        <button class="category-box category-economic-history" data-filter="economic-history" type="button">Economic History</button>
+        <button class="category-box category-financial-crisis" data-filter="financial-crisis" type="button">Financial Crisis</button>
+        <button class="category-box category-technology" data-filter="technology" type="button">Technology</button>
+        <button class="category-box category-research" data-filter="research" type="button">Research</button>
+      </div>
     </div>
 
-</header>
+    <section class="blog-section"><div class="blog-list">
 
-
-<main>
-
-    <div class="container">
-
-        <!-- PAGE HEADER -->
-
-        <div class="page-header">
-
-            <h1>
-                Blog
-            </h1>
-
-            <p>
-                Notes, reflections, and longer-form writing on AI,
-                governance, economics, technology, and research.
-            </p>
-<div class="category-boxes">
-  <button class="category-box category-all active" data-filter="all" type="button">All</button>
-  <button class="category-box category-ai" data-filter="ai" type="button">AI Safety</button>
-  <button class="category-box category-governance" data-filter="governance" type="button">Governance</button>
-  <button class="category-box category-economic-history" data-filter="economic-history" type="button">Economic History</button>
-  <button class="category-box category-financial-crisis" data-filter="financial-crisis" type="button">Financial Crisis</button>
-  <button class="category-box category-technology" data-filter="technology" type="button">Technology</button>
-  <button class="category-box category-research" data-filter="research" type="button">Research</button>
-</div>
-
-        <!-- BLOG POSTS -->
-
-        <div class="blog-section">
-
-            <div class="blog-list">
-
-<!-- Banking Without Boundaries -->
-<article class="post filter-item" data-categories="economics">
-
-    <div class="post-date">
-        2026
-    </div>
-
-    <div class="post-content">
-
-        <div class="post-category">
-            <span class="category-economics">Economic History</span>
-            <span class="category-terracotta">Financial Crisis</span>
+      <article class="post filter-item" data-categories="economics economic-history financial-crisis">
+        <div class="post-date">2026</div><div class="post-content">
+          <div class="post-category">
+            <span class="category-economics">Economics</span>
+            <span class="category-economic-history">Economic History</span>
+            <span class="category-financial-crisis">Financial Crisis</span>
+          </div>
+          <h2 class="post-title-bold"><a href="banking-without-boundaries.html">Banking Without Boundaries</a></h2>
+          <p class="post-subtitle">How the repeal of Glass–Steagall and branching deregulation reshaped American banking</p>
+          <p class="post-description">How the deregulation of U.S. banking reshaped American economic history and contributed to the 2008 financial crisis.</p>
+          <a class="read-more" href="banking-without-boundaries.html">Read article →</a>
         </div>
+      </article>
 
-        <h2 class="post-title-bold">
-            <a href="banking-without-boundaries.html">
-                <strong>Banking Without Boundaries</strong>
-            </a>
-        </h2>
-
-        <p class="post-subtitle">
-            <em>
-                How the repeal of Glass–Steagall and branching
-                deregulation reshaped American banking
-            </em>
-            
-              </p>
-              <p class="post-description">
-                How the deregulation of U.S. banking reshaped American economic history and led to the 2008 financial crisis
-              </p>
-
-        <a class="read-more" href="banking-without-boundaries.html">
-            Read article →
-        </a>
-
-    </div>
-
-</article>
-                <!-- POST 1 -->
-
-                <article
-                    class="post filter-item"
-                    data-categories="ai governance">
-
-                    <div class="post-date">
-                        2026
-                    </div>
-
-                    <div class="post-content">
-
-                        <div class="post-category category-ai">
-                            AI Safety
-                        </div>
-
-                        <h2>
-
-                            <a href="#">
-                                Writing on AI Safety and Governance
-                            </a>
-
-                        </h2>
-
-                        <p class="post-description">
-                            Essays and notes exploring how increasingly
-                            capable AI systems may affect institutions,
-                            governance, and society.
-                        </p>
-
-                        <a class="read-more"
-                           href="#">
-                            Read →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- POST 2 -->
-
-                <article
-                    class="post filter-item"
-                    data-categories="research">
-
-                    <div class="post-date">
-                        2026
-                    </div>
-
-                    <div class="post-content">
-
-                        <div class="post-category category-research">
-                            Research
-                        </div>
-
-                        <h2>
-
-                            <a href="#">
-                                Notes from Independent Research
-                            </a>
-
-                        </h2>
-
-                        <p class="post-description">
-                            Reflections on research questions, methods,
-                            evidence, and the process of turning broad
-                            questions into concrete projects.
-                        </p>
-
-                        <a class="read-more"
-                           href="#">
-                            Read →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- POST 3 -->
-
-                <article
-                    class="post filter-item"
-                    data-categories="economics">
-
-                    <div class="post-date">
-                        2025
-                    </div>
-
-                    <div class="post-content">
-
-                        <div class="post-category category-economics">
-                            Economics
-                        </div>
-
-                        <h2>
-
-                            <a href="#">
-                                Financial Systems and Economic Change
-                            </a>
-
-                        </h2>
-
-                        <p class="post-description">
-                            Writing and reflections emerging from research
-                            into financial regulation, banking, economic
-                            institutions, and historical change.
-                        </p>
-
-                        <a class="read-more"
-                           href="#">
-                            Read →
-                        </a>
-
-                    </div>
-
-                </article>
-
-
-                <!-- NO RESULTS -->
-
-                <div class="no-results">
-                    No posts in this category yet.
-                </div>
-
-
-            </div>
-
+      <article class="post filter-item" data-categories="ai governance">
+        <div class="post-date">2026</div><div class="post-content">
+          <div class="post-category"><span class="category-ai">AI Safety</span><span class="category-governance">Governance</span></div>
+          <h2><a href="#">Writing on AI Safety and Governance</a></h2>
+          <p class="post-description">Essays and notes exploring how increasingly capable AI systems may affect institutions, governance, and society.</p>
+          <a class="read-more" href="#">Read →</a>
         </div>
+      </article>
 
-    </div>
+      <article class="post filter-item" data-categories="research">
+        <div class="post-date">2026</div><div class="post-content">
+          <div class="post-category"><span class="category-research">Research</span></div>
+          <h2><a href="#">Notes from Independent Research</a></h2>
+          <p class="post-description">Reflections on research questions, methods, evidence, and the process of turning broad questions into concrete projects.</p>
+          <a class="read-more" href="#">Read →</a>
+        </div>
+      </article>
 
-</main>
+      <article class="post filter-item" data-categories="economics economic-history">
+        <div class="post-date">2025</div><div class="post-content">
+          <div class="post-category"><span class="category-economics">Economics</span><span class="category-economic-history">Economic History</span></div>
+          <h2><a href="#">Financial Systems and Economic Change</a></h2>
+          <p class="post-description">Reflections on financial regulation, banking, economic institutions, and historical change.</p>
+          <a class="read-more" href="#">Read →</a>
+        </div>
+      </article>
 
+      <p class="no-results">No posts in this category yet.</p>
+    </div></section>
+  </main>
 
-<footer>
+  <footer><div class="container">© 2026 Dalia Ahmed</div></footer>
 
-    <div class="container">
-        © 2026 Dalia Ahmed
-    </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll(".category-box[data-filter]");
+      const posts = document.querySelectorAll(".filter-item");
+      const message = document.querySelector(".no-results");
 
-</footer>
-
-
-<script>
-
-    const filterButtons =
-        document.querySelectorAll(".category-box");
-
-    const filterItems =
-        document.querySelectorAll(".filter-item");
-
-    const noResults =
-        document.querySelector(".no-results");
-
-
-    filterButtons.forEach(function(button) {
-
-        button.addEventListener("click", function() {
-
-            const selectedCategory =
-                button.dataset.filter;
-
-
-            /* Update active button */
-
-            filterButtons.forEach(function(item) {
-
-                item.classList.remove("active");
-
-            });
-
-            button.classList.add("active");
-
-
-            /* Filter posts */
-
-            let visibleCount = 0;
-
-
-            filterItems.forEach(function(item) {
-
-                const categories =
-                    item.dataset.categories.split(" ");
-
-
-                const matches =
-                    selectedCategory === "all" ||
-                    categories.includes(selectedCategory);
-
-
-                if (matches) {
-
-                    item.classList.remove("hidden");
-
-                    visibleCount++;
-
-                } else {
-
-                    item.classList.add("hidden");
-
-                }
-
-            });
-
-
-            /* Show / hide empty message */
-
-            if (visibleCount === 0) {
-
-                noResults.classList.add("visible");
-
-            } else {
-
-                noResults.classList.remove("visible");
-
-            }
-
+      function filterPosts(category) {
+        let count = 0;
+        posts.forEach(post => {
+          const categories = (post.dataset.categories || "").split(/\s+/);
+          const show = category === "all" || categories.includes(category);
+          post.classList.toggle("hidden", !show);
+          if (show) count++;
         });
+        buttons.forEach(button => button.classList.toggle("active", button.dataset.filter === category));
+        message.classList.toggle("visible", count === 0);
+      }
 
+      buttons.forEach(button => button.addEventListener("click", () => filterPosts(button.dataset.filter)));
+      filterPosts("all");
     });
-
-</script>
-
+  </script>
 </body>
-
 </html>
