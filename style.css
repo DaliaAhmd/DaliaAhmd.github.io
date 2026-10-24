@@ -55,7 +55,7 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .hero-photo img{display:block;width:270px;height:270px;border-radius:5px;object-fit:cover;box-shadow:0 16px 36px rgba(48,39,31,.1)}
 .hero-text{flex:1;min-width:0}
 .hero h1{margin:0 0 20px;color:var(--text);font-size:clamp(38px,5vw,50px);font-weight:700;letter-spacing:-1.8px;line-height:1.12}
-.subtitle{margin:0 0 24px;color:var(--sage);font-size:17px;font-weight:700;line-height:1.7}
+.subtitle {margin: 0 0 24px;color: var(--maroon);font-size: 17px;font-weight: 700;line-height: 1.7;}
 .intro{max-width:630px;margin:0;font-size:18px;line-height:1.9}
 .links{display:flex;flex-wrap:wrap;gap:14px 25px;margin-top:30px;font-size:15px;font-weight:700}
 .links a{color:var(--navy)}
