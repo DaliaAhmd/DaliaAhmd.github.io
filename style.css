@@ -223,6 +223,26 @@ body:has(.interest-grid) .page-header::after{border:1px solid rgba(85,113,93,.28
   footer{padding:29px 0}
 }
 
+/* Keep navigation identical across all pages */
+.nav-links a,
+.nav-links a:nth-child(2),
+.nav-links a:nth-child(3),
+.nav-links a:nth-child(4) {
+  color: #000 !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+}
+
+/* Consistent mobile navigation */
+@media (max-width: 700px) {
+  .nav-links a,
+  .nav-links a:nth-child(2),
+  .nav-links a:nth-child(3),
+  .nav-links a:nth-child(4) {
+    font-size: 14px !important;
+  }
+}
+
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
