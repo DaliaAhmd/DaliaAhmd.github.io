@@ -109,17 +109,16 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 .no-results{display:none;margin-top:26px;color:var(--muted)}
 .no-results.visible{display:block}
 
-/* About page: compact, colourful sections */
-.interest-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px}
-.interest{padding:16px 18px;border-top:3px solid var(--sage);border-radius:6px;background:var(--pastel-rose)}
-.interest:nth-child(1){border-color:var(--sage);background:var(--pastel-sage)}
-.interest:nth-child(2){border-color:var(--navy);background:var(--pastel-blue)}
-.interest:nth-child(3){border-color:var(--maroon);background:var(--pastel-rose)}
-.interest:nth-child(4){border-color:var(--terracotta);background:var(--pastel-peach)}
-.interest h3{margin:0 0 6px;font-size:21px;font-weight:700;line-height:1.4;color:var(--maroon)}
-.interest:nth-child(2) h3{color:var(--navy)}.interest:nth-child(4) h3{color:var(--terracotta)}
-.interest p{margin:0;color:var(--text);font-size:18px;font-weight:500;line-height:1.7}
-@media(max-width:600px){.interest-grid{grid-template-columns:1fr;gap:10px}.interest p{font-size:17px}}
+/* About page: colourful, bold, compact */
+.about-page .about-section{padding:14px 20px;margin:10px 0;border-left:4px solid var(--maroon);border-radius:6px;background:var(--pastel-rose)}
+.about-page .about-section:nth-of-type(2){background:var(--pastel-blue);border-color:var(--navy)}
+.about-page .about-section:nth-of-type(3){background:var(--pastel-peach);border-color:var(--terracotta)}
+.about-page .about-section:nth-of-type(4){background:var(--pastel-sage);border-color:var(--sage)}
+.about-page .about-section h2{margin:0 0 8px;font-size:23px;font-weight:700;color:var(--maroon)}
+.about-page .about-section p{margin:0 0 10px;font-size:18px;font-weight:500;line-height:1.7;color:var(--text)}
+.about-page strong{color:var(--maroon);font-weight:750}
+.about-page em{color:var(--navy)}
+
 
 /* Contact and footer */
 #contact{text-align:center}
@@ -234,26 +233,3 @@ body:has(.interest-grid) .page-header::after{border:1px solid rgba(85,113,93,.28
   html{scroll-behavior:auto}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
-
-
-
-/* About: colourful, personal and compact */
-.about-page .about-intro p,.about-page .about-section p{font-size:18px;line-height:1.75;font-weight:500;margin:0 0 12px;color:var(--text)}
-.about-page strong{color:var(--maroon);font-weight:750}
-.about-page em{color:var(--navy)}
-.about-tags{display:flex;flex-wrap:wrap;gap:9px;margin:18px 0 22px}
-.about-tags span{padding:7px 13px;border-radius:20px;background:var(--pastel-rose);color:var(--maroon);font-size:14px;font-weight:700}
-.about-tags span:nth-child(2){background:var(--pastel-blue);color:var(--navy)}
-.about-tags span:nth-child(3){background:var(--pastel-sage);color:var(--sage)}
-.about-tags span:nth-child(4){background:var(--pastel-cream);color:var(--brown)}
-.about-tags span:nth-child(5){background:var(--pastel-peach);color:var(--terracotta)}
-.about-page .about-section{padding:18px 22px 10px;margin:12px 0;border-left:4px solid var(--maroon);border-radius:7px;background:var(--pastel-rose)}
-.about-page .about-curiosity{background:var(--pastel-blue);border-color:var(--navy)}
-.about-page .about-personal{background:var(--pastel-peach);border-color:var(--terracotta)}
-.about-page .about-website{background:var(--pastel-sage);border-color:var(--sage)}
-.about-page .about-section h2{font-size:23px;font-weight:750;line-height:1.4;margin:0 0 12px;color:var(--maroon)}
-.about-page .about-curiosity h2{color:var(--navy)}
-.about-page .about-personal h2{color:var(--terracotta)}
-.about-page .about-website h2{color:var(--sage)}
-.about-quote{margin:20px 0;padding:18px 22px;border-left:4px solid var(--maroon);background:var(--pastel-cream);color:var(--brown);font:italic 20px/1.7 var(--editorial-font)}
-@media(max-width:600px){.about-page .about-intro p,.about-page .about-section p{font-size:17px}.about-page .about-section{padding:16px 17px 8px}.about-page .about-section h2{font-size:21px}}
