@@ -27,14 +27,18 @@
 <main class="container">
   <div class="page-header">
     <h1>Blog</h1>
-    <p>Notes, reflections, and longer-form writing on AI, governance, economics, technology, and research.</p>
+    <p>Notes, reflections, and longer-form writing on AI, governance, economics, technology, 
+      research, and personal interests, from art and music to the thoughts and experiences that shape how I see the world.</p>
 
     <!-- Category filter buttons -->
     <div class="category-boxes">
       <button class="category-box active" data-filter="all" type="button">All</button>
+      <button class="category-box" data-filter="personal-thoughts">Personal Thoughts</button>
       <button class="category-box" data-filter="ai" type="button">AI Safety</button>
-      <button class="category-box" data-filter="governance" type="button">Governance</button>
+      <button class="category-box" data-filter="ai-policy-governance" type="button">AI Policy &amp; Governance</button>
+      <button class="category-box" data-filter="biosecurity" type="button">Biosecurity</button>
       <!-- <button class="category-box" data-filter="economics" type="button">Economics</button> -->
+      <button class="category-box" data-filter="political-economy" type="button">Political Economy</button>
       <button class="category-box" data-filter="economic-history" type="button">Economic History</button>
       <button class="category-box" data-filter="financial-crisis" type="button">Financial Crisis</button>
       <button class="category-box" data-filter="technology" type="button">Technology</button>
@@ -45,10 +49,10 @@
   <section class="blog-section"><div class="blog-list">
 
     <!-- Blog 1: Banking Without Boundaries -->
-    <article class="post filter-item" data-categories="economic-history financial-crisis">
+    <article class="post filter-item" data-categories="political-economy economic-history financial-crisis">
       <div class="post-date">Oct 2025</div>
       <div class="post-content">
-        <div class="project-category">Economic History · Financial Crisis</div>
+        <div class="project-category">Political Economy · Economic History · Financial Crisis</div>
         <h2 class="post-title-bold"><a href="banking-without-boundaries.html">Banking Without Boundaries</a></h2>
         <p class="post-subtitle">How the repeal of Glass–Steagall and branching deregulation reshaped American banking</p>
         <p class="post-description">How the deregulation of U.S. banking reshaped American economic history and contributed to the 2008 financial crisis.</p>
@@ -56,45 +60,7 @@
       </div>
     </article>
 
-    <!-- Blog 2: AI Safety and Governance -->
-    <article class="post filter-item" data-categories="ai governance">
-      <div class="post-date">Month 2026</div>
-      <div class="post-content">
-        <div class="post-category">
-          <span>AI Safety</span>
-          <span>Governance</span>
-        </div>
-        <h2><a href="#">Writing on AI Safety and Governance</a></h2>
-        <p class="post-description">Essays and notes exploring how increasingly capable AI systems may affect institutions, governance, and society.</p>
-        <a class="read-more" href="#">Read →</a>
-      </div>
-    </article>
-
-    <!-- Blog 3: Independent Research -->
-    <article class="post filter-item" data-categories="research">
-      <div class="post-date">Month 2026</div>
-      <div class="post-content">
-        <div class="post-category"><span>Research</span></div>
-        <h2><a href="#">Notes from Independent Research</a></h2>
-        <p class="post-description">Reflections on research questions, methods, evidence, and the process of turning broad questions into concrete projects.</p>
-        <a class="read-more" href="#">Read →</a>
-      </div>
-    </article>
-
-    <!-- Blog 4: Financial Systems and Economic Change -->
-    <article class="post filter-item" data-categories="economics economic-history">
-      <div class="post-date">Month 2025</div>
-      <div class="post-content">
-        <div class="post-category">
-          <span>Economics</span>
-          <span>Economic History</span>
-        </div>
-        <h2><a href="#">Financial Systems and Economic Change</a></h2>
-        <p class="post-description">Reflections on financial regulation, banking, economic institutions, and historical change.</p>
-        <a class="read-more" href="#">Read →</a>
-      </div>
-    </article>
-
+  
     <!-- Message shown when a category has no matching posts -->
     <p class="no-results">No posts in this category yet.</p>
 
@@ -130,3 +96,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
+
