@@ -81,7 +81,7 @@ body:has(.interest-grid){background:linear-gradient(135deg,#f4f7f1,#f8f5f0 58%,#
 /* Category labels: maroon, regular weight */
 .post-category{display:flex;flex-wrap:wrap;gap:8px 12px;margin:0 0 12px}
 .post-category span,.project-category,.reading-category,.article-topics span,.activity-category{font-family:var(--body-font);
-  color:var(--maroon)!important;font-size:14px!important;font-weight:400!important;letter-spacing:.2px;line-height:1.6;text-transform:none}
+  color:var(--maroon)!important;font-size:14px!important;font-weight:500!important;letter-spacing:.2px;line-height:1.6;text-transform:none}
 .project-category{margin:0 0 12px}
 
 /* Blog, Readings and Projects */
