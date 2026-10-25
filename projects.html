@@ -33,18 +33,7 @@
   </div>
 
   <section class="projects-section"><div class="project-list">
-    <article class="project filter-item" data-categories="ai governance economics">
-      <div class="project-date">YYYY</div>
-      <div class="project-content">
-        <div class="project-category">AI &amp; Economics</div>
-        <h2><a href="#">AI Adoption and the Changing Landscape of Unemployment</a></h2>
-        <div class="project-status">In Progress</div>
-        <p class="project-description">An empirical project examining how AI adoption may affect unemployment and underemployment across sectors, with implications for labor markets and AI governance.</p>
-        <div class="project-tools">OECD · ILO · WEF AI Index · Econometric Analysis</div>
-        <a class="project-link" href="#">View project →</a>
-      </div>
-    </article>
-
+    
     <!-- Project 3: Financial Deregulation and the 2008 Financial Crisis -->
 <article class="project filter-item" data-categories="economics economic-history financial-crisis research">
   <div class="project-date">Dec 2025</div>
@@ -55,7 +44,7 @@
     <p class="project-description">A qualitative historical–institutional analysis (1920–2008) examining how U.S. financial deregulation contributed to the buildup of systemic risk culminating in the 2008 financial crisis.</p>
     <p class="project-description" style="margin-top:8px">Synthesized data from primary regulatory texts, Congressional reports, and Federal Reserve publications to document mechanisms of systemic risk.</p>
     <div class="project-tools">Historical Research · Regulatory Analysis · Institutional Analysis</div>
-    <a class="project-link" href="https://drive.google.com/file/d/1z1oLn51j0cQi8gU08NaodnCdvguCOQYh/view?usp=sharing" target="_blank" rel="noopener noreferrer">Read Full Paper ↗</a>
+    <a class="project-link" href="https://drive.google.com/file/d/1z1oLn51j0cQi8gU08NaodnCdvguCOQYh/view?usp=sharing" target="_blank" rel="noopener noreferrer">Read Full Paper →</a>
   </div>
 </article>
     
@@ -68,13 +57,59 @@
     <div class="project-status">Google Data Analytics Capstone Project</div>
     <p class="project-description">Applied big data analytics techniques and workflows (OSMEN and APPA-SA) to process and analyze large-scale datasets (100M+ observations) using SQL (BigQuery) and Tableau.</p>
     <div class="project-tools">BigQuery · SQL · Tableau</div>
-    <a class="project-link" href="https://www.kaggle.com/code/daliaelaraby123/bike-share-analysis-with-bigquery-and-tableau" target="_blank" rel="noopener noreferrer">Full Project ↗</a>
-    <a class="project-link" href="https://github.com/DaliaAhmd/Chicago-Bike-Share-Usage-Analysis-with-BigQuery-and-Tableau" target="_blank" rel="noopener noreferrer">Data &amp; Code ↗</a>
-    <a class="project-link" href="https://public.tableau.com/app/profile/dalia.elaraby/viz/BikeShareDadhboard/BikeShareAnalysis" target="_blank" rel="noopener noreferrer">Tableau Dashboard ↗</a>
+    <a class="project-link" href="https://www.kaggle.com/code/daliaelaraby123/bike-share-analysis-with-bigquery-and-tableau" target="_blank" rel="noopener noreferrer">Full Project →</a>
+    <a class="project-link" href="https://github.com/DaliaAhmd/Chicago-Bike-Share-Usage-Analysis-with-BigQuery-and-Tableau" target="_blank" rel="noopener noreferrer">Data &amp; Code →</a>
+    <a class="project-link" href="https://public.tableau.com/app/profile/dalia.elaraby/viz/BikeShareDadhboard/BikeShareAnalysis" target="_blank" rel="noopener noreferrer">Tableau Dashboard →</a>
   </div>
 </article>
 
     
+
+
+    <p class="no-results">No projects in this category yet.</p>
+  </div></section>
+</main>
+
+<footer><div class="container">© 2026 Dalia Ahmed</div></footer>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const buttons = document.querySelectorAll(".category-box[data-filter]");
+  const items = document.querySelectorAll(".filter-item");
+  const message = document.querySelector(".no-results");
+
+  function filterItems(category) {
+    let count = 0;
+    items.forEach(item => {
+      const categories = (item.dataset.categories || "").split(/\s+/);
+      const show = category === "all" || categories.includes(category);
+      item.classList.toggle("hidden", !show);
+      if (show) count++;
+    });
+    buttons.forEach(button => button.classList.toggle("active", button.dataset.filter === category));
+    message.classList.toggle("visible", count === 0);
+  }
+
+  buttons.forEach(button => button.addEventListener("click", () => filterItems(button.dataset.filter)));
+  filterItems("all");
+});
+</script>
+</body>
+</html>
+
+
+
+<!-- <article class="project filter-item" data-categories="ai governance economics">
+      <div class="project-date">YYYY</div>
+      <div class="project-content">
+        <div class="project-category">AI &amp; Economics</div>
+        <h2><a href="#">AI Adoption and the Changing Landscape of Unemployment</a></h2>
+        <div class="project-status">In Progress</div>
+        <p class="project-description">An empirical project examining how AI adoption may affect unemployment and underemployment across sectors, with implications for labor markets and AI governance.</p>
+        <div class="project-tools">OECD · ILO · WEF AI Index · Econometric Analysis</div>
+        <a class="project-link" href="#">View project →</a>
+      </div>
+    </article>
+
     <article class="project filter-item" data-categories="economics economic-history research">
       <div class="project-date">YYYY</div>
       <div class="project-content">
@@ -122,33 +157,4 @@
         <a class="project-link" href="#">View project →</a>
       </div>
     </article>
-
-    <p class="no-results">No projects in this category yet.</p>
-  </div></section>
-</main>
-
-<footer><div class="container">© 2026 Dalia Ahmed</div></footer>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const buttons = document.querySelectorAll(".category-box[data-filter]");
-  const items = document.querySelectorAll(".filter-item");
-  const message = document.querySelector(".no-results");
-
-  function filterItems(category) {
-    let count = 0;
-    items.forEach(item => {
-      const categories = (item.dataset.categories || "").split(/\s+/);
-      const show = category === "all" || categories.includes(category);
-      item.classList.toggle("hidden", !show);
-      if (show) count++;
-    });
-    buttons.forEach(button => button.classList.toggle("active", button.dataset.filter === category));
-    message.classList.toggle("visible", count === 0);
-  }
-
-  buttons.forEach(button => button.addEventListener("click", () => filterItems(button.dataset.filter)));
-  filterItems("all");
-});
-</script>
-</body>
-</html>
+    
