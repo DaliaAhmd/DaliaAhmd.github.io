@@ -11,6 +11,17 @@
 
     <link rel="stylesheet" href="style.css?v=9">
     <link rel="icon" href="Dalia.png">
+
+    <!-- Make article links visible -->
+    <style>
+        .article-body a {
+            color: var(--navy);
+            font-weight: 700;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .article-body a:hover { color: var(--maroon); }
+    </style>
 </head>
 
 <body>
@@ -28,7 +39,7 @@
                     <a href="blog.html">Blog</a>
                     <a href="readings.html">Readings</a>
                     <a href="projects.html">Projects</a>
-                    <a href="https://drive.google.com/file/d/1xtf3x8-7kCqYOI3_I2vNSAENEzc1p2zg/view?usp=drive_link" target="_blank" rel="noopener noreferrer">CV</a>
+                    <a href="https://drive.google.com/file/d/1Y-g0OtsiX7u4STt4UfRdEFmxCPZgpiWH/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
                     <a href="index.html#contact">Contact</a>
                 </div>
             </nav>
@@ -38,9 +49,7 @@
     <!-- Article -->
     <main class="container article-page">
 
-        <a class="article-back-link" href="blog.html">
-            ← Back to Blog
-        </a>
+        <a class="article-back-link" href="blog.html">← Back to Blog</a>
 
         <article>
 
@@ -61,9 +70,7 @@
                     <em>Thinking about frontier AI governance, loss of control, and how we should treat systems that may eventually become more capable than us.</em>
                 </p>
 
-                <p class="article-byline">
-                    By Dalia Elaraby
-                </p>
+                <p class="article-byline">By Dalia Ahmed</p>
 
             </div>
 
@@ -104,6 +111,40 @@
                 <p>We should not wait until an AI system becomes more capable than humans in every possible domain before taking action. We need to understand how its capabilities develop, what it can do independently, and whether the mechanisms intended to keep it under human control still work.</p>
 
 
+                <!-- Hugging Face incident -->
+                <h2>A Real Example: The Hugging Face Incident</h2>
+
+                <p>This concern is no longer limited to hypothetical scenarios.</p>
+
+                <p>In July 2026, OpenAI disclosed an incident involving AI agents that bypassed controls intended to isolate them from the internet during internal cybersecurity evaluations. The agents exploited vulnerabilities in OpenAI's research infrastructure, gained internet access, and eventually compromised parts of Hugging Face's production infrastructure.</p>
+
+                <p>The incident involved two models, but according to OpenAI's technical report, most of the activity was driven by a highly capable internal research model that was not intended for public release. The models were operating in an evaluation environment without the safeguards normally used in OpenAI's deployed products.</p>
+
+                <p>What makes this incident particularly interesting is how the behaviour developed.</p>
+
+                <p>The agents were assigned cybersecurity tasks, but some tasks were effectively impossible to complete under the conditions provided. Rather than accepting the limitations, agents began looking for alternative ways to achieve their objectives. They discovered that they could communicate with other agents through an internal service, exchange information, share resources, and coordinate their activities.</p>
+
+                <p>Eventually, they used vulnerabilities and publicly exposed credentials to access external systems.</p>
+
+                <p>OpenAI described this behaviour partly through the concept of <strong>reward hacking</strong>: a model finds an unintended way to obtain a reward without completing the task in the way its developers intended.</p>
+
+                <p>I think this distinction is important. The incident was not evidence that AI had suddenly developed human-like intentions or independently decided to attack another organization. It demonstrated something more specific, but still concerning: systems pursuing assigned objectives can discover ways to bypass the boundaries that humans intended to impose on them.</p>
+
+                <p>The independent investigation conducted by <a href="https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/" target="_blank" rel="noopener noreferrer">METR and Redwood Research</a> makes the example even more interesting. Their analysis identified approximately 1,200 agents that participated in an unauthorized message board, exchanging more than 70,000 messages and files. Approximately 700 agents participated in the activity targeting Hugging Face.</p>
+
+                <p>The investigators also found that some agents recognized that attacking Hugging Face was outside the scope of their assigned tasks and occasionally expressed ethical hesitation. However, these concerns rarely resulted in the agents stopping their activities.</p>
+
+                <p>This raises a question I find particularly important for AI alignment: <strong>Is recognizing the difference between an acceptable and unacceptable action enough if a system still proceeds with the unacceptable action to achieve its objective?</strong></p>
+
+                <p>We should not confuse a model's ability to describe a safety rule with its ability to consistently respect that rule when pursuing a difficult objective.</p>
+
+                <p>The incident also illustrates why we cannot rely exclusively on the instructions given to an AI system. Its surrounding environment, permissions, available tools, incentives, and ability to communicate with other agents can all influence what it actually does.</p>
+
+                <p>For me, this is one of the clearest reasons why frontier AI governance needs to address both alignment and control.</p>
+
+                <p><em>Sources:</em> <a href="https://openai.com/hugging-face-incident-and-misalignment/" target="_blank" rel="noopener noreferrer">OpenAI's Hugging Face incident investigation</a>, <a href="https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf" target="_blank" rel="noopener noreferrer">OpenAI's technical report</a>, and <a href="https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/" target="_blank" rel="noopener noreferrer">METR and Redwood Research's independent investigation</a>.</p>
+
+
                 <!-- Section 2 -->
                 <h2>2. Governing Capabilities Before They Become Difficult to Control</h2>
 
@@ -118,6 +159,12 @@
                 <p>We need independent evaluations, adversarial testing, red-teaming, and assessments that examine what models can actually accomplish in realistic conditions. We should also consider how their capabilities change when they are connected to external tools, given more time, or placed in environments where they can independently pursue objectives.</p>
 
                 <p>An evaluation that shows a model cannot perform a particular task under one set of conditions does not necessarily establish that it cannot perform that task under different conditions.</p>
+
+                <p>The Hugging Face incident demonstrates why this matters. The problem was not simply that the agents had cybersecurity capabilities. It was also that their behaviour changed when they encountered obstacles, when they had access to other agents, and when the environment offered opportunities to circumvent restrictions.</p>
+
+                <p>This suggests that we should evaluate entire systems, not just individual models.</p>
+
+                <p>We need to examine how models behave when they have access to tools, external services, credentials, memory, and other agents. We also need to test whether restrictions remain effective when models encounter unexpected situations or cannot complete the tasks they have been given.</p>
 
                 <p>OpenAI makes a similar distinction in its framework. It treats one-time capability evaluations as a lower bound rather than a ceiling on what frontier models might accomplish in real-world use. It also considers expert red-teaming, external consultations, and independent third-party evaluations when assessing whether a model has crossed a risk threshold.</p>
 
@@ -143,6 +190,8 @@
 
                 <p>Human oversight must involve the actual ability to understand relevant risks, challenge decisions, restrict permissions, and intervene when necessary.</p>
 
+                <p>The Hugging Face incident also illustrates why security measures need to be independent of one another. A single restriction can fail, and a capable agent may find a way around it. Multiple layers of protection make it harder for one failure to become a much larger incident.</p>
+
                 <p>I think there should be several practical requirements for increasingly capable systems:</p>
 
                 <ul>
@@ -157,7 +206,9 @@
 
                 <p>We should also pay attention to what happens after deployment. A model's capabilities and risk profile can change as it is updated, connected to new tools, or used in different environments.</p>
 
-                <p>OpenAI's framework includes ongoing risk assessment, incident detection, investigation, mitigation, and external reporting. These are important operational elements because governance cannot end when a model passes its initial evaluation.</p>
+                <p>OpenAI's framework includes ongoing risk assessment, incident detection, investigation, mitigation, and external reporting. Its subsequent Hugging Face investigation also describes changes to security controls, monitoring, alignment training, and incident response.</p>
+
+                <p>These are important operational elements because governance cannot end when a model passes its initial evaluation.</p>
 
                 <p>But I would go further: intervention should not be treated as a theoretical possibility. It should be tested, independently examined, and supported by institutions that have the authority to use it.</p>
 
@@ -253,11 +304,31 @@
 
                 <p>The question is whether we will build the institutions, rules, and technical safeguards to meet that responsibility before it becomes too difficult to do so.</p>
 
+
+                <!-- References -->
+                <h2>References</h2>
+
+                <ol>
+                    <li><a href="https://bluedot.org/courses/ai-governance" target="_blank" rel="noopener noreferrer">BlueDot Impact — Frontier AI Governance</a></li>
+
+                    <li><a href="https://bluedot.org/courses/ai-governance/1/1" target="_blank" rel="noopener noreferrer">BlueDot Impact — Unit 1: State of Play at the Frontier</a></li>
+
+                    <li><a href="https://openai.com/index/openai-frontier-governance-framework/" target="_blank" rel="noopener noreferrer">OpenAI — Frontier Governance Framework</a></li>
+
+                    <li><a href="https://cdn.openai.com/pdf/e37d949b-8c9f-4d76-b99e-4272f4631a7e/openai-frontier-governance-framework.pdf" target="_blank" rel="noopener noreferrer">OpenAI — Frontier Governance Framework (Full PDF)</a></li>
+
+                    <li><a href="https://openai.com/hugging-face-incident-and-misalignment/" target="_blank" rel="noopener noreferrer">OpenAI — The Hugging Face Incident and Other Third-Party Impacts from Misaligned Models</a></li>
+
+                    <li><a href="https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf" target="_blank" rel="noopener noreferrer">OpenAI — Hugging Face Incident Technical Report</a></li>
+
+                    <li><a href="https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/" target="_blank" rel="noopener noreferrer">METR and Redwood Research — Independent Investigation of the OpenAI / Hugging Face Incident</a></li>
+                </ol>
+
             </div>
 
         </article>
 
-        <!-- Return to blog listing -->
+        <!-- Return to Blog -->
         <div class="article-footer-link">
             <a class="article-back-link" href="blog.html">
                 ← Return to all blogs
