@@ -21,6 +21,14 @@
             text-underline-offset: 3px;
         }
         .article-body a:hover { color: var(--maroon); }
+
+        /* Match bullet points to article font */
+        .article-body ul{margin:0 0 30px;padding-left:25px}
+        .article-body li{font-family:var(--editorial-font);font-size:19px;line-height:1.95;color:#282623;margin-bottom:12px}
+
+        @media(max-width:700px){
+          .article-body li{font-size:17px;line-height:1.9}
+        }
     </style>
 </head>
 
