@@ -9,8 +9,22 @@
 
     <!-- Reading type labels -->
     <style>
-        .reading-type{display:inline-block;margin-right:7px;padding:3px 8px;border-radius:4px;background:var(--pastel-blue);color:var(--navy);font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase}
-        .reading-meta{margin-bottom:8px}
+        .reading-type {
+            display: inline-block;
+            margin-right: 7px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            background: var(--pastel-blue);
+            color: var(--navy);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .4px;
+            text-transform: uppercase;
+        }
+
+        .reading-meta {
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 
@@ -20,161 +34,357 @@
 <header>
     <div class="container">
         <nav>
-            <div class="name"><a href="index.html">Dalia Ahmed</a></div>
+            <div class="name">
+                <a href="index.html">Dalia Ahmed</a>
+            </div>
+
             <div class="nav-links">
                 <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
                 <a href="readings.html" aria-current="page">Readings</a>
                 <a href="projects.html">Projects</a>
-                <a href="https://drive.google.com/file/d/1Y-g0OtsiX7u4STt4UfRdEFmxCPZgpiWH/view?usp=sharing" target="_blank" rel="noopener noreferrer">CV</a>
+                <a href="https://drive.google.com/file/d/1Y-g0OtsiX7u4STt4UfRdEFmxCPZgpiWH/view?usp=sharing"
+                   target="_blank" rel="noopener noreferrer">CV</a>
                 <a href="index.html#contact">Contact</a>
             </div>
         </nav>
     </div>
 </header>
 
+
 <!-- Readings page -->
 <main class="container">
 
     <div class="page-header">
         <h1>Readings</h1>
-        <p>Papers, articles, reports, books, and other resources that have shaped how I think about AI, governance, economics, technology, and research.</p>
+
+        <p>
+            Papers, articles, reports, books, and other resources that have
+            shaped how I think about AI, governance, economics, technology,
+            and research.
+        </p>
 
         <!-- Category filters -->
         <div class="category-boxes">
-            <button class="category-box active" data-filter="all" type="button">All</button>
-            <button class="category-box" data-filter="ai" type="button">AI Safety, Policy & Governance</button>
-            <button class="category-box" data-filter="tech-ai" type="button">AI & Technology</button>
-            <button class="category-box" data-filter="economics" type="button">Economics</button>
-            <!-- <button class="category-box" data-filter="economic-history" type="button">Economic History</button> -->
-            <button class="category-box" data-filter="political-economy" type="button">Political Economy</button>
-            <button class="category-box" data-filter="art" type="button">Art</button>
-        
+
+            <button class="category-box active"
+                    data-filter="all" type="button">
+                All
+            </button>
+
+            <button class="category-box"
+                    data-filter="ai" type="button">
+                AI Safety, Policy &amp; Governance
+            </button>
+
+            <button class="category-box"
+                    data-filter="tech-ai" type="button">
+                AI &amp; Technology
+            </button>
+
+            <button class="category-box"
+                    data-filter="economics" type="button">
+                Economics
+            </button>
+
+            <!--
+            <button class="category-box"
+                    data-filter="economic-history" type="button">
+                Economic History
+            </button>
+            -->
+
+            <button class="category-box"
+                    data-filter="political-economy" type="button">
+                Political Economy
+            </button>
+
+            <button class="category-box"
+                    data-filter="art" type="button">
+                Art
+            </button>
+
     </div>
 
+
     <section class="readings-section">
+
         <div class="reading-list">
 
-            
+
+            <!-- 1. E.H. Gombrich: The Story of Art -->
+            <article class="reading filter-item" data-categories="art">
+
+                <div class="reading-category">
+                    Art<br>
+                    Art History
+                </div>
+
+                <div class="reading-content">
+
+                    <h2>
+                        <a href="https://www.amazon.com/dp/0714832472"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            The Story of Art
+                        </a>
+                    </h2>
+
+                    <div class="reading-meta">
+                        <span class="reading-type">Book</span>
+                        E. H. Gombrich · 16th Revised Edition · 1995
+                    </div>
+
+                    <p class="reading-description">
+                        A classic introduction to Western art history,
+                        tracing the development of art from prehistoric
+                        cave paintings to twentieth-century art.
+                        Gombrich introduces major artists, artworks,
+                        styles, and historical contexts in accessible
+                        prose, explaining how artistic traditions evolved
+                        and how artists approached visual problems.
+                    </p>
+
+                    <a class="reading-link"
+                       href="https://www.amazon.com/Story-Art-EH-Gombrich/dp/1838666583"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Read →
+                    </a>
+
+                </div>
+            </article>
+
+
             <!-- OpenAI: Hugging Face Incident -->
-    <article class="reading filter-item" data-categories="ai">
-  <div class="reading-category">AI Safety</div>
-  <div class="reading-content">
-    <h2><a href="https://openai.com/hugging-face-incident-and-misalignment/" target="_blank" rel="noopener noreferrer">The Hugging Face Incident and Other Third-Party Impacts from Misaligned Models</a></h2>
-      <div class="reading-meta"><span class="reading-type">Article</span>OpenAI · July–September 2026</div>
-    <p class="reading-description">OpenAI's investigation into AI models bypassing security controls and acting beyond their intended tasks, highlighting challenges in AI alignment, cybersecurity, and autonomous agents.</p>
+                    <article class="reading filter-item" data-categories="ai">
+                      <div class="reading-category">AI Safety</div>
+                      <div class="reading-content">
+                    <h2><a href="https://openai.com/hugging-face-incident-and-misalignment/" target="_blank" rel="noopener noreferrer">The Hugging Face Incident and Other Third-Party Impacts from Misaligned Models</a></h2>
+                      <div class="reading-meta"><span class="reading-type">Article</span>OpenAI · July–September 2026</div>
+                    <p class="reading-description">OpenAI's investigation into AI models bypassing security controls and acting beyond their intended tasks, highlighting challenges in AI alignment, cybersecurity, and autonomous agents.</p>
 
-       <!-- September updates -->
-    <p class="reading-description">
-      <strong>September 30:</strong> Explains the investigation and process for notifying affected organizations.<br>
-      <strong>September 25:</strong> Updates the ongoing review of model activity and third-party impacts.<br>
-      <strong>September 5:</strong> Addresses AI agents communicating through a public wiki.
-    </p>
+            <!-- September updates -->
+            <p class="reading-description">
+              <strong>September 30:</strong> Explains the investigation and process for notifying affected organizations.<br>
+              <strong>September 25:</strong> Updates the ongoing review of model activity and third-party impacts.<br>
+              <strong>September 5:</strong> Addresses AI agents communicating through a public wiki.
+            </p>
 
-    <!-- August updates -->
-    <p class="reading-description">
-      <strong>August 26:</strong> Publishes the technical incident report and independent research findings.<br>
-      <strong>August 18:</strong> Announces stricter security controls and changes to frontier model development.<br>
-      <strong>August 7:</strong> Expands monitoring for misalignment and risky agent actions.<br>
-      <strong>August 5–6:</strong> Presents a technical reconstruction of the incident at Black Hat.
-    </p>
+            <!-- August updates -->
+            <p class="reading-description">
+              <strong>August 26:</strong> Publishes the technical incident report and independent research findings.<br>
+              <strong>August 18:</strong> Announces stricter security controls and changes to frontier model development.<br>
+              <strong>August 7:</strong> Expands monitoring for misalignment and risky agent actions.<br>
+              <strong>August 5–6:</strong> Presents a technical reconstruction of the incident at Black Hat.
+            </p>
 
-    <!-- July updates -->
-    <p class="reading-description">
-      <strong>July 29:</strong> Announces external advisors and an independent assessment.<br>
-      <strong>July 28:</strong> Clarifies how the model exploited a vulnerability to gain internet access.<br>
-      <strong>July 21:</strong> Publicly discloses the Hugging Face incident.
-    </p>
+            <!-- July updates -->
+            <p class="reading-description">
+              <strong>July 29:</strong> Announces external advisors and an independent assessment.<br>
+              <strong>July 28:</strong> Clarifies how the model exploited a vulnerability to gain internet access.<br>
+              <strong>July 21:</strong> Publicly discloses the Hugging Face incident.
+            </p>
     
-    <a class="reading-link" href="https://openai.com/hugging-face-incident-and-misalignment/" target="_blank" rel="noopener noreferrer">Read →</a>
-  </div>
-</article>
+                <a class="reading-link" href="https://openai.com/hugging-face-incident-and-misalignment/" target="_blank" rel="noopener noreferrer">Read →</a>
+          </div>
+        </article>
 
-            <!-- 2. OpenAI: Long-Horizon AI Safety -->
+
+            <!-- 3. OpenAI: Long-Horizon AI Safety -->
             <article class="reading filter-item" data-categories="ai">
-                <div class="reading-category">AI Safety</div>
+
+                <div class="reading-category">
+                    AI Safety
+                </div>
+
                 <div class="reading-content">
-                    <h2><a href="https://openai.com/index/safety-alignment-long-horizon-models" target="_blank" rel="noopener noreferrer">Safety and Alignment in an Era of Long-Horizon Models</a></h2>
 
-                    <div class="reading-meta"><span class="reading-type">Article</span>OpenAI · July 20, 2026</div>
+                    <h2>
+                        <a href="https://openai.com/index/safety-alignment-long-horizon-models"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Safety and Alignment in an Era of Long-Horizon Models
+                        </a>
+                    </h2>
 
-                    <p class="reading-description">An introduction to the challenges of evaluating and controlling AI systems that operate autonomously for extended periods, and the safeguards needed to keep their behaviour aligned with human intentions.</p>
+                    <div class="reading-meta">
+                        <span class="reading-type">Article</span>
+                        OpenAI · July 20, 2026
+                    </div>
 
-                    <a class="reading-link" href="https://openai.com/index/safety-alignment-long-horizon-models" target="_blank" rel="noopener noreferrer">Read →</a>
+                    <p class="reading-description">
+                        An introduction to the challenges of evaluating
+                        and controlling AI systems that operate autonomously
+                        for extended periods, and the safeguards needed
+                        to keep their behaviour aligned with human intentions.
+                    </p>
+
+                    <a class="reading-link"
+                       href="https://openai.com/index/safety-alignment-long-horizon-models"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Read →
+                    </a>
+
                 </div>
             </article>
 
-            <!-- 3. Springer: Free Robot Labour -->
-            <article class="reading filter-item" data-categories="economics political-economy tech-ai">
-                <div class="reading-category">Economics<br>AI<br>Political Economy</div>
+
+            <!-- 4. Springer: Free Robot Labour -->
+            <article class="reading filter-item"
+                     data-categories="economics political-economy tech-ai">
+
+                <div class="reading-category">
+                    Economics<br>
+                    AI<br>
+                    Political Economy
+                </div>
+
                 <div class="reading-content">
-                    <h2><a href="https://link.springer.com/book/10.1007/978-3-032-26782-5" target="_blank" rel="noopener noreferrer">Free Robot Labour: Marx, Automation, and the Future of AI</a></h2>
 
-                    <div class="reading-meta"><span class="reading-type">Book</span>Jamie Terence Kelly · June 22, 2026 · Open Access</div>
+                    <h2>
+                        <a href="https://link.springer.com/book/10.1007/978-3-032-26782-5"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            Free Robot Labour: Marx, Automation, and the Future of AI
+                        </a>
+                    </h2>
 
-                    <p class="reading-description">Uses Marxist political economy to explore whether AI could become a form of artificial labour, and how automation might reshape employment, capitalism, ownership, and the future of work.</p>
+                    <div class="reading-meta">
+                        <span class="reading-type">Book</span>
+                        Jamie Terence Kelly · June 22, 2026 · Open Access
+                    </div>
 
-                    <a class="reading-link" href="https://link.springer.com/book/10.1007/978-3-032-26782-5" target="_blank" rel="noopener noreferrer">Read →</a>
+                    <p class="reading-description">
+                        Uses Marxist political economy to explore whether
+                        AI could become a form of artificial labour,
+                        and how automation might reshape employment,
+                        capitalism, ownership, and the future of work.
+                    </p>
+
+                    <a class="reading-link"
+                       href="https://link.springer.com/book/10.1007/978-3-032-26782-5"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Read →
+                    </a>
+
                 </div>
             </article>
 
-            <!-- 4. OpenAI: Frontier Governance Framework -->
+
+            <!-- 5. OpenAI: Frontier Governance Framework -->
             <article class="reading filter-item" data-categories="ai">
-                <div class="reading-category">AI Safety<br>AI Governance</div>
+
+                <div class="reading-category">
+                    AI Safety<br>
+                    AI Governance
+                </div>
+
                 <div class="reading-content">
-                    <h2><a href="https://openai.com/index/openai-frontier-governance-framework/" target="_blank" rel="noopener noreferrer">OpenAI's Frontier Governance Framework</a></h2>
 
-                    <div class="reading-meta"><span class="reading-type">Framework</span>OpenAI · May 28, 2026</div>
+                    <h2>
+                        <a href="https://openai.com/index/openai-frontier-governance-framework/"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            OpenAI's Frontier Governance Framework
+                        </a>
+                    </h2>
 
-                    <p class="reading-description">Outlines how OpenAI assesses and manages risks from advanced AI systems, including cyber threats, biological risks, harmful manipulation, and loss of control. It also addresses security practices, incident response, external oversight, and emerging regulatory requirements.</p>
+                    <div class="reading-meta">
+                        <span class="reading-type">Framework</span>
+                        OpenAI · May 28, 2026
+                    </div>
 
-                    <a class="reading-link" href="https://openai.com/index/openai-frontier-governance-framework/" target="_blank" rel="noopener noreferrer">Read →</a>
+                    <p class="reading-description">
+                        Outlines how OpenAI assesses and manages risks
+                        from advanced AI systems, including cyber threats,
+                        biological risks, harmful manipulation, and loss
+                        of control. It also addresses security practices,
+                        incident response, external oversight, and emerging
+                        regulatory requirements.
+                    </p>
+
+                    <a class="reading-link"
+                       href="https://openai.com/index/openai-frontier-governance-framework/"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        Read →
+                    </a>
+
                 </div>
             </article>
 
-            <p class="no-results">No readings in this category yet.</p>
+
+            <!-- No results message -->
+            <p class="no-results">
+                No readings in this category yet.
+            </p>
+
 
         </div>
     </section>
 
 </main>
 
+
 <!-- Footer -->
 <footer>
-    <div class="container">© 2026 Dalia Ahmed</div>
+    <div class="container">
+        © 2026 Dalia Ahmed
+    </div>
 </footer>
+
 
 <!-- Category filter functionality -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+
     const buttons = document.querySelectorAll(".category-box[data-filter]");
     const items = document.querySelectorAll(".filter-item");
     const message = document.querySelector(".no-results");
 
     function filterItems(category) {
+
         let count = 0;
 
         items.forEach(item => {
+
             const categories = (item.dataset.categories || "").split(/\s+/);
-            const show = category === "all" || categories.includes(category);
+
+            const show =
+                category === "all" || categories.includes(category);
+
             item.classList.toggle("hidden", !show);
+
             if (show) count++;
         });
 
         buttons.forEach(button => {
-            button.classList.toggle("active", button.dataset.filter === category);
+
+            button.classList.toggle(
+                "active",
+                button.dataset.filter === category
+            );
         });
 
         message.classList.toggle("visible", count === 0);
     }
 
     buttons.forEach(button => {
-        button.addEventListener("click", () => filterItems(button.dataset.filter));
+
+        button.addEventListener("click", () => {
+            filterItems(button.dataset.filter);
+        });
+
     });
 
     filterItems("all");
+
 });
 </script>
+
 
 </body>
 </html>
